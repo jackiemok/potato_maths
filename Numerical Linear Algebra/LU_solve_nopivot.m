@@ -1,4 +1,5 @@
 %% LU Solve without Pivoting
+% Perform A = LU decomposition and solve Ax = (LU)x = b
 % ( A = LU ) => ( Ax = b <=> (LU)x = b )
 
 % Input:    A - (n x n) matrix
