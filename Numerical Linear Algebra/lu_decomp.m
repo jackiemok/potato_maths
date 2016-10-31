@@ -1,8 +1,11 @@
 %% LU Decomposition
-% Gaussian Elimination without Pivoting
+% Compute the L & U factors of a random matrix A of size (n x n)
+% using Gaussian Elimination without pivoting.
 
-% Input:   n - The size of the linear system ( Random A in R^{nxn} )
-% Output:  The random matrix A and its factors L and U
+% Input:   n - The size of the linear system ( Random A in R^{n x n} )
+% Output:  A - (n x n) random matrix equivalent to the product of L*U
+%          L - (n x n) lower factor of A
+%          U - (n x n) upper factor of A
 
 function [ A, L, U ] = lu_decomp( n )
 
@@ -13,9 +16,9 @@ U = A;
 
 % To demonstrate the weakness of Gaussian Elimination without pivoting,
 % guarantee at least one of the pivots is small.
-A(1,1) = 50*eps*A(1,1);
+% A(1,1) = 50 * eps * A(1,1);
 
-% Compute LU Factorization
+% Compute LU Factorization without Pivoting
 for k = 1:n-1
     for j = k+1:n
         
@@ -25,6 +28,7 @@ for k = 1:n-1
             return
         end
         
+        % Compute multiplier of row j
         L(j,k) = U(j,k) / U(k,k);
         
         % Row j <-- Row j - multiplier * (pivot row)
@@ -36,6 +40,8 @@ end
 % Pivoting decreases the backward error and norms of L and U,
 % but the performance of Gaussian Elimination without pivoting is
 % usually not conspicuously bad and is more or less stable.
+
+% Print infinity norms of L, U, and the backward error E = ( LU - A )
 fprintf( 'The infinity norm of L is %e.\n', norm( L, inf ) );
 fprintf( 'The infinity norm of U is %e.\n', norm( U, inf ) );
 fprintf( 'The infinity norm of backward error ||E|| = ||LU - A|| = %e.\n', ...
