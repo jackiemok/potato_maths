@@ -1,4 +1,4 @@
-%% LU Decomposition
+%% LU Decomposition without Pivoting
 % Compute the L & U factors of a random matrix A of size (n x n)
 % using Gaussian Elimination without pivoting.
 
@@ -18,7 +18,7 @@ U = A;
 % guarantee at least one of the pivots is small.
 % A(1,1) = 50 * eps * A(1,1);
 
-% Compute LU Factorization without Pivoting
+% Gaussian Elimination without Pivoting
 for k = 1:n-1
     for j = k+1:n
         
