@@ -25,7 +25,7 @@ U = A;
 
 % Gaussian Elimination without Pivoting
 for k = 1:n-1
-    for j = k+1:min( n, s_L + k - 1 )
+    for j = k+1:min( n, s_L + k )
         
         % Check for zeros along the diagonal
         if U(k,k) == 0
@@ -33,13 +33,12 @@ for k = 1:n-1
             return
         end
         
-        % Compute multiplier for row j
+        % Compute the multiplier for row j
         L(j,k) = U(j,k) / U(k,k);
         
         % Row j <-- Row j - multiplier * (pivot row)
-        for m = k:min( s_U + k - 1, n )
-            U(j,m) = U(j,m) - L(j,k) * U(k,m);  
-        end
+        U( j, k:min( n, s_U + k ) ) = ... 
+            U( j, k:min( n, s_U + k ) ) - L(j,k) * U( k, k:min( n, s_U + k ) );  
     end 
 end
 
