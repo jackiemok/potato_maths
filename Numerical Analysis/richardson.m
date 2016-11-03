@@ -1,9 +1,9 @@
 %% Richardson Linear Iterative Method
-% Approximately solve Ax = b, where A = [ D + ( L + U ) ] =: [ D + R ]
+% Approximately solve Ax = b, where A = [ D + ( L + U ) ]
 
 % Iterative step: 
 % The k-th iteration is the k-th approximation of x solving Ax = b
-% x_k = x_{k-1} + [ wI( b - A*x_{k-1} ) ]
+% x_k = x_{k-1} + wI( b - A*x_{k-1} )
 % =: x_{k-1} + W( b - A*x_{k-1} )
 % =: x_{k-1} + Wb - WA*x_{k-1}
 
