@@ -3,7 +3,8 @@
 
 % Iterative step: 
 % The k-th iteration is the k-th approximation of x solving Ax = b
-% x_k = D_inv( b - R * x_{k-1} ) = [ (D_inv * b) - (D_inv * R) * x_{k-1} ]
+% x_k = D_inv( b - R * x_{k-1} ) 
+% = [ (D_inv * b) - (D_inv * R) * x_{k-1} ]
 % =: [ C - T * x_{k-1} ]
 
 % Input:  A - (n x n) (strictly or irreducibly) diagonally dominant matrix
@@ -17,7 +18,7 @@
 function[ sol, num_iterations ] = jacobi( A, b, x_0, tol, iteration_lim )                         
 
 % Initialize matrices in regular splitting of A = D + R
-D = eye(n);                            
+D = eye( size(A,1) );                            
 R = A;                                 
 
 % Create diagonal matrix D and matrix R = L + U
