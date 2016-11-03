@@ -1,5 +1,5 @@
 %% Richardson Linear Iterative Method
-% Approximately solve Ax = b, where A = [ D + ( L + U ) ]
+% Approximately solve Ax = b, where A = D + L + U.
 
 % Iterative step: 
 % The k-th iteration is the k-th approximation of x solving Ax = b
