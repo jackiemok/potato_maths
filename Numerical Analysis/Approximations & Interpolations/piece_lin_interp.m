@@ -1,24 +1,28 @@
-%% Piecewise Linear Polynomial Interpolation
+%% Piecewise Linear Polynomial Interpolation Example
 
 % Consider the function f(x) = 1 / ( 1 + x^2 ) on [ -5, 5 ].
-% Approximate f using piecewise linear polynomial interpolation with
-% equally distributed points of mesh size.
+% Approximate f using piecewise linear polynomial interpolation 
+% with equally distributed points.
 
 % Input:     interpX - (1 x 1000) vector containing equidistant points
 %            within the interval [ -5, 5 ]
-% Output:    L - (1 x 1000) linear interpolator for our function f(x)
+% Output:    L - (1 x 1000) linear interpolator for our function f(x) with
+%            approximate values to f at the corresponding points
 %            error - Normed error between the values given by the 
 %            linear interpolator & the true values given by function f(x)
 
+% To run, let:
 % interpX = linspace( -5, 5, 1000 );
+% More generally, let interpX = linspace( -5, 5, [Any integer] ).
 
 function [ L, error ] = piece_lin_interp( interpX )
 
-% Define function f over [ -5, 5 ].
+% Using 11 equidistant points over [ -5, 5], get
+% row-vector of x-values and row-vector of f(x)-values.
 x = -5 : 5;                     
 y = 1 ./ ( 1 + x.^2 );
 
-% Initialize linear interpolator
+% Initialize linear interpolator L
 L = zeros( size( interpX ) ); 
  
 % For each entry j in interpX, 
