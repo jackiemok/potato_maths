@@ -12,6 +12,11 @@
 % Given the tolerance epsilon = 10^(-8), report the approximate value of
 % the integral over [1,pi] of function f(x) = x^2 * sin(x)
 
+% To implement the above example, set:
+% a = 1; b = pi;
+% epsilon = (10^-8);
+% f = @(x) ( x^2 ) * sin(x);
+
 function [ value ] = adaptive_simpsons( f, a, b, epsilon )
 
 % Apply Simpon's rule on the whole interval [a,b]
