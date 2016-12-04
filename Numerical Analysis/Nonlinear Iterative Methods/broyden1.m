@@ -31,7 +31,7 @@ for k = 1:num_iterations
     B_k = B_k + 1 / (transpose(s)*s) * ((v - B_k*s) * transpose(s));
   
     % Check convergence => Perform next iteration?
-    if ( norm( x_k - sol )/norm(x_k ) ) < 10^(-6)
+    if ( norm(x_k - sol) / norm(x_k) ) < 10^(-6)
         sol = x_k;
         num_iterations = k;
         break;
