@@ -7,13 +7,19 @@
 % => Random variable X = (X_1 + ... + X_n) ~ Bin(n,p)
 % For large n and small p, X is approximately Poisson(n*p)-distributed
 
-% Input                     n - The number of independent trials
-%                           p - P(X_i = 1); i.e., the probability of 
-%                           success for any given trial
+% Input:                    n - The number of independent trials
+%                           p - P(X_i = 1); i.e., the probability of success for any given trial
 %                           k - The number of desired successes
-% Output                    pk - 
+% Output:                   mean - Expected value or mean of random variable X
+%                           var - Variance of random variable variable X
+%                           bin_pk - P(X = k) if X ~ Bin(n,p)
+%                           poiss_pk - P(X = k) if X ~ Poiss(n*p)
+%                           bin_ck - P(X <= k) if X ~ Bin(n,p)
+%                           poiss_ck - P(X <= k) if X ~ Poiss(n*p)
+%                           error_pk - | bin_pk - poiss_pk |
+%                           error_ck - | bin_ck - poiss_ck |
 
-function [ mean, var, bin_pk, poiss_pk, bin_ck, poiss_ck, error ] = bin_poiss( n, p, k ) 
+function [ mean, var, bin_pk, poiss_pk, bin_ck, poiss_ck, error_pk, error_ck ] = bin_poiss( n, p, k ) 
 
 % Compute expectation E[X] = mu = lambda (Poisson parameter)
 mean = n * p;
@@ -40,6 +46,7 @@ for i = 0:k
 end
 
 % Compute the error between bin_pk & poiss_pk
-error = abs(bin_pk - poiss_pk);
+error_pk = abs( bin_pk - poiss_pk );
+error_ck = abs( bin_ck - poiss_ck );
 
 end
