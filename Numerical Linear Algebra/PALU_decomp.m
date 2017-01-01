@@ -16,6 +16,7 @@ L = eye(n);                         % Lower factor of A
 U = A;                              % Upper factor of A
 
 %% WORK ON PERMUTATION P   
+
 for k = 1:(n - 1)                   % Loop over columns
 % Choose pivot p such that | u_pk | = max| u_ik |
 p = k;
@@ -42,19 +43,25 @@ P(p,:) = temp(1,:);
 
 % Permute p-th and k-th rows' entries of 1st (k - 1) columns of L
 temp = L(k,:);
-for q = 1:(k-1)
+for q = 1:(k - 1)
     L(k,q) = L(p,q);
     L(p,q) = temp(1,q);
 end
 
 %% WORK ON MATRICES L, U
-    for i = (k + 1):n                            % Loop over rows
-        % Compute l_ji
-        L(i,k) = U(i,k) / U(k,k);
-        U(i,k) = 0;                              % Clean up lower part of U
+    
+    % Loop over rows
+    for i = (k + 1):n                            
         
-        for j= k+1:n                             % Loop over columns
-        U(i,j) = U(i,j) - L(i,k) * U(k,j);       % Update U
+        % Compute multiplier
+        L(i,k) = U(i,k) / U(k,k);
+        
+        % Clean up lower part of U
+        U(i,k) = 0;                              
+        
+        % Loop over columns
+        for j = (k + 1):n                        
+            U(i,j) = U(i,j) - L(i,k) * U(k,j);   % Update U
         end
     end    
 end
