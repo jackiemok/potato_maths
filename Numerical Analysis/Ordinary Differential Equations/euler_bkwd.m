@@ -6,7 +6,10 @@
 
 % Try using step sizes h = 0.1, 0.25, 0.5
 
-function euler_bkwd( h )
+% Input:      h - Step size to discretize time and spatial vectors
+% Output:     y - Approximate solution to the given ODE
+
+function [ y ] = euler_bkwd( h )
 
 % Define function f = y'(t)
 % Print initial conditions
