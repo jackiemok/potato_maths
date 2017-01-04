@@ -6,7 +6,7 @@
 
 % Try using step sizes h = 0.1, 0.25, 0.5
 
-function runge_kutta( h )
+function [ y ] = runge_kutta( h )
 
 % Define function f = y'(t)
 % Print initial conditions

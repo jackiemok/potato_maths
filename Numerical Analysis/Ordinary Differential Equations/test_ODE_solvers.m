@@ -10,65 +10,77 @@
 % Test for step size h = 0.25:
 fprintf( 'Testing Forward Euler Method for step size h = 0.25\n' );
 h = 0.25;
-euler_fwd( h );
+[ y ] = euler_fwd( h );
+disp(y);
 
 % Test for step size h = 0.5:
 fprintf( 'Testing Forward Euler Method for step size h = 0.5\n' );
 h = 0.5;
-euler_fwd( h );
+[ y ] = euler_fwd( h );
+disp(y);
 
 % Test for step size h = 0.1:
 fprintf( 'Testing Forward Euler Method for step size h = 0.1\n' );
 h = 0.1;
-euler_fwd( h );
+[ y ] = euler_fwd( h );
+disp(y);
 
 %% TEST BACKWARD EULER METHOD
 
 % Test for step size h = 0.25:
 fprintf( 'Testing Backard Euler Method for step size h = 0.25\n' );
 h = 0.25;
-euler_bkwd( h );
+[ y ] = euler_bkwd( h );
+disp(y);
 
 % Test for step size h = 0.5:
 fprintf( 'Testing Backward Euler Method for step size h = 0.5\n' );
 h = 0.5;
-euler_bkwd( h );
+[ y ] = euler_bkwd( h );
+disp(y);
 
 % Test for step size h = 0.1:
 fprintf( 'Testing Backward Euler Method for step size h = 0.1\n' );
 h = 0.1;
-euler_bkwd( h );
+[ y ] = euler_bkwd( h );
+disp(y);
 
 %% TEST CRANK-NICOLSON METHOD
 
 % Test for step size h = 0.25:
 fprintf( 'Testing Crank-Nicolson Method for step size h = 0.25\n' );
 h = 0.25;
-crank_nicolson( h );
+[ y ] = crank_nicolson( h );
+disp(y);
 
 % Test for step size h = 0.5:
 fprintf( 'Testing Crank-Nicolson Method for step size h = 0.5\n' );
 h = 0.5;
-crank_nicolson( h );
+[ y ] = crank_nicolson( h );
+disp(y);
 
 % Test for step size h = 1:
 fprintf( 'Testing Crank-Nicolson Method for step size h = 0.1\n' );
 h = 0.1;
-crank_nicolson( h );
+[ y ] = crank_nicolson( h );
+disp(y);
 
 %% TEST RUNGE-KUTTA 4-STAGE (RK4) METHOD
 
 % Test for step size h = 0.25:
 fprintf( 'Testing RK4 Method for step size h = 0.25\n' );
 h = 0.25;
-runge_kutta( h );
+[ y ] = runge_kutta( h );
+disp(y);
 
 % Test for step size h = 0.5:
 fprintf( 'Testing RK4 Method for step size h = 0.5\n' );
 h = 0.5;
-runge_kutta( h );
+[ y ] = runge_kutta( h );
+disp(y);
 
 % Test for step size h = 0.1:
 fprintf( 'Testing RK4 Method for step size h = 0.1\n' );
 h = 0.1;
-runge_kutta( h );
+[ y ] = runge_kutta( h );
+disp(y);
