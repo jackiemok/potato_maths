@@ -1,0 +1,24 @@
+\subsection*{4. \underline{Exercise 5.5.6}}
+Suppose that $K = \langle x \rangle$ is cyclic and $H$ is an arbitrary group. Let $\phi_1$ and $\phi_2$ be homomorphisms from $K$ into Aut($H)$ defined by $\phi_i(x) = \gamma_i$, for $x \in K$ and each $i = 1,2$.  Also, suppose that $\phi_1(K)$ and $\phi_2(K)$ are conjugate subgroups of Aut($H$). We claim that $H \rtimes_{\phi_1} K \cong H \rtimes_{\phi_2} K$ via $\psi: H \rtimes_{\phi_1} K \rightarrow H \rtimes_{\phi_2} K$ defined by $\psi((h,k)) = (\sigma(h), k^a)$, for each $(h,k) \in H \rtimes_{\phi_1} K$. That is, $\phi_1(K)$ conjugate to $\phi_2(K) \implies \exists$ some $\sigma \in$ Aut($H$), such that $\sigma\phi_1(K)\sigma^{-1} = \phi_2(K)$. Then, for some $a \in \mathbb{Z}$, $\sigma\phi_1(k)\sigma^{-1} = \phi_2(k)^a$, for all $k \in K$.
+
+Indeed $\psi$ is a homomorphism since for any $(h_1,k_1),(h_2,k_2) \in H \rtimes_{\phi_1} K$, we have:
+\begin{align*}
+    \psi((h_1,k_1)(h_2,k_2)) &= \psi((h_1\phi_1(k_1)(h_2), k_1k_2)) \hspace{5mm} \textnormal{by Theorem 5.5.10} \\
+    &= (\sigma(h_1\phi_1(k_1)(h_2)), (k_1k_2)^a) \\
+    &= (\sigma(h_1\phi_1(k_1)(h_2)), k_1^a k_2^a) \\
+    &= (\sigma(h_1)\sigma(\phi_1(k_1)(h_2)), k_1^a k_2^a) \\
+    &= (\sigma(h_1)\sigma\phi_1(k_1)(h_2), k_1^a k_2^a) \\
+    &= (\sigma(h_1)\phi_2(k_1)^a\sigma(h_2), k_1^a k_2^a) \hspace{5mm} \textnormal{since } \sigma\gamma_1 = \gamma_2^a\sigma \\
+    &= (\sigma(h_1)\phi_2(k_1^a)\sigma(h_2), k_1^a k_2^a) \\
+    &= (\sigma(h_1),k_1^a)(\sigma(h_2),k_2^a) \\
+    &= \psi((h_1,k_1))\psi((h_2,k_2)).
+\end{align*}
+We claim that $\psi$ is bijective and thus an isomorphism, since it has a 2-sided inverse. That is, there is some $b \in \mathbb{Z}$ such that $\sigma^{-1}\phi_2(k)\sigma = \phi_1(k)^b$, for all $k \in K$, since $a \in \mathbb{Z}$ satisfies $\sigma\gamma_1\sigma^{-1} = \gamma_2^a$. We must consider separately the cases when $K$ is infinitely cyclic and when $K$ is finitely cyclic.
+
+Suppose first that $K \cong \mathbb{Z}$ is infinitely cyclic and $\phi_1, \phi_2$ are injective. For all $k \in K$, $\sigma\phi_1(k)\sigma^{-1} = \phi_2(k)^a = \phi_2(k^a)$ and $\sigma^{-1}\phi_2(k)\sigma = \phi_1(k)^b = \phi_1(k^b) \implies \sigma_2(k^{ab}) = \sigma_2(k^a)^b = (\sigma\phi_1(k)\sigma^{-1})^b = \sigma\phi_1(k)^b\sigma^{-1}$, by cancellation of $(b-1)$ copies of $\sigma^{-1}\sigma = (1)$. Then, $\sigma\phi_1(k)^b\sigma^{-1} = \sigma(\sigma^{-1}\phi_2(k)\sigma)\sigma^{-1} = (\sigma\sigma^{-1})\phi_2(k)(\sigma\sigma^{-1}) = \phi_2(k)$. Now, since $\phi_1$ and $\phi_2$ are injective and $\phi_2(k)^{ab} = \phi_2(k^{ab}) = \phi_2(k)$, $(ab-1) = 0$ and $a = b = \pm 1$. 
+
+Then, when $K \cong \mathbb{Z}$, we define the inverse of $\psi$ by $\psi': H \rtimes_{\phi_2} K \rightarrow H \rtimes_{\phi_1} K$ by $\psi'((h,k)) = (\sigma^{-1}(h),k^b)$, for each $(h,k) \in H \rtimes_{\phi_2} K$. Indeed, $\psi\psi'((h,k)) = (\sigma(\sigma^{-1}(h)),(k^b)^a) = ((h,k))$ and $\psi'\psi((h,k)) = (\sigma^{-1}(\sigma(h)),(k^a)^b) = ((h,k))$, for each $(h,k) \in H \rtimes_{\phi_2} K$. Therefore, $H \rtimes_{\phi_1} K \cong H \rtimes_{\phi_2} K$.
+
+Now, consider the case when $K \cong \mathbb{Z}_n$, for some $n\in\mathbb{Z}$. Then, $K = \langle x \rangle,$ for some $x \in K$ of order $n$.  Then, $\phi_1(x) = \gamma_1$ and $\phi_2(x) = \gamma_2$ completely determine the images of $\phi_1$ and $\phi_2$, while $\phi_1(K), \phi_2(K) \le$ Aut($H$) have orders which divide $n$ by Lagrange's Theorem. By assumption, $\phi_1(K)$ and $\phi_2(K)$ are conjugate in Aut($H)$, and conjugation by $\sigma \in$ Aut($H)$ defines an isomorphism from $\phi_1(K)$ to $\phi_2(K)$ by Corollary 4.4.14. Then, $\sigma\gamma_1\sigma^{-1} = \gamma_2^a$ generates $\phi_2(K)$ and therefore, $(a,|\phi_2(K)|) = 1$, where $|\phi_2(K)|$ divides $n$. This implies that $(a,n) = 1$ and so, there exists some $b \in \mathbb{Z}$ such that $ab \equiv 1$ (mod $n)$. 
+
+Now that we have shown that there exists an appropriate $b \in \mathbb{Z}$ which serves as the multiplicative inverse for $a \in \mathbb{Z}_n$, it follows that the inverse of $\psi$ by $\psi': H \rtimes_{\phi_2} K \rightarrow H \rtimes_{\phi_1} K$ is given by $\psi'((h,k)) = (\sigma^{-1}(h),k^b)$, for each $(h,k) \in H \rtimes_{\phi_2} K$. Again, $\psi\psi'((h,k)) = (\sigma(\sigma^{-1}(h)),(k^b)^a) = ((h,k))$ and $\psi'\psi((h,k)) = (\sigma^{-1}(\sigma(h)),(k^a)^b) = ((h,k))$, for each $(h,k) \in H \rtimes_{\phi_2} K$. Therefore, $H \rtimes_{\phi_1} K \cong H \rtimes_{\phi_2} K$.

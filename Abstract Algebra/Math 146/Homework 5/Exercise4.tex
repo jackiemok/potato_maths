@@ -1,0 +1,5 @@
+\subsection*{Exercise 4}
+\textit{Show that $\sqrt{3} \not\in \mathbb{Q}(\sqrt{2})$.}
+
+\vspace{5 mm}
+Suppose for the sake of contradiction that $\sqrt{3} \in \mathbb{Q}(\sqrt{2})$. Then, we can write $\sqrt{3} = a + b\sqrt{2}$ for some $a,b \in \mathbb{Q}$. This implies that $\sqrt{3}^2 = 3 = (a + b\sqrt{2})^2 = (a^2 + 2ab\sqrt{2} + 2b^2)$, and thus, $(a^2 + 2ab\sqrt{2} + 2b^2 - 3) = 0$. Since $\sqrt{2} \not\in \mathbb{Q}$ and $\mathbb{Q}$ is an integral domain, this forces $ab = 0 \implies a = 0$ or $b = 0$. If $a = 0$, then $(2b^2 - 3) = 0 \implies b = \sqrt{3/2} \in \mathbb{Q}$, which is impossible. On the other hand, if $b = 0$, then $(a^2 - 3) = 0 \implies a = \sqrt{3} \in \mathbb{Q}$, which is also impossible. We have reached our required contradiction and thus, conclude that $\sqrt{3} \not\in \mathbb{Q}(\sqrt{2})$.

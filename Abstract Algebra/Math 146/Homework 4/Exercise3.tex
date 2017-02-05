@@ -1,0 +1,7 @@
+\subsection*{Exercise 22}
+\textit{Let $R$ be an integral domain. Show that $R$ contains a subring isomorphic to $\mathbb{Z}_p$ for some prime number $p$ if and only if char($R) = p$.}
+
+\vspace{5 mm}
+Suppose that $R$ is an integral domain with a subring $S \subseteq R$ isomorphic to $\mathbb{Z}_p$ for some prime number $p$. Then there exists some isomorphism $\phi: S \rightarrow \mathbb{Z}_p$ with $\phi(1_R) = [1]_p$. Since $[1]_p \in \mathbb{Z}_p = \langle [1]_p \rangle$ has order $p$, we must have $p \cdot 1_R = 0$, where $p$ is guaranteed to be the minimal positive integer with this property by definition of order. It now follows that char($R$) = $p$, as desired.
+
+Conversely, suppose that $R$ is an integral domain with char($R) = p$ for some prime number $p$. Then $p \cdot 1_R = 0$, where $p$ is the smallest positive integer with this property. By the distributive law, for any $a \in R$, $p\cdot a = (p \cdot 1)\cdot a = 0 \cdot a = 0$. Then the underlying additive group has exponent $p$. By Proposition 5.2.11, $\langle$char($R$)$\rangle$ = ker$(\phi)$ for the homomorphism $\phi: \mathbb{Z} \rightarrow R$ defined by $\phi(n) = n \cdot 1$, $\forall n \in \mathbb{Z}$. Moreover, by the Fundamental Homomorphism Theorem for Rings, $\phi(\mathbb{Z}) \cong \mathbb{Z} /$ker($\phi) \cong \mathbb{Z}_p$, where $\phi(\mathbb{Z}) \subseteq R$ is the desired subring of $R$ isomorphic to $\mathbb{Z}_p$.

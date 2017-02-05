@@ -1,0 +1,10 @@
+\subsection*{Exercise 27}
+Let $g_1, g_2, ..., g_r$ be representatives of the conjugacy classes of the finite group $G$, and assume that $g_ig_j = g_jg_i$, for each $1 \le i,j \le r$. Then, considering the class equation of $G$, suppose that $|Z(G)| = s$ and the remaining $(r-s)$ elements are in the conjugacy classes of $G$ not contained in the center. Moreover, for each $g_i$, $|C_G(g_i)| \ge r$ and so, $|G:C_G(g_i)| = |G|/|C_G(g_i)| \le |G|/r$. Now, the class equation of $G$ gives us that:
+\begin{align*}
+    |G| &= |Z(G)| + \sum_{i=1}^r|G:C_G(g_i)| \\
+    &\le s + (r-s)\cdot|G|/r \\
+    &= s + (1-s/r)|G| \\
+    \implies |G|(1 - 1 + s/r) &\le s \\
+    \implies |G| & \le r
+\end{align*}
+Now, since $|G| \le r$, this forces $1 = |G|/r = |G:C_G(g_i)|$, which implies that $|G| = r$. So, each of the conjugacy classes $\{g_i\}$ are of size 1, which happens if and only if $g_i \in Z(G)$. Therefore, $g_i \in Z(G)$, for each $i = 1,...,r$, so that $G$ is abelian, as desired.

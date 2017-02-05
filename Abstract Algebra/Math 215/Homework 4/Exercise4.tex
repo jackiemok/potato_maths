@@ -1,0 +1,18 @@
+\subsection*{Exercise 4(b)}
+We are given the abelian groups:
+$A = \{2^2, 2 \cdot 3^2\} = \{4,18\}$, $B = \{2^2 \cdot 3, 2 \cdot 3\} = \{12,6\}$, $C = \{2^3 \cdot 3^2\} = \{72\}$, and $D = \{2^2 \cdot 3^2, 2\} = \{36,2\}$. $|A| = |B| = |C| = |D| = 2^3\cdot3^2 = 72$. In order to determine which of these groups are isomorphic, we need only find the nonisomorphic abelian groups $G \cong (G_1 \times G_2)$ of order 72.
+
+We obtain the following list of abelian groups from the list of positive integer partitions of 3:
+\begin{align}
+    \setcounter{equation}{0}
+    3 &= 1+1+1 &&\implies G_1 \cong \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+1 &&\implies G_1 \cong \mathbb{Z}_4 \times\mathbb{Z}_2 \\
+    &= 3 &&\implies G_1 \cong \mathbb{Z}_{8}
+\end{align}
+Similarly, we obtain the following list of abelian groups from the list of positive integer partitions of 2:
+\begin{align}
+    \setcounter{equation}{0}
+    2 &= 1+1 &&\implies G_2 \cong \mathbb{Z}_3 \times \mathbb{Z}_3 \\
+    &= 2 &&\implies G_2 \cong \mathbb{Z}_9
+\end{align}
+Then, there are 6 abelian groups of order 72 up to isomorphism. Now, $A$ has elementary divisors 2, 4, and 9; $B$ has elementary divisors 2, 3, 3, and 4. $C$ has elementary divisors 9 and 8, while $D$ has elementary divisors 2, 4, and 9. Therefore, only $A \cong D \cong \mathbb{Z}_2 \times \mathbb{Z}_4 \times \mathbb{Z}_9$, while the remaining $B$ and $C$ are distinct.

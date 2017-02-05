@@ -1,0 +1,12 @@
+\subsection*{Exercise 12}
+
+\textbf{[a]} Let $N$ be a submodule of the $R$-module $M$, and let $I$ be its annihilator in the ring $R$. We claim that the annihilator of $I$ in $M$ contains $N$. Let $J$ be the annihilator of $I$ in $M$, so that $J$ is a 2-sided ideal of $M$ such that $ja = 0$, for every $j \in J$ and $a \in I$. Since $J$ is an ideal of $M$, we have the property that $jm, mj \in J$, for every $j \in J$ and $m \in M$. Now, since $N$ is a submodule of $M$, $N \le M$ and it follows that $nJ, Jn \subseteq J$, for any $n \in N$. But this is equivalent to $NJ,JN \subseteq J \implies (JN)I = \{0\} \implies N \subseteq J$, our desired result.
+
+If we let $N = \mathbb{Z}_2 \times \overline{0} \le M = \mathbb{Z}_2 \times \mathbb{Z}_2$, a $\mathbb{Z}$-module, then $I = 2\mathbb{Z}$ is the annihilator of $N$ in $\mathbb{Z}$ and $J = M$ is the annihilator of $I$ in $M$, where $N \not= J$.
+
+\vspace{5 mm}
+\textbf{[b]} Let $I$ be a right ideal of $R$, and let $N$ be its annihilator in $M$. Then, for every $r \in R$, we have $Ir \subseteq I$, and for every $m \in M$, we have $mN, Nm \subseteq N$, where $NI = \{0\}$.
+
+We want to show that the annihilator of $N$ in $R$ contains $I$. Let $J$ be the annihilator of $N$ in $R$. Then, $J$ is a 2-sided ideal of $R$, so that $Jr, rJ \subseteq J$, for each $r \in R$, with the property that $JN = \{0\}$. Since $JR \subseteq J$ and $IR \subseteq I \subseteq R$, we also have $JI \subseteq J$ and $(JI)N \subseteq JN = \{0\}$, which shows that $I \subseteq J$.
+
+For our example, let $M = \mathbb{Z}_2 \times \mathbb{Z}_3$ be a $\mathbb{Z}$-module and let $I = 4\mathbb{Z}$, whose annihilator in $M$ is $N =  \mathbb{Z}_2 \times \overline{0}$. Then, the annihilator of $N$ in $R$ is $J = 2\mathbb{Z}$, where $I = 4\mathbb{Z} \subset 2\mathbb{Z} = J$ since $2 \mid 4$, but $J \not= I$.

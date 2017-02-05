@@ -1,0 +1,26 @@
+\subsection*{Exercise 23}
+\textit{Show that if $R$ is an integral domain with characteristic $p > 0$, then for all $a,b \in R$ we must have $(a+b)^p = a^p + b^p$. Show by induction that we must also have $(a+b)^{p^n} = a^{p^n} + b^{p^n}$ for all positive integers $n$.}
+
+\vspace{5 mm}
+Suppose that $R$ is an integral domain with characteristic $p$, for some prime number $p$. Then $p \cdot 1_R = 0$, and moreover, by the distributive law, $p\cdot c = (p \cdot 1)\cdot c = 0 \cdot c = 0$, for any $c \in R$. Let $a,b \in R$. Then by the Binomial Theorem, we obtain the following:
+\begin{align*}
+    (a+b)^p &= \sum_{i=0}^p \binom{p}{i} a^ib^{p-i} = \sum_{i=0}^p \frac{p!}{i!(p-i)!} a^ib^{p-i} \\
+    &= b^p + pab^{p-1} + \binom{p}{2}a^2b^{p-2} + ... + \binom{p}{p-2}a^{p-2}b^2 + pa^{p-1}b + a^p \\
+    &= b^p + 0 + 0 + ... + 0 + 0 + a^p \\
+    &= b^p + a^p
+\end{align*}
+
+We have now shown that $(a+b)^p = a^p + b^p$. It remains for us to show that $(a+b)^{p^n} = a^{p^n} + b^{p^n}$ for all $n \in \mathbb{Z}^+$. We proceed by induction on $n$:
+
+If $n = 1$, then $(a + b)^{p^n} = (a+b)^p = (a^p + b^p) = (a^{p^n} + b^{p^n})$ by the previous results. We have shown that the statement holds true for the base case. 
+
+Now suppose that the statement holds true for some $k \in \mathbb{N}$, so that $(a+b)^{p^k} = a^{p^k} + b^{p^k}$. We want to show that the statement holds true for the case when $n = k + 1$.
+
+Consider the case when $n = k+1$: 
+\begin{align*}
+    (a+b)^{p^{k+1}} &= ((a+b)^{p^k})^p \\
+    &= (a^{p^k} + b^{p^k})^p \\
+    &= a^{p^{k+1}} + b^{p^{k+1}}
+\end{align*}
+
+Since the statement holds true for $n=k+1$, we conclude that the statement holds true for all $n \in \mathbb{N}$.

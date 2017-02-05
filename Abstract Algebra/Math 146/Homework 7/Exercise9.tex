@@ -1,0 +1,5 @@
+\subsection*{Exercise 12}
+\textit{If G is a finite group of order n and p is the least prime such that $p \mid n$, show that any subgroup of index p is normal in G.}
+
+\vspace{5 mm}
+Suppose that $G$ is a finite group of order $n$, whose least prime divisor is $p$. Then, $n = pk$, for some $k \in \mathbb{Z}^+$. Let $H \le G$ such that $[G:H] = |G|/|H| = p$. Then, $[G:H] = n/|H| = pk/|H| = p \implies k/|H| = 1 \implies k = |H|$. If $k = 1$, then $H = \{e\} \trianglelefteq G$, and we are done. Otherwise, the kernel of the group action homomorphism is nontrivial and contained in $H$. By Exercise 7.3.2, ker($\phi) = \cap_{g \in G} gHg^{-1}$ is the largest normal subgroup of $G$ contained in $H$. By Lagrange's Theorem, $|$ker($\phi)| = m$ must divide $|H| = k$, so take $m = kq$, for some $q \in \mathbb{Z}^+$. Meanwhile, $[G:$ ker($\phi)] = |G|/|$ker($\phi)| = n/m = pk/kq = p/q$, which is not an integer unless $q = p$ or $q = 1$. Since ker($\phi$) was assumed to be nontrivial, this implies that $|H| = k = p$. In this case, ker($\phi$) = $H$, and so $H$ is indeed normal in $G$.

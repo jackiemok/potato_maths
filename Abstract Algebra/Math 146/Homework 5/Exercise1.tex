@@ -1,0 +1,9 @@
+\subsection*{Exercise 8}
+\textit{Let p be a prime number, and let $D = \{m/n \mid m,n \in \mathbb{Z}$ and $p \not|$ $n \}.$ Verify that D is an integral domain and find Q(D).}
+
+\vspace{5 mm}
+Suppose that $p$ is a prime number and $D$ is the set as given above. $D$ is nonempty since $(\frac{m}{1}) \in D$ for any $m \in \mathbb{Z}$. Then, let $a,b \in D$, where $a = m_1/n_1$ and $b = m_2/n_2$ for some $m_1,m_2,n_1,n_2 \in \mathbb{Z}$ with $p \not|$ $n_1,n_2$. If $ab = 0$, then $(\frac{m_1}{n_1}\cdot\frac{m_2}{n_2}) = (\frac{m_1m_2}{n_1n_2}) = (\frac{0}{n_1n_2}) = 0 \implies m_1 = 0$ or $m_2 = 0$, since $\mathbb{Z}$ is an integral domain. Moreover, since $p \not|$ $n_1,n_2$, we also have that $p \not|$ $n_1n_2$. Therefore, $ab = 0 \in D \implies a = 0$ or $b = 0$ in $D$, as required for us to show that $D$ is an integral domain.
+
+Since $D$ is an integral domain, by Lemma 5.4.1 we can form the set of equivalence classes $Q(D) = \{[a,b]\}$ on $W = \{(a,b) \in D \mid b \not= 0$ and $p \not|$ $b \}$ determined by the equivalence relation $\sim$ given by $(a,b) \sim (c,d)$ if $ad = bc$. We see that $D \subset \mathbb{Q} = \{ m/n \mid m,n \in \mathbb{Z}$ and $n \not= 0 \}$ is a subring of the field $\mathbb{Q}$: $0_D = 0_\mathbb{Q}$, $1_D = 1_\mathbb{Q}$ and $(a/b \pm c/d) = (ad \pm bc)/(bd) \in D\subset \mathbb{Q}$, for all $a/b, c/d \in D$. Similarly, $(a/b \cdot c/d) = ac/bd \in D \subset \mathbb{Q}$, where $p$ does not divide $bd \not= 0$.
+
+We can write each element of $\mathbb{Q}$ in the form $a/b$ for some $a,b \in D$. In particular, for any $a,b \in D\setminus\{0\}$ with $a = (\frac{m_1}{n_1})$ and $b = (\frac{m_2}{n_2})$, we have that $a/b = (\frac{m_1}{n_1})/(\frac{m_2}{n_2}) = (\frac{m_1n_2}{n_1m_2}) \in \mathbb{Q}$, since $m_1n_2, n_1m_2 \in \mathbb{Z}$ and $n_1m_2 \not= 0$. For $0 \in \mathbb{Q}$, we take the element $(\frac{0}{1}) \in \mathbb{D}$. Now, by Corollary 5.4.7, $Q(D) \cong \mathbb{Q}$.

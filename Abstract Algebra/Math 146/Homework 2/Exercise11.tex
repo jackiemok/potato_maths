@@ -1,0 +1,11 @@
+\subsection*{Exercise 7}
+Let $f(x) = x^2 + 100x + n$.
+
+\textbf{(a)} We want an infinite set of integers $n$ such that $f(x)$ is reducible over $\mathbb{Q}$. Since $f(x)$ is of degree 2, we must find the values of $n \in \mathbb{Z}$ which allow $f(x)$ to be zero-valued for some $x \in \mathbb{Q}$.
+
+$f(x) = 0 = x^2 + 100x + n \hspace{10mm} \textnormal{for some } x \in \mathbb{Q} \\
+\implies -n = x(x + 100)$
+
+Then, take $n \in \{t \in \mathbb{Z} \mid f(x) = x^2 + 100x - t(t + 100) = x^2 - t^2 + 100(x - t)\}$. \\
+
+\textbf{(b)} Now, we want an infinite set of integers $n$ such that $f(x)$ is irreducible over $\mathbb{Q}$. We must find the values of $n \in \mathbb{Z}$ for which $f(x)$ is not zero-valued for any $x \in \mathbb{Q}$. We can use the Eisenstein criterion to produce such an $n$. We must have $(a_1 = 100) \equiv (a_0 = n) \equiv 0$ (mod $p$) for some prime number $p$. Since $a_1 = 100 = 2^2\cdot5^2$, we can take $n \in \{ a(at + r) \mid t \in \mathbb{Z}, a = 5 \textnormal{ or 2, and } 1 \le r \le (a-1) \}$.

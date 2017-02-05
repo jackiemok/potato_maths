@@ -1,0 +1,32 @@
+\subsection*{Exercise 8}
+An element $m$ of the $R$-module $M$ is a torsion element if $rm = 0$ for some nonzero $r \in R$. We denote the set of torsion elements by Tor($M) = \{ m \in M \mid rm = 0$, for some nonzero $r \in R \}$.
+
+\vspace{5 mm}
+\textbf{[a]} Suppose that $R$ is an integral domain. Then, $R$ is a commutative ring with $1 \not= 0 \in R$ and no nontrivial zero divisors. For any $r,s \in R$ and $m \in M$, we have $(rs)m = r(sm) \in M$ and $(r + s)m = rm + sm \in M$. Because $0m = 0 + 0m$ and $0 = 0 + 0 \implies 0 + 0m = 0m = (0 + 0)m = 0m + 0m$, cancellation of $0m$ on both sides gives us that $0 = 0m$. Therefore, if $(rs) = 0$, then $r=0$ or $s=0$ and $(rs)m = r(sm) = 0 \in M$.
+
+To see that Tor($M)$ is a submodule of $M$, we must show that Tor($M) \le M$ and is closed under the action of ring elements. Tor($M) \not= \emptyset$, since $(M,+)$ is an abelian group, and for any $m \in M$ and $r \not= 0 \in R$, $r0_M = r(m + -m)= rm + r(-m) = rm + r(-1)m = rm + (-r)m = (r + -r)m = 0m = 0 \in$ Tor$(M) \subseteq M$.
+
+Now, let $m,n \in$ Tor($M)$ and $r,s \not= 0 \in R$ such that $rm = 0 = sn$. Since $R$ is an integral domain, $R$ is commutative and $rs \not= 0$, so that $(m \pm n) \in$ Tor($M)$:
+\begin{align*}
+    rs(m+n) &= (rs)m \pm (rs)n \\
+    &= (sr)m \pm r(sn) \\
+    &= s(rm) \pm r(sn) \\
+    &= s0 \pm r0 \\
+    &= 0 \pm 0 \\
+    &= 0
+\end{align*}
+Now, we see that Tor($M)$ is closed under addition and taking inverses, so by Proposition 2.1.1 Tor$(M) \le M$. It remains for us to show that Tor$(M)$ is closed under the action of ring elements. Suppose to that end that $r \in R$ and $m \in$ Tor($M)$, such that $sm = 0$, for some $s \not= 0 \in R$. Then, $rm \in$ Tor($M)$:
+\begin{align*}
+    s(rm) &= (sr)m \\
+    &= (rs)m \\
+    &= r(sm) \\
+    &= r0 \\
+    &= 0
+\end{align*}
+Now, since Tor($M) \le M$ is closed under the action of ring elements, Tor($M)$ is a submodule of $M$.
+
+\vspace{5 mm}
+\textbf{[b]} Consider the ring $R = \mathbb{Z}_6$ and let $M = R$ be our $R$-module. We will show that the torsion elements of the $R$-module $R$ is not a submodule of $R$. Notice that in $R$, for any $n \in \mathbb{Z}$, we have $\overline{n} = \{n + 6q \mid q \in \mathbb{Z}\}$. Now, the congruence classes represented by the non-identity divisors of 6 are contained in Tor($R)$, since $\overline{0} = \overline{6} = \overline{2}\cdot\overline{3} \in R$. Morever, the sum of two elements in Tor($R)$ must also be in Tor($R)$ to ensure that Tor($R)$ is a submodule of $R$, but $\overline{2} + \overline{3} = \overline{5} \not\in$ Tor($R)$ since $\overline{0} \not= \overline{5}\cdot\overline{x} = \overline{5}, \overline{10} = \overline{4}, \overline{15} = \overline{3}, \overline{20} = \overline{2}, \overline{25} = \overline{1}$ for $x = 1,2,3,4,5$, respectively. Therefore, Tor($R)$ is not a submodule of $R$, as desired.
+
+\vspace{5 mm}
+\textbf{[c]} Suppose that $R$ has zero divisors, and let $M$ be a nonzero $R$-module. We claim that Tor($M)$ contains nonzero elements. Let $a,b \not= 0 \in R$ such that $ab = 0 \in R$. Then, for any $m \not= 0 \in M$, either $bm = 0$ or $bm \not=0$. If $bm = 0$, then since $b \not=0$, $0 \not=m \in$ Tor($M)$, which gives us our desired result. Otherwise, $bm \not=0 \in M$, and we have that $a(bm) = (ab)m = 0m = 0$. Now, since $a \not= 0 \in R$, we see that $bm \in$ Tor($M)$, where $bm \not=0$, our desired result once again.

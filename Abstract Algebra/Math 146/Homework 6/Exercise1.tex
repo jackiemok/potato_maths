@@ -1,0 +1,5 @@
+\subsection*{Exercise 11}
+\textit{Let K be a field, and let F be an extension field of K. Let $\phi: F \rightarrow F$ be an automorphism of F such that $\phi(a) = a$, for all $a \in K$. Show that for any polynomial $f(x) \in K[x]$, and any root $u \in F$ of $f(x)$, the image $\phi(u)$ must be a root of $f(x)$.}
+
+\vspace{5 mm}
+Consider the polynomial $f(x) \in K[x]$ with a root $u \in F$. Then, $f(u) = a_0 + a_1u + ... + a_nu^n = 0$ for $a_i \in K$, $0 \le i \le n$, and some $n \in \mathbb{Z}^+$. Now, since $\phi$ is an isomorphism, this implies that $0_F = \phi(0_F) = \phi(f(u)) = \phi(a_0 + a_1u + ... + a_nu^n) = \phi(a_0) + \phi(a_1u) + ... + \phi(a_nu^n) = \phi(a_0) + \phi(a_1)\phi(u) + ... + \phi(a_n)\phi(u^n) = a_0 + a_1\phi(u) + ... + a_n\phi(u)^n = f(\phi(u))$. We have thus shown that $f(\phi(u)) = 0$, our desired result.

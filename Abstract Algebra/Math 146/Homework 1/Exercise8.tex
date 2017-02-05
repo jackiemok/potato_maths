@@ -1,0 +1,12 @@
+\subsection*{Exercise 4(b)}
+We must find the greatest common divisor of the polynomials $f(x) = 4x^3 - 2x^2 - 3x + 1$ and $g(x) = 2x^2 - x - 2$ over $\mathbb{Q}$. We proceed by using the Euclidean Algorithm for polynomials.
+
+\polylongdiv{4x^3 - 2x^2 - 3x + 1}{2x^2 - x - 2}
+
+We obtain the quotient $q_1(x) = 2x$ and remainder $r_1(x) = x+1$. Now, gcd($f(x),g(x)$) = gcd($g(x),r_1(x)$).
+
+\polylongdiv{2x^2 - x - 2}{x+1}
+
+This gives the quotient $q_2(x) = 2x - 3$ and remainder $r_2(x) = 1$. Now, it follows that:
+
+$\textnormal{gcd}(4x^3 - 2x^2 - 3x + 1,2x^2 - x - 2) = \textnormal{gcd}(2x^2 - x - 2,x+1) = \textnormal{gcd}(x+1,1) = 1$.

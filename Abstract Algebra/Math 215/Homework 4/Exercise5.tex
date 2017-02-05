@@ -1,0 +1,12 @@
+\subsection*{Exercise 8}
+Let $A$ be a finite abelian group and let $p$ be a prime. Also, let $A^p = \{a^p \mid a \in A\}$ and $A_p = \{x \mid x^p = 1\}$ be the image and kernel of the $p^{th}$-power map, respectively.
+
+\textbf{[a]} We want to show that $A/A^p \cong A_p$. $A/A^p = \{xA^p \mid x \in A\}$ is the set of cosets such that $(xA^p)^p = (x^p)A^p = 1A^p = A^p$ since $x^pA^p \le A^p$. Then, every non-identity element in $A^p$ has order $p$, so $A/A^p$ is elementary abelian and $A/A^p \cong \mathbb{Z}_p \times ... \times \mathbb{Z}_p = E_{p^n}$, for some $n \in \mathbb{N}$ such that $p^n \mid |A|$.
+
+Similarly, every non-identity element of $A_p$ has order $p$ and so, $p \mid |A_p|$ and $A_p$ is elementary abelian by the definition of $A_p$. Furthermore, $|A/A^p| \le |A_p|$ since every non-identity element of $A/A^p$ has order $p$. On the other hand, $A_p \le A/A^p$ since for any $x \in A_p$, $x^p = 1 \in A/A^p$. Therefore, $|A_p| = |A/A^p|$, where $A_p$ and $A/A^p$ are both elementary abelian, and so $A_p \cong A/A^p$.
+
+\textbf{[b]} We want to show that the number of subgroups of $A$ of order $p$ is equal to the number of subgroups of $A$ of index $p$. By the Fundamental Theorem of Finitely Generated Abelian Groups, $A \cong A_1 \times A_2$, where $A_1$ is an abelian $p$-group and $p \nmid |A_2|$. Then, subgroups of order $p$ are of the form $A_1 \times \{1\}$, while all subgroups of index $p$ are subgroups of $A_1 \times A_2$. Then, we can reduce to the case where $A$ is the elementary abelian $p$-group given by $\mathbb{Z}_p \times ... \times \mathbb{Z}_p = E_{p^n}$. 
+
+Each non-identity element generates a cyclic group of order $p$, and so, we have $(p^n-1)$ generators for $A$. By Lagrange's Theorem, distinct subgroups of order $p$ intersect trivially. However, these $(p^n-1)$ non-identity elements are partitioned into subsets of size $(p-1)$ since each of these subsets consists of the non-identity elements of some subgroup of order $p$. Therefore, we have $(p^n-1)/(p-1)$ subgroups of order $p$ in $A$.
+
+Similarly, every subgroup of index $p$ corresponds to a group $K$ with 1 element in the $i^{th}$ factor of $\mathbb{Z}_p \times ... \times \mathbb{Z}_p$ since $|A/K| = p^n/p^{n-1} = p$. Again, we have $(p-1)$ elements of order $p$ in each factor and $(p-1)$ elements of order $p^n - 1$ in each factor, so there are the same number of subgroups of $A$ of order $p$ as there are subgroups of index $p$.

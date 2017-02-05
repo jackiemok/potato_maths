@@ -1,0 +1,5 @@
+\subsection*{Exercise 7}
+\textit{Let E and F be two splitting fields of a polynomial over the field K. We already know that $E \cong F$. Prove that Gal(E/K) $\cong$ Gal(F/K).}
+
+\vspace{5 mm}
+By assumption, $E$ and $F$ are two isomorphic splitting fields of some polynomial $f(x) \in K[x]$ of degree $n \in \mathbb{Z}^+$. Then, $K \subset K(u_1,...,u_n) \subseteq E,F$, where $f(u_i) = 0$, for $1 \le i \le n$. Any automorphisms $\phi_1 \in$ Gal($E/K)$ and $\phi_2 \in$ Gal($F/K$) must fix $\phi_1(a) = a = \phi_2(a)$, for all $a \in K$, while permuting the roots $\phi_1(u_i) = u_j = \phi_2(u_k)$, for $1 \le i,j,k \le n$. But since $E \cong F$ and the choices of $\phi_1$ and $\phi_2$ are governed by the behavior of the $u_i$, $i = 1,...,n$, this forces $[F:K] = [E:K] \implies |$Gal($F/K)| = |$Gal($E/K)|$. And by Lagrange's Theorem, the orders of the elements of Gal($E/K)$ and Gal($F/K$) must correspond, fixing the structures of the groups so that Gal$(E/K) \cong$ Gal($F/K)$.

@@ -1,0 +1,7 @@
+\subsection*{Exercise 6}
+\textit{Show that the Galois group of $(x^2 -2)(x^2 + 2)$ over $\mathbb{Q}$ is isomorphic to $\mathbb{Z}_2 \times \mathbb{Z}_2$.}
+
+\vspace{5 mm}
+Consider the polynomial $f(x) = (x^2 - 2)(x^2 + 2)$ over $\mathbb{Q}$ with roots $\pm\sqrt{2}$ and $\pm\sqrt{2}i$. Then, the splitting field of $f(x)$ over $\mathbb{Q}$ is given by $F = \mathbb{Q}(\sqrt{2},i)$. Now, $|$Gal($F/\mathbb{Q})|$ = $[F:\mathbb{Q}] = [F:\mathbb{Q}(i)][\mathbb{Q}(i):\mathbb{Q}] = 2\cdot2 = 4$. That is, $[\mathbb{Q}(i):\mathbb{Q}] = 2$ since the root $i$ has minimal polynomial $x^2 + 1$ over $\mathbb{Q}$, and $[F:\mathbb{Q}(i)] = 2$ since the root $\sqrt{2}$ has minimal polynomial $x^2 - 2$ over $\mathbb{Q}(i)$. 
+
+But any group of order 4 must be isomorphic to either $\mathbb{Z}_4$ or $\mathbb{Z}_2 \times \mathbb{Z}_2$ by Lagrange's Theorem. Meanwhile, any automorphism $\theta \in$ Gal($F/\mathbb{Q})$ must be determined by the roots $\pm\sqrt{2}$ and $\pm\sqrt{2}i$ of $f(x)$. The roots of $(x^2 - 2)$ are $\pm\sqrt{2}$, so any automorphism $\theta$ must satisfy $\theta(\sqrt{2}) = \pm\sqrt{2}$. Similarly, the roots of $(x^2 + 2)$ are $\pm\sqrt{2}i$, which implies that $\theta(\sqrt{2}i) = \pm\sqrt{2}i$. These elements $\theta$ of Gal($F/\mathbb{Q})$ show that Gal($F/\mathbb{Q})$ is not cyclic of order 4. Therefore, the Galois group of $f(x)$ over $\mathbb{Q}$ is indeed isomorphic to $\mathbb{Z}_2 \times \mathbb{Z}_2$.

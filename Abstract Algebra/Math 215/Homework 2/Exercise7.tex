@@ -1,0 +1,4 @@
+\subsection*{Exercise 8}
+We want to show that for a group $G$ and subgroup $H$ with index $|G:H| = n < \infty$, there is a normal subgroup $K \le H \le G$ such that $|G: K| \le n!$. Let $A = \{gH \mid g \in G\}$ be the set of left cosets of $H$, and consider the group action $\pi: G \rightarrow$ Sym$(A) \cong S_n$ of $G$ onto $A$, where $|A| = |G:H| = n$. By the First Isomorphism Theorem, $G/$ker($\pi) \cong \pi(G) \le S_n$.
+
+Then, ker($\pi) = \{g \in G \mid g\cdot aH = aH, \forall a \in G\} = \{g \in G \mid a^{-1}ga \in H \} \trianglelefteq G$ and ker$(\pi) \le H$. This implies that $K =$ ker($\pi)$, the largest normal subgroup of $G$ contained in $H$, and thus, $|G:K| \le |S_n| = n!$.

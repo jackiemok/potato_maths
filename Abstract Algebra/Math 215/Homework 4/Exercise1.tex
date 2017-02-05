@@ -1,0 +1,24 @@
+\subsection*{Exercise 1(b)}
+We want the number of nonisomorphic abelian groups of order $576 = 2^6\cdot3^2$. Let $G$ be an abelian group of order 576. By Theorem 5, $G \cong A_1 \times A_2$, where $|A_1| = 2^6 = 64$ and $|A_2| = 3^2 = 9$. 
+
+We obtain the following list of abelian groups from the list of positive integer partitions of 6:
+\begin{align}
+    6 &= 1+1+1+1+1+1 &&\implies A_1 \cong \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+1+1+1+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+2+1+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_4 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+2+2 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_4 \times \mathbb{Z}_4 \\
+    &= 2+3+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_8 \times \mathbb{Z}_2 \\
+    &= 2+4 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_{16} \\
+    &= 3+1+1+1 &&\implies A_1 \cong \mathbb{Z}_8 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 3+3 &&\implies A_1 \cong \mathbb{Z}_8 \times \mathbb{Z}_8 \\
+    &= 4+1+1 &&\implies A_1 \cong \mathbb{Z}_{16} \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 5+1 &&\implies A_1 \cong \mathbb{Z}_{32} \times \mathbb{Z}_2 \\
+    &= 6 &&\implies A_1 \cong \mathbb{Z}_{64}
+\end{align}
+Similarly, we obtain the following list of abelian groups from the list of positive integer partitions of 2:
+\begin{align}
+    \setcounter{equation}{0}
+    2 &= 1+1 &&\implies A_2 \cong \mathbb{Z}_3 \times \mathbb{Z}_3 \\
+    &= 2 &&\implies A_2 \cong \mathbb{Z}_9
+\end{align}
+Now, we obtain the abelian groups of order 576 by taking pairs of abelian groups from the two lists above. This produces a list of $(11\cdot2) = 22$ abelian groups of order 576 up to isomorphism.

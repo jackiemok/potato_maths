@@ -1,0 +1,9 @@
+\subsection*{Exercise 1}
+\textit{In G = $\mathbb{Z}_{32}^\times$ find cyclic subgroups H of order 2 and K of order 8 with HK = G and $H \cap K = \{e\}$. Conclude that $\mathbb{Z}_{32}^\times \cong \mathbb{Z}_2 \times \mathbb{Z}_8$.}
+
+\vspace{5 mm}
+Let $G = \mathbb{Z}_{32}^\times = \{[x]_{32} \mid (x,32) = 1 \}$ be the abelian multiplicative group of units modulo 32, with $|G| = \phi(32) = 32(1 - \frac{1}{2}) = 16$. (Note to self: $G$ is not cyclic by Exercise 3.5.19). In order to find the desired subgroups, we can appeal to Theorem 7.1.3. 
+
+By Theorem 3.5.2, it suffices for us to find cyclic subgroups $H,K \subset G$ such that $|H| = 2$ and $|K| = 8$, since then $H \cong \mathbb{Z}_2$ and $K \cong \mathbb{Z}_8$. Let $H = \langle [15]_{32} \rangle = \{[x]_{32} \mid x = 1,15\}$ and $K = \langle [3]_{32} \rangle = \{[x]_{32} \mid x = 1,3,9,11,17,19,25,27\}$, so that $HK = \{[x]_{32} \mid x = 1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31\} = G$. Clearly, $HK = G$ is a subgroup of $G$ with $H \cap K = \{e\}$. Each of the left and right cosets of $H$ and $K$ coincide since $G$ is abelian, and thus, $H,K \trianglelefteq G$.
+
+Since $H,K \trianglelefteq G$, it follows from Theorem 7.1.3 that $G \cong H \times K \cong \mathbb{Z}_2 \times \mathbb{Z}_8$, as desired.

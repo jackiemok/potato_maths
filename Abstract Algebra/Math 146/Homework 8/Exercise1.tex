@@ -1,0 +1,16 @@
+\subsection*{Exercise 1}
+\textit{In Example 8.3.3 use a direct calculation to verify that the subfield fixed by $\langle \alpha^3 \beta \rangle$ is $\mathbb{Q}(\sqrt[4]{2} - i\sqrt[4]{2})$.}
+
+Since $\beta$ represents complex conjugation, $\mathbb{Q}(\sqrt[4]{2}) \subset \mathbb{R}$ is fixed by $\beta$. To identify the subfield fixed by $\langle \alpha^3 \beta \rangle$, consider the basis for $\mathbb{Q}(\sqrt[4]{2},i)$ given by $\{1,\sqrt[4]{2},\sqrt{2},\sqrt[4]{8},i,i\sqrt[4]{2},i\sqrt{2},i\sqrt[4]{8}\}$. Using the given definitions of $\alpha$ and $\beta$, we obtain the following:
+\begin{align*}
+    \alpha^3\beta(1) &= 1 \\
+    \alpha^3\beta(\sqrt[4]{2}) &= \alpha^2(\alpha\beta(\sqrt[4]{2})) =  \alpha^2(i\sqrt[4]{2}) = -i\sqrt[4]{2} \\
+    \alpha^3\beta(\sqrt{2}) &= \alpha^3(\sqrt{2}) = \alpha\alpha^2(\sqrt{2}) = \alpha(\sqrt{2}) = -\sqrt{2} \\
+    \alpha^3\beta(\sqrt[4]{8}) &= \alpha^3(\sqrt[4]{8}) = i\sqrt[4]{8} \\
+    \alpha^3\beta(i) &= \alpha^3(-i) = -i \\
+    \alpha^3\beta(i\sqrt[4]{2}) &= \alpha(\alpha^2\beta(i\sqrt[4]{2})) = \alpha(i\sqrt[4]{2}) = -\sqrt[4]{2} \\
+    \alpha^3\beta(i\sqrt{2}) &= \alpha^3(-i\sqrt{2}) = i\sqrt{2} \\
+    \alpha^3\beta(i\sqrt[4]{8}) &= \alpha^3(-i\sqrt[4]{8}) = \sqrt[4]{8}
+\end{align*}
+
+It now follows that an element of the form $u = a_1 + a_2\sqrt[4]{2} + a_3\sqrt{2} + a_4\sqrt[4]{8} + a_5i + a_6i\sqrt[4]{2} + a_7i\sqrt{2} + a_8i\sqrt[4]{8}$ is left fixed by $\alpha^3\beta$ if and only if $a_3 = a_5 = 0$, $a_2 = -a_6$, and $a_4 = a_8$. Thus, such an element is of the form $u = a_1 + a_2(\sqrt[4]{2} - i\sqrt[4]{2}) + a_7i\sqrt{2} + a_4(\sqrt[4]{8} + i\sqrt[4]{8})$. Therefore, the subfield fixed by $\langle \alpha^3 \beta \rangle$ is $\mathbb{Q}(\sqrt[4]{2} - i\sqrt[4]{2})$.

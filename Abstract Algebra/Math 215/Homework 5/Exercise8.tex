@@ -1,0 +1,41 @@
+\subsection*{Exercise 14}
+Let $R$ be a commutative ring and $x \in R$ an indeterminate. Suppose $f(x) \in R[x]$ is a monic polynomial of degree $n \in \mathbb{Z}^+$.
+
+\vspace{3 mm}
+
+\textbf{[a]} We want to show that every element of $R[x]/(f(x))$ is of the form $\overline{p(x)}$, for some $p(x) \in R[x]$ with deg($p(x)) < n$. Let $f(x) = \sum_{i=0}^nb_ix^i$, where $b_i \in R$, for $i = 0,...,n$, and $b_n = 1$ since $f(x)$ is monic.
+
+Let $I = (f(x)) = \{g(x) \in R[x] \mid g(x) = f(x)q(x)$, for some $q(x) \in R[x] \}$, which is an ideal since $I \subseteq R$ is closed under addition and multiplication: If $g(x) = f(x)g'(x)$ and $h(x) = f(x)h'(x)$ in $I$, for some $g'(x),h'(x) \in R[x]$, then $(g(x) + h(x)) = f(x)(g'(x) + h'(x)) \in I$ and $g(x)h(x) = f(x)g'(x)h(x) \in I$. Furthermore, for any $r(x) \in R[x]$, which is commutative since $R$ is commutative, we have $r(x)I = Ir(x) = I \subseteq I$, since $r(x)g(x) = g(x)r(x) = f(x)g'(x)r(x) \in I$. Moreover, since deg($f(x)) = n$, by Proposition 7.2.4, any nonzero polynomial $g(x) \in I$ has degree at least $n$.
+
+Since $(f(x)) = (\sum_{i=0}^nb_ix^i) = I$, $\overline{0} = (0 + I) = (f(x) + I) = (\sum_{i=0}^nb_ix^i + I) = (x^n + I) + (\sum_{i=0}^{n-1}b_ix^i + I) = \overline{x^n} + \overline{\sum_{i=0}^{n-1}b_ix^i} \implies \overline{x^n} = \overline{-\sum_{i=0}^{n-1}b_ix^i}$, thereby verifying the hint provided.
+
+Now, since $R[x] = \{ g(x) = \sum_{i=0}^ma_ix^i \mid a_i \in R, \textnormal{ for } i = 0,...,m, \textnormal{ and deg}(g(x)) = m \in \mathbb{Z}^+\}$, taking the quotient $R[x]/I$ leaves us with polynomials in $R[x]$ of degree less than $n$ by Proposition 7.2.4. Note that for a polynomial $p(x) := a_mx^m + a_{m-1}x^{m-1} + ... + ax + a_0 \in R[x]$ of degree $m > n$, we have the following by Proposition 7.3.6:
+\begin{align*}
+    \overline{p(x)} &= (p(x) + I) \in R[x]/I \\
+    &= (a_mx^m + a_{m-1}x^{m-1} + ... + ax + a_0) + I \\
+    &= (a_mx^m + a_{m-1}x^{m-1} + ... + a_nx^n + ... + ax + a_0) + I \\
+    &= ((a_mx^m + a_{m-1}x^{m-1} + ... + a_{n+1}x^{n+1}) + I) +  ((a_nx^n + ... + ax + a_0) + I) \\
+    &= ((a_mx^m + a_{m-1}x^{m-1} + ... + a_{n+1}x^{n+1}) + I) +  (0 + I) \hspace{5 mm} \textnormal{since } r(x)I \subseteq I, \forall r(x) \in R \\
+    &= ((a_{[m]_n}x^{[m]_n} + a_{[m-1]_n}x^{[m-1]_n} + ... + a_{[n+1]_n}x^{[n+1]_n}) + I) \hspace{5 mm} *\\
+    &= ((a_{k}x^{k} + a_{k-1}x^{k-1} + ... + a_1x^{1}) + I) \hspace{5 mm} \textnormal{for some } k < n \\
+    &= \overline{a_{k}x^{k} + a_{k-1}x^{k-1} + ... + a_1x} \hspace{5 mm} \textnormal{with degree } k < n
+\end{align*}
+*Note that above, we use the $[i]_n$ notation on indices $i$ to denote equivalence classes modulo $n$. 
+
+\vspace{3 mm}
+
+\textbf{[b]}
+Suppose that $p(x) \not= q(x) \in R[x]$ of degrees $k,m < n$, respectively. We claim that $\overline{p(x)} \not= \overline{q(x)}$. Suppose to the contrary that $\overline{p(x)} = \overline{q(x)}$. Then, $\overline{p(x)} - \overline{q(x)} = \overline{0} \implies p(x) - q(x) = 0 + I \implies p(x), q(x) \in I \implies p(x) = f(x)g(x)$ and $q(x) = f(x)h(x)$, for some $g(x),h(x) \in R[x]$. This shows that $(p(x) - q(x))$ is an $R[x]$-multiple of the monic polynomial $f(x)$, which cannot happen for distinct polynomials of degrees $k,m < n$. Therefore, $\overline{p(x)} \not= \overline{q(x)}$.
+
+\vspace{3 mm}
+
+\textbf{[c]} Now, suppose that $f(x) = a(x)b(x)$, where the degrees of $a(x)$ and $b(x)$ are both less than $n$. We want to show that $\overline{a(x)}$ is a zero divisor in $R[x]/(f(x))$. Since $I = (f(x)) = (a(x)b(x))$, any $g(x) \in I$ is of the form $a(x)b(x)g'(x)$, for some $g'(x) \in R[x]$. That is $(g(x) + I) = (a(x)b(x)g'(x) + I) = (f(x)g'(x) + I) = (0 + I)$, so that $(a(x) + I) = \overline{a(x)}$ is a zero divisor in $R[x]/I$.
+
+\vspace{3 mm}
+
+\textbf{[d]} If $f(x) = x^n - a$, for some nilpotent element $a \in R$, we claim that $\overline{x} \in R[x]/I$ is nilpotent. Suppose that $a^m = 0 \in R$, for some $m \in \mathbb{Z}^+$. Now, $I = (f(x)) = (x^n - a) \implies (x^n + I) + (-a + I) = (x^n - a) + I = (0 + I) \implies \overline{0} = \overline{x^n - a} = \overline{x^n} - \overline{a} \implies \overline{x^n} = \overline{a}$. Since $a \in R$ is nilpotent, so is $\overline{a}$, because $\overline{a}^m = (a + I)^m = (a^m + I) = (0 + I) = \overline{0}$, by Proposition 7.3.6. Now, since $\overline{x^n} = \overline{a}$, it follows that $\overline{x^n}^m = \overline{0}$, so $\overline{x}$ is also nilpotent in $R[x]/I$.
+
+\vspace{3 mm}
+
+\textbf{[e]} Let $p$ be a prime number, and assume that $R = \mathbb{F}_p$ and $f(x) = x^p - a$, for some $a \in \mathbb{F}_p$. We claim that $\overline{x-a}$ is nilpotent in $R[x]/I$. Since $|R| = p$, by Fermat's Little Theorem, $a^{p-1} = 1$ and $a^p = a$.
+By Exercise 7.3.26 and Proposition 7.3.6, $\overline{x-a}^p = ((x-a) + I)^p = ((x-a)^p + I) = ((x^p -a^p) + I) = ((x^p - a) + I) = (f(x) + I) = \overline{0}$. Therefore, $\overline{x-a} \in R[x]/I$ is nilpotent.

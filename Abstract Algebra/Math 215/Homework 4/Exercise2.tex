@@ -1,0 +1,33 @@
+\subsection*{Exercise 2(c)}
+We want the list of invariant factors for all abelian groups of order $320 = 2^6\cdot5$. Let $G$ be an abelian group of order 320. By Theorem 5, $G \cong A_1 \times A_2$, where $|A_1| = 2^6 = 64$ and $|A_2| = 5^1 = 5$.
+
+We obtain the following list of abelian groups from the list of positive integer partitions of 6:
+\begin{align}
+\setcounter{equation}{0}
+    6 &= 1+1+1+1+1+1 &&\implies A_1 \cong \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+1+1+1+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+2+1+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_4 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 2+2+2 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_4 \times \mathbb{Z}_4 \\
+    &= 2+3+1 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_8 \times \mathbb{Z}_2 \\
+    &= 2+4 &&\implies A_1 \cong \mathbb{Z}_4 \times \mathbb{Z}_{16} \\
+    &= 3+1+1+1 &&\implies A_1 \cong \mathbb{Z}_8 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 3+3 &&\implies A_1 \cong \mathbb{Z}_8 \times \mathbb{Z}_8 \\
+    &= 4+1+1 &&\implies A_1 \cong \mathbb{Z}_{16} \times \mathbb{Z}_2 \times \mathbb{Z}_2 \\
+    &= 5+1 &&\implies A_1 \cong \mathbb{Z}_{32} \times \mathbb{Z}_2 \\
+    &= 6 &&\implies A_1 \cong \mathbb{Z}_{64}
+\end{align}
+On the other hand, since 1 is the exponent for $5$ in the prime decomposition of $|G| = 320$, we only have the case $A_2 \cong \mathbb{Z}_5$ to consider. Therefore, we have $(11 \cdot 1) = 11$ abelian groups of order 320, up to isomorphism, and thus, 11 invariant factors given below. Note that the invariant factors have been ordered so that in a given sequence of the form $n_1, n_2,..., n_k$, we have $n_{i+1} | n_{i}$. 
+\begin{align*}
+ &\textbf{Elementary Divisors} && \textbf{Invariant Factors} \\
+ &\textbf{2}, 2, 2, 2, 2, 2, \textbf{5} && \textbf{10}, 2, 2, 2, 2, 2 \\
+ &\textbf{4}, 2, 2, 2, 2, \textbf{5} && \textbf{20}, 2, 2, 2, 2 \\
+ &\textbf{4}, 4, 2, 2, \textbf{5} && \textbf{20}, 4, 2, 2 \\
+ &\textbf{4}, 4, 4, \textbf{5} && \textbf{20}, 4, 4 \\
+ &4, \textbf{8}, 2, \textbf{5} && \textbf{40}, 4, 2 \\
+ &4, \textbf{16}, \textbf{5} && \textbf{80}, 4 \\
+ &\textbf{8}, 2, 2, 2, \textbf{5} && \textbf{40}, 2, 2, 2 \\
+ &\textbf{8}, 8, \textbf{5} && \textbf{40}, 8 \\
+ &\textbf{16}, 2, 2, \textbf{5} && \textbf{80}, 2, 2 \\
+ &\textbf{32}, 2, \textbf{5} && \textbf{160}, 2 \\
+ &\textbf{64}, \textbf{5} && \textbf{320}
+\end{align*}

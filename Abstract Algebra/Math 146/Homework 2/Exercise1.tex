@@ -1,0 +1,19 @@
+\subsection*{Exercise 8}
+We want to show that $\mathbb{R}[x]/\langle x^2 + 2\rangle \cong \mathbb{C}$. Let $f(x) = x^2 + 2$. Since $f(x)$ is of degree 2 and has no roots in $\mathbb{R}$, $f(x)$ is irreducible over $\mathbb{R}$ by Proposition 4.2.7, and moreover, $\mathbb{R}[x]/\langle x^2 + 2\rangle$ is a field by Theorem 4.3.6. Every congruence class in $\mathbb{R}[x]/\langle x^2 + 2\rangle$ can be represented by a linear polynomial of the form $a + bx$, where $a,b \in \mathbb{R}$. Also, the congruence class $[x]$ has the property that its square is $[-2]$.
+
+Consider the mapping $\phi: \mathbb{R}[x]/\langle x^2 + 2\rangle \rightarrow \mathbb{C}$ defined by $\phi([a + bx]) = a + ib\sqrt{2}$, $\forall a,b \in \mathbb{R}$. $\phi$ is one-to-one since if $\phi([a + bx]) = \phi([c + dx])$ for some $a,b,c,d \in \mathbb{R}$, then $(a + ib\sqrt{2}) = (c + id\sqrt{2}) \implies a=c$ and $b=d$, and thus, $[a + bx] = [c + dx] \in \mathbb{R}[x]/\langle x^2 + 2\rangle$. $\phi$ is also onto since if $z = (a + ib) \in \mathbb{C}$, then $z = (a + i\frac{b\sqrt{2}}{\sqrt{2}}) =: (a + ic\sqrt{2}) = \phi([a + cx])$, where $c = \frac{b}{\sqrt{2}} \in \mathbb{R}$. Therefore, the fields $\mathbb{R}[x]/\langle x^2 + 2\rangle$ and $\mathbb{C}$ are in one-to-one correspondence.
+
+$\phi$ is multiplicative and additive:
+\begin{align*}
+    \phi([a+bx][c+dx]) &= \phi([ac+(ad+bc)x+bdx^2]) \\
+    &= \phi([(ac-2bd)+(ad+bc)x]) \\
+    &= (ac-2bd) + i\sqrt{2}(ad + bc) \\
+    &= (a + ib\sqrt{2})(c + id\sqrt{2}) \\
+    &= \phi([a+bx])\phi([c+dx]) \\
+    & \\
+    \phi([a+bx]+[c+dx]) &= \phi([(a+c)+(b+d)x]) \\
+    &= (a+c) + i\sqrt{2}(b+d) \\
+    &= (a + ib\sqrt{2})+(c + id\sqrt{2}) \\
+    &= \phi([a+bx])+\phi([c+dx])
+\end{align*}
+Therefore, the map $\phi$ determines an isomorphism on the fields, and $\mathbb{R}[x]/\langle x^2 + 2\rangle \cong \mathbb{C}$, as desired.

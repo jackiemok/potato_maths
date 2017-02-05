@@ -1,0 +1,52 @@
+\subsection*{Exercise 31}
+We claim that the following elements $a,b \in M_2(\mathbb{Z})$ are nilpotent, while their sum $(a + b)$ is not since $M_2(\mathbb{Z})$ is not commutative. Moreover, since $a,b \in \mathfrak{N}(M_2(\mathbb{Z}))$, but $(a+b) \not\in \mathfrak{N}(M_2(\mathbb{Z}))$, $\mathfrak{N}(M_2(\mathbb{Z}))$ is not closed under addition and so $\mathfrak{N}(M_2(\mathbb{Z}))$ cannot be an ideal.
+
+Let $a = \left( \begin{array}{cc}
+    0 & 1 \\
+    0 & 0
+\end{array} \right) $ and $b = \left( \begin{array}{cc}
+    0 & 0 \\
+    1 & 0
+\end{array} \right) $. Then, we have the following:
+\newline
+$a^2 = \left( \begin{array}{cc}
+    0 & 1 \\
+    0 & 0
+\end{array} \right)\left( \begin{array}{cc}
+    0 & 1 \\
+    0 & 0
+\end{array} \right) = \left( \begin{array}{cc}
+    0 & 0 \\
+    0 & 0
+\end{array} \right) = \left( \begin{array}{cc}
+    0 & 0 \\
+    1 & 0
+\end{array} \right)\left( \begin{array}{cc}
+    0 & 0 \\
+    1 & 0
+\end{array} \right) = b^2 \implies a,b$ are nilpotent.
+\newline
+However, $(a+b) = \left( \begin{array}{cc}
+    0 & 1 \\
+    0 & 0
+\end{array} \right) + \left( \begin{array}{cc}
+    0 & 0 \\
+    1 & 0
+\end{array} \right) = \left( \begin{array}{cc}
+    0 & 1 \\
+    1 & 0
+\end{array} \right)$, where taking positive powers of $(a+b)$ avoids the zero element of $M_2(\mathbb{Z})$. That is, $(a + b)^2 = I_2 \implies (a + b)^{2k} = ((a+b)^2)^k = I_2^k = I_2$, for any $k \in \mathbb{Z}^+$. Therefore, $(a + b)^{(2k+1)} = (a+b)^{2k}(a+b) = I_2(a+b) = (a+b)$, for $k \in \mathbb{Z}^+$. In summary,
+\[
+(a+b)^k = 
+\begin{cases}
+\left( \begin{array}{cc}
+    1 & 0 \\
+    0 & 1
+\end{array} \right) & \textnormal{if } k \textnormal{ is even} \\
+\\
+\left( \begin{array}{cc}
+    0 & 1 \\
+    1 & 0
+\end{array} \right) & \textnormal{if } k \textnormal{ is odd} 
+\end{cases}
+\]

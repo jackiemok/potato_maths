@@ -1,0 +1,7 @@
+\subsection*{Exercise 5}
+\textit{Show that the Galois group of $x^3 - 1$ over $\mathbb{Q}$ is cyclic of order 2.}
+
+\vspace{5 mm}
+Consider the polynomial $f(x) = x^3 - 1 = (x-1)(x^2 + x + 1)$ in $\mathbb{Q}[x]$. To find the splitting field for $f(x)$ over $\mathbb{Q}$, we must adjoin to $\mathbb{Q}$ the solutions to the equation $x^3 = 1$. We have the solutions $x = \sqrt[3]{1} \in \{1,(-1\pm\sqrt{3}i)/2 \} \subset \mathbb{C}$. Then, $F = \mathbb{Q}((-1+\sqrt{3}i)/2)$ is the splitting field for $f(x)$ over $\mathbb{Q}$, and Gal($F/\mathbb{Q}) = \{ \theta \in Aut(F) \mid \theta(a) = a$, for all $a \in \mathbb{Q} \}$ is the Galois group of $f(x)$ over $\mathbb{Q}$.
+
+Moreover, $[F:\mathbb{Q}] = 2$, since the minimal polynomial of the root $(-1\pm\sqrt{3}i)/2$ is the irreducible factor $p(x) = x^2 + x + 1$ of $f(x)$, which has degree 2. Now, by Theorem 8.1.6, $|$Gal($F/\mathbb{Q})| = [F:\mathbb{Q}] = 2$. But by Corollary 3.2.12, any group of prime order must be cyclic, and so Gal($F/\mathbb{Q})$ is cyclic of order 2, as desired.

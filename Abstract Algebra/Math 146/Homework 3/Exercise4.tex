@@ -1,0 +1,40 @@
+\subsection*{Exercise 20(a),(c)}
+\textit{An element $e$ of a ring $R$ is said to be \textbf{idempotent} if $e^2 = e$. Find all idempotent elements of the following rings.}
+
+\textbf{(a)} $\mathbb{Z}_8$ and $\mathbb{Z}_9$
+
+\vspace{5 mm}
+The only idempotent elements of $\mathbb{Z}_8$ are [0] and [1].
+
+$[0]^2 = [0] \implies [0] \textnormal{ is idempotent.}$ \\
+$[1]^2 = [1] \implies [1] \textnormal{ is idempotent.}$ \\
+$[2]^2 = [4] \implies [2] \textnormal{ is not idempotent.}$ \\
+$[3]^2 = [9] = [1] \implies [3] \textnormal{ is not idempotent.}$ \\
+$[4]^2 = [16] = [0] \implies [4] \textnormal{ is not idempotent.}$ \\
+$[5]^2 = [25] = [1] \implies [5] \textnormal{ is not idempotent.}$ \\
+$[6]^2 = [36] = [4] \implies [6] \textnormal{ is not idempotent.}$ \\
+$[7]^2 = [49] = [1] \implies [7] \textnormal{ is not idempotent.}$ \\
+
+The only idempotent elements of $\mathbb{Z}_9$ are [0] and [1].
+
+$[0]^2 = [0] \implies [0] \textnormal{ is idempotent.}$ \\
+$[1]^2 = [1] \implies [1] \textnormal{ is idempotent.}$ \\
+$[2]^2 = [4] \implies [2] \textnormal{ is not idempotent.}$ \\
+$[3]^2 = [9] = [0] \implies [3] \textnormal{ is not idempotent.}$ \\
+$[4]^2 = [16] = [7] \implies [4] \textnormal{ is not idempotent.}$ \\
+$[5]^2 = [25] = [7] \implies [5] \textnormal{ is not idempotent.}$ \\
+$[6]^2 = [36] = [0] \implies [6] \textnormal{ is not idempotent.}$ \\
+$[7]^2 = [49] = [4] \implies [7] \textnormal{ is not idempotent.}$ \\
+$[8]^2 = [64] = [1] \implies [8] \textnormal{ is not idempotent.}$
+\vspace{5 mm}
+
+\textbf{(c)} $\mathbb{Z} \oplus \mathbb{Z}$
+
+\vspace{5 mm}
+$\mathbb{Z} \oplus \mathbb{Z} = \{0,\pm1,\pm2,...\} \oplus \{0,\pm1,\pm2,...\} = \{(x,y) \mid x,y \in \mathbb{Z}\} = \mathbb{Z}^2$. The only idempotent elements of $\mathbb{Z}^2$ are those elements $(x,y)$ such that either or both of $x,y$ are 0 or 1, since these values of $x,y$ are idempotent elements of $\mathbb{Z}$. On the other hand, for arbitrary $a \in \mathbb{Z}$, with $a \ne 0,1$, we have that $a^2 > a$.
+
+$(0,0)^2 = (0,0) \implies (0,0) \textnormal{ is idempotent.}$ \\
+$(1,1)^2 = (1,1) \implies (1,1) \textnormal{ is idempotent.}$ \\
+$(0,1)^2 = (0,1) \implies (0,1) \textnormal{ is idempotent.}$ \\
+$(1,0)^2 = (1,0) \implies (1,0) \textnormal{ is idempotent.}$ \\
+$(a,b)^2 = (a^2,b^2) \implies (a,b) \textnormal{ is not idempotent for } a,b \ne 0,1$.

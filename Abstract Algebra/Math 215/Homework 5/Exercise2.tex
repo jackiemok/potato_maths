@@ -1,0 +1,26 @@
+\subsection*{Exercise 14}
+Let $x$ be a nilpotent element of the commutative ring $R$.
+
+\vspace{3 mm}
+
+\textbf{[a]} We claim that $x$ is either zero or a zero divisor. By assumption, there exists some $m \in \mathbb{Z}^+$ such that $x^m = 0 \in R$. Certainly, if $x = 0$, then the result holds since $0^m = 0$, for any $m \in \mathbb{Z}^+$. Otherwise, $x \not= 0$ and $x^m = 0 \implies ax^m = a0 = 0$, for any $a \not= 0 \in R$ by Proposition 1, where $ax^m = x^ma$ since $R$ is commutative. This precisely defines $x$ as a zero divisor in $R$, our desired result.
+
+\vspace{3 mm}
+
+\textbf{[b]} We want to show that $rx$ is nilpotent, for any $r \in R$. Then, consider $(rx)^m$, for some $r \in R$ and $m \in \mathbb{Z}^+$ such that $x^m = 0$. Notice that $(rx)^m = r^mx^m$ since $R$ is a commutative ring, and thus, $(rx)^m = r^m0 = 0$ by Proposition 1. Since $(rx)^m = 0$, where $m \in \mathbb{Z}^+$ and $r \in R$ was chosen arbitrarily, we conclude that $rx$ is nilpotent, for any $r \in R$.
+
+\vspace{3 mm}
+
+\textbf{[c]} We claim that $(1 + x)$ is a unit in $R$, where $x \in R$ is nilpotent. Suppose as before that there exists some $m \in \mathbb{Z}^+$ such that $x^m = 0 \in R$. Notice that:
+\begin{align*}
+    (1 + x)\sum_{k=0}^{m-1}(-1)^kx^k &= (1 + x)(1 - x + x^2 - ... + (-1)^{(m-1)}x^{(m-1)}) \\
+    &= 1 + x - x + x^2 - x^2 + ... + (-1)^{(m-1)}x^{(m-1)} - (-1)^{(m-1)}x^{(m-1)} + (-1)^mx^m \\
+    &= 1 + (-1)^mx^m \\
+    &= 1 + (-1)^m0 \\
+    &= 1 + 0 = 1 \hspace{10 mm} \textnormal{ by Proposition 1}.
+\end{align*}
+We conclude that $(1 + x)$ is indeed a unit.
+
+\vspace{3 mm}
+
+\textbf{[d]} By part (c), we deduce that the sum of a nilpotent element and a unit is a unit in $R$. Let $u \in R$ be a unit with $u^{-1}u = 1 = uu^{-1}$. Then since $R$ is commutative, $(u + x) = u(1 + u^{-1}x)$, where by part (b) we may deduce that $u^{-1}x$ is nilpotent. Now, we have the sum of a unit and nilpotent element, which may be rewritten as the product of two units by part (c). But the product of two units is a unit, and thus, the sum of a nilpotent element and a unit is itself a unit in $R$.

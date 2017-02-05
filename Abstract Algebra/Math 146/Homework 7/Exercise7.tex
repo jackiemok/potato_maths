@@ -1,0 +1,14 @@
+\subsection*{Exercise 6}
+\textit{Let G be any non-abelian group of order 6. By Cauchy's theorem, G has an element, say a, of order 2. Let H = $\langle a \rangle$, and let S be the set of left cosets of H.}
+
+\textit{(a) Show that H is not normal in G.}
+
+\textit{Hint: If H is normal, then $H \subseteq Z(G)$, and it can then be shown that G is abelian.}
+
+\textit{(b) Use Exercise 2 and part (a) to show that G must be isomorphic to Sym(S). Thus any non-abelian group of order 6 is isomorphic to $S_3$.}
+
+\vspace{5 mm}
+\textbf{[a]} Suppose that $G$ is a non-abelian group of order 6. Let $H = \langle a \rangle$, where $o(a) = 2$. Suppose for the sake of contradiction that $H$ is normal in $G$. Then, $H = \{e,a\} \subseteq Z(G)$, and $a$ commutes with all elements in $G$. Either $|Z(G)| = |H| = 2$ or $|Z(G)| = 3$ by Lagrange's Theorem. In either case, by normality of the center of $G$, we can form $G/Z(G)$. Thus, $|G/Z(G)| = (6/2) = 3$ or $|G/Z(G)| = (6/3) = 2$, so $G/Z(G)$ is cyclic with prime order. But if the quotient group is cyclic, then by Exercise 7.1.9, $G$ must be abelian - a contradiction. Therefore, $H$ is not normal in $G$.
+
+\vspace{5 mm}
+\textbf{[b]} $S = \{xH \mid x \in G\}$ is the set of left cosets of $H$. As in Exercise 7.3.2, we can define the same group action of $G$ on $S$ by setting $a \cdot (xH) = axH$, for all $a,x \in G$. Furthermore, the largest normal subgroup of $G$ contained in $H$ must be the trivial ker($\phi$) = $\{e\}$, since $H$ itself cannot by normal by part (a). Then, by the Fundamental Homormorphism Theorem, $G/$ker($\phi$) = $G/\{e\} = G \cong \phi(G)$ = Sym($S$). $|H| = 2 \implies |S| = 3$. By Cayley's Theorem, Sym($S) \cong$ Sym($\{1,2,3\}) = S_3$. Therefore, $G \cong S_3$, as required.

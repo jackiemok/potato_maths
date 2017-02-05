@@ -1,0 +1,7 @@
+\subsection*{Exercise 17}
+\textit{Let G be a non-abelian group of order $p^3$, for a prime number p. Show that Z(G) must have order p.}
+
+\vspace{5 mm}
+Let $G$ be a non-abelian group of order $p^3$, for some prime number $p$. By Theorem 7.2.8 (Burnside), the center of $G$, $Z(G) = \{x \in G \mid xg = gx$, for all $x \in G\}$, is nontrivial. Then, by Proposition 7.1.8, $Z(G) \trianglelefteq G$, and thus, $|Z(G)| \not= 1$ divides $p^3$. This implies that $|Z(G)| = p^n$, for $n \in \{1,2,3\}$, but since $G$ is not abelian, $|Z(G)| \not= |G| = p^3$.
+
+Now, since $Z(G) \trianglelefteq G$, if $|Z(G)| = p^2$, then $[G : Z(G)] = p^3/p^2 = p$. This implies that $G/Z(G)$ is cyclic of order $p$, which further implies that $G$ is abelian, by the Fundamental Homomorphism Theorem. This is a contradiction. Therefore, we require that $|Z(G)| = p$.

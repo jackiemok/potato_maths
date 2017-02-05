@@ -1,0 +1,6 @@
+\subsection*{Exercise 14}
+Let $p$ be a prime number. A monic polynomial of degree 2 over $\mathbb{Z}_p$ is of the form $f(x) = a_2x^2 + a_1x + a_0$, where $a_2 \equiv 1$ (mod $p$). That is, $f(x) = x^2 + a_1x + a_0.$ We have $p$ choices each for the values $a_1$ and $a_0$, so there are $p^2$ monic polynomials of degree 2 over $\mathbb{Z}_p$. We want to know how many of these are irreducible.
+
+A second-degree reducible polynomial is of the form $(x + a)(x + b)$, for some $a,b \in \mathbb{Z}_p$. There are $p$ such polynomials if we let $a = b$, and there are $\binom{p}{2} =[\frac{p(p-1)}{2}]$ such polynomials with distinct $a$ and $b$.
+
+We can now subtract the number of reducible polynomials from the total number of monic polynomials of degree 2 over $\mathbb{Z}_p$ to obtain the desired result. This gives us $[p^2 - p - \frac{p(p-1)}{2}] = [\frac{(2p^2 - 2p - p^2 + p)}{2}] = \frac{(p^2 - p)}{2}$ monic irreducible polynomials of degree 2 over $\mathbb{Z}_p$.

@@ -1,0 +1,9 @@
+\subsection*{Exercise 4}
+\textit{Let p be a prime number, and let C be a cyclic subgroup of order p in $S_p$. Compute the order of N(C).}
+
+\vspace{5 mm}
+Let $C = \langle \sigma \rangle \le S_p$ be a cyclic subgroup of prime order $p$. The normalizer of $C$ in $S_p$ is given by $N(C) = \{\tau \in S_p \mid \tau\langle \sigma \rangle\tau^{-1} = \langle \sigma \rangle\}$. We are interested in computing its order.
+
+By Proposition 2.3.8, $\sigma = (a_1,a_2,...,a_p)$, for some $a_i \in \{1,...,p\}$, $i = 1,...,p$, and we can express any such $p-$cycle in $p$ equivalent ways. Then, there are $p!/p = (p-1)!$ such $p-$cycles in $S_p$, each of which forms a cyclic subgroup of order $p$. Moreover, $C = \langle \sigma^n \rangle$, for any $n \in \{1,...,p-1\}$, and likewise, any other $p-$cycle in $S_p$ has $(p-1)$ generators.
+
+By Example 7.2.3, any two permutations in $S_p$ are conjugate if and only if they have the same shape. Therefore, there are $(p-1)!/(p-1) = (p-2)!$ distinct $p-$cycles which are conjugate to one another. This corresponds to the index of $N(C)$ in $S_p$, and therefore, $|N(C)| = p!/(p-2)! = p(p-1)$.

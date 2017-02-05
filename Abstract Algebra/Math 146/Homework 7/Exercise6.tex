@@ -1,0 +1,7 @@
+\subsection*{Exercise 5}
+\textit{Let G be a group of order 28. Use Exercise 2 to show that G has a normal subgroup of order 7. Show that if G also has a normal subgroup of order 4, then it must be an abelian group.}
+
+\vspace{5 mm}
+Suppose that $G$ is group with order 28. Then, by Theorem 7.2.10 (Cauchy), we can find some subgroup $H$ with order 7, such that $[G:H] = (28/7) = 4$, since $28 \nmid (4! = 24)$. $H$ contains a nontrivial normal subgroup by Exercise 7.3.2. But since $|H|$ is of prime order, the only nontrivial normal subgroup is $H$ itself. Therefore, $H$ is our desired normal subgroup of $G$ of order 7.
+
+On the other hand, if $G$ has a normal subgroup $K$ of order 4, then $H \cap K = \{e\}$ by Lagrange's Theorem. It then follows that $HK = G$ with $|HK| = |G| = 28$. Now, by Theorem 7.1.3, $G \cong H \times K$. Moreover, since $H$ is of prime order, by Theorem 3.5.2, $H \cong \mathbb{Z}_7$, which is cyclic and thus abelian. Similarly, since $|K| = 2^2$, by Corollary 7.2.9, $K$ is abelian. Now, we obtain that $G \cong \mathbb{Z}_7 \times \mathbb{Z}_4$, and so $G$ is indeed abelian.

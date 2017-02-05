@@ -1,0 +1,10 @@
+\subsection*{Exercise 14}
+\textit{(a) Show that the splitting field of $x^4 - 2$ over $\mathbb{Q}$ is $\mathbb{Q}(\sqrt[4]{2},i)$.}
+
+\textit{(b) Show that $\mathbb{Q}(\sqrt[4]{2},i)$ is also the splitting field of $x^4 + 2$ over $\mathbb{Q}$.}
+
+\vspace{5 mm}
+\textbf{[a]} Consider the polynomial $f(x) = x^4 - 2$ over $\mathbb{Q}$. To find the splitting field of $f(x)$, we must adjoin to $\mathbb{Q}$ all solutions of the equation $x^4 = 2$. We have as one solution $x = \sqrt[4]{2}$, but then we also have the solutions $x = \omega\sqrt[4]{2}$, where $\omega \in \mathbb{C}$ satisfies $\omega^4 = 1$. Then, $\omega \in \{1,-1,i,-i\}$, and the roots of $f(x)$ are $\pm\sqrt[4]{2}$ and $\pm\sqrt[4]{2}i$. Thus, we obtain the splitting field $\mathbb{Q}(\sqrt[4]{2},i)$.
+
+\vspace{5 mm}
+\textbf{[b]} Consider the polynomial $g(x) = x^4 + 2$ over $\mathbb{Q}$. To find the splitting field of $g(x)$, we proceed similarly by adjoining to $\mathbb{Q}$ all solutions of the equation $x^4 = -2$. We have as one solution $x = \sqrt[4]{-2} = \sqrt[4]{2}i$, but then we also have the solutions $x = \omega\sqrt[4]{2}i$, where $\omega \in \mathbb{C}$ satisfies $\omega^4 = 1$. Then, $\omega \in \{1,-1,i,-i\}$ as before, and the roots of $g(x)$ are $\pm\sqrt[4]{2}i$, $\sqrt[4]{2}i^2$, and $\sqrt[4]{2}(-i^2)$. But since $i^2 = -1$ and $(-i)^2 = 1$, these roots are $\pm\sqrt[4]{2}$ and $\pm\sqrt[4]{2}i$, precisely the roots of $f(x)$ from part (a). Therefore, the splitting field of $g(x)$ over $\mathbb{Q}$ is $\mathbb{Q}(\sqrt[4]{2},i)$, which is also the splitting field of $f(x)$ over $\mathbb{Q}$ from part (a).

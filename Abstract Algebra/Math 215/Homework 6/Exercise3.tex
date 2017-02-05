@@ -1,0 +1,6 @@
+\subsection*{Exercise 4}
+Let $F$ be a finite field. We claim that $F[x]$ contains infinitely many primes. Suppose for the sake of contradiction that $F[x]$ has only finitely many primes $p_1(x), ..., p_n(x)$ of degrees $\ge 1$, since the nonzero elements of $F$ are units. By Corollary 4, $F[x]$ is a Principal Ideal Domain and a Unique Factorization Domain, so let $r(x) = \prod_{i=1}^np_i(x) \in F[x]$ be the nonzero non-unit product of the irreducibles $p_i(x)$ with degree $\sum_{i=1}^n$deg($p_i(x)) \ge 1$.
+
+Now, consider $r(x) + 1 \in F[x]$, which is also nonzero and not prime with degree at least 1. If $r(x)+1$ is not a unit, then we can write $r(x)+1$ as a product of irreducibles $p_i(x)$, where at least one of the $p_i(x)$ is shared by both $r(x)$ and $r(x) + 1$ in the prime decompositions. Let $p_k(x)$ be in the prime decompositions of both $r(x)$ and $r(x) + 1$, for some $k \in \{1,...,n\}$. Notice then that we would have $p_k(x) \mid r(x)$ and $p_k(x) \mid r(x) + 1$, which implies that $p_k(x)$ divides the difference ($r(x) + 1 - r(x)) = 1$. However, $p_k(x) \mid 1 \implies p_k(x)$ is a unit and has degree 0, contradicting our original assumptions. Therefore, there must exist infinitely many primes in $F[x]$.
+
+Notice that if $r(x) + 1$ is a unit, then the above argument can be replaced with $r(x) + a$, for some unit $a \in F$.

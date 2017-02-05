@@ -1,0 +1,10 @@
+\subsection*{Exercise 8}
+Let $G$ be a group with subgroups $H$ and $K$, with $H \le K \le G$.
+
+\textbf{[a]} Suppose that $H$ is characteristic in $K$ and $K \trianglelefteq G$. We claim that $H \trianglelefteq G$. Since $K$ is normal in $G$, by Proposition 13, $G$ acts by conjugation on $K$ as automorphisms of $K$. That is, for each $g \in G$, conjugation is defined by $\phi(k) = gkg^{-1} \in K$, for each $k \in K$ and $\phi \in$ Aut($K) \le S_K$. Since $H \le K$ and $H$ char $K$, $\phi(H) = H \le K$, for any $\phi \in$ Aut($K)$. But then, this implies that $\phi(h) = ghg^{-1} \in H$, for each $h \in H$ and $g \in G$, since $K \trianglelefteq G$. Then, $N_G(H) = G$ and so, $H \trianglelefteq G$.
+
+\textbf{[b]} Suppose that $H$ is characteristic in $K$ and $K$ is characteristic in $G$. We want to show that $H$ is also characteristic in $G$. Since $H$ char $K$, for any $\phi \in$ Aut($K) \le S_K \le S_G$, $\phi(H) = H$. Similarly, $K$ char $G \implies \pi(K) = K$, for any $\pi \in$ Aut($G) \le S_G$. However, such a $\pi \in$ Aut($K$) as well, which implies that $\pi(H) = H \le \pi(K) = K \le G$. Therefore, $H$ char $G$ as well.
+
+Now, we use this result to show that the Klein 4-group $V_4$ is characteristic in $S_4$. In $S_4$, the subgroup isomorphic to $V_4$ is given by $\{(),(12)(34),(13)(24),(14)(23)\}$, which is characteristic in $A_4$, since it is the unique subgroup of order 4. Similarly, $A_4$ is characteristic in $S_4$, since it is the unique subgroup of order 12. Now, by the previous result, we obtain that $V_4$ is characteristic in $S_4$.
+
+\textbf{[c]} We want an example for which $H \trianglelefteq K$ and $K$ char $G$, but $H \not\trianglelefteq G$. Let $H = \mathbb{Z}_2 \le K = V_4 \le G = A_4$. By the previous part, $V_4$ char $A_4$, so $K$ char $G$. $H = \mathbb{Z}_2 \trianglelefteq V_4 = K$, since $K$ is abelian. However, it is not true that $H = \mathbb{Z}_2 = \langle (12)(34) \rangle$ is normal in $G = A_4$.

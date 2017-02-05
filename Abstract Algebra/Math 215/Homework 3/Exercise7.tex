@@ -1,0 +1,15 @@
+\subsection*{Exercise 19}
+Suppose that $G$ is a finite group with order $6545 = 5\cdot7\cdot11\cdot17$. Let $p_1 = 5, p_2 = 7, p_3 = 11,$ and $p_4 = 17$. By Theorem 18, $n_{p_i} \equiv 1$ mod($p_i$) and $n_{p_i} \mid \prod_{j\not=i}p_j$, for each $i = 1,...,4$. Then, we obtain the following: \begin{align*}
+    n_5 &= 1 \textnormal{ or } 11 \\
+    n_7 &= 1 \textnormal{ or } (5\cdot17)=85 \\
+    n_{11} &= 1 \textnormal{ or } (5\cdot7\cdot17)=595 \\
+    n_{17} &= 1 \textnormal{ or } (5\cdot7)=35
+\end{align*}
+We claim that at least one of these $n_{p_i} = 1$, in which case $H \in Syl_{p_i}(G)$ is normal in $G$ and $G$ is not simple. If we assume that $n_{p_i} \not= 1$, for each $i$, then let $K_{p_i}$ be the set of all non-identity elements in $G$ of order $p_i$, so that $Syl_{p_i}(G) \setminus \{e\} \subseteq K_{p_i}$. Then, we obtain:
+\begin{align*}
+    |K_5| &= 11\cdot(5-1) = 11\cdot4 = 44 \\
+    |K_7| &= 85\cdot(7-1) = 85\cdot6 = 510 \\
+    |K_{11}| &= 595\cdot(11-1) = 595\cdot10 = 5950 \\
+    |K_{17}| &= 35\cdot(17-1) = 35\cdot16 = 560
+\end{align*}
+Then, $\sum_{i=1}^4|K_{p_i}| = 44+510+5950+560>6545$, so we must require that $n_{p_i}$ for some $i = 1,2,3,4$. Then, by Corollary 20, $H \in Syl_{p_i}(G)$ is normal in $G$, for $p_i$ satisfying $n_{p_i} = 1$, so that $G$ is not simple.

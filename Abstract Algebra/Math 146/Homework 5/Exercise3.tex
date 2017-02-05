@@ -1,0 +1,5 @@
+\subsection*{Exercise 2}
+\textit{Let F be an extension field of K, and let u be a nonzero element of F that is algebraic over K. Show that $u^{-1}$ is also algebraic over K.}
+
+\vspace{5 mm}
+Since $u \in F$ is algebraic over K, there exists some nonzero polynomial $f(x) \in K[x]$ such that $f(u) = a_nu^n + a_{n-1}u^{n-1} + ... + a_1u + a_0 = 0$. And since $u \not= 0$, $u^{-1} \in F$ exists. Then, $(u^{-1})^nf(u) = u^{-n}f(u) = u^{-n}(a_nu^n + a_{n-1}u^{n-1} + ... + a_1u + a_0) = (a_n + a_{n-1}u^{-1} + ... + a_1u^{-n+1} + a_0u^{-n}) = 0$. Then, $u^{-1}$ satisfies the nonzero polynomial $g(x) = u^{-n}f(x) \in K[x]$, so $u^{-1}$ is also algebraic over $K$.

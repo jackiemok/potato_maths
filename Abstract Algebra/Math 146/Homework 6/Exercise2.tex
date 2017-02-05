@@ -1,0 +1,11 @@
+\subsection*{Exercise 12}
+\textit{Use Exercise 11 to show that there are only two automorphisms of the field $\mathbb{Q}(i):$ the identity automorphism, and the one defined by $\phi(a + bi) = a - bi$, for all $a, b \in \mathbb{Q}$.}
+
+\vspace{5 mm}
+Let $\phi: \mathbb{Q}(i) \rightarrow \mathbb{Q}(i)$ be an automorphism such that $\phi(a) = a$, for all $a \in \mathbb{Q}$. By Exercise 6.4.11, given any polynomial $f(x) \in \mathbb{Q}[x]$ with root $u \in \mathbb{Q}(i)$, we must also have $f(\phi(u)) = 0$.
+
+Since $\mathbb{Q}(i)$ is a field, the identity map is clearly an automorphism satisfying additivity, multiplicativity, and preservation of the identity element. Furthermore, the identity map ensures that the images of roots are again roots of the polynomial of interest.
+
+The map defined by $\phi(a + bi) = a - bi$ is also an automorphism of $\mathbb{Q}(i)$. By uniqueness of conjugation, the map $\phi$ is well-defined. Letting $a,b,c,d \in \mathbb{Q}$, we see that $\phi$ is indeed both additive and multiplicative: $\phi((a+bi) + (c+di)) = \phi((a+c) + (b+d)i) = (a+c) - (b+d)i = (a-bi) + (c-di) = \phi(a+bi) + \phi(c+di)$, and $\phi((a+bi)\cdot(c+di)) = \phi((ac-bd)+(ad+bc)i) = (ac-bd) - (ad+bc)i = (a-bi)(c-di) = \phi(a+bi)\phi(c+di)$. $\phi$ preserves the identity element since $1_{\mathbb{Q}(i)} = 1 - 0i = \phi(1+0i) = \phi(1_{\mathbb{Q}(i)})$. We also have the property obtained in Exercise 6.4.11 by Proposition 4.4.11.
+
+It now remains for us to show that these are the only two automorphisms of $\mathbb{Q}(i)$. Since any automorphism of $\mathbb{Q}(i)$ must fix elements of the base field $\mathbb{Q}$, we must particularly concern ourselves with $i \in \mathbb{Q}(i)$. $i$ has minimal polynomial $f(x) = x^2 + 1$ over $\mathbb{Q}$, and so by Exercise 6.4.11, we require that $f(\phi(i)) = 0$ for any automorphism $\phi$ of $\mathbb{Q}(i)$. But by Proposition 4.4.11, if $f(\phi(i)) = 0$, then we also have that $f(\phi(-i)) = 0$. However, this again corresponds to the identity mapping and the conjugation mapping. Therefore, these are the only two automorphisms of $\mathbb{Q}(i)$.

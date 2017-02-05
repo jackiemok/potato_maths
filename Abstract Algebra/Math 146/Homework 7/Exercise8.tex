@@ -1,0 +1,7 @@
+\subsection*{Exercise 8}
+\textit{Let G be a p-group with proper subgroup H. Show that there exists an element $a \in G - H$ such that $a^{-1}Ha = H$.}
+
+\vspace{5 mm}
+Suppose that $G$ is a $p-$group with a subgroup $H \subset G$, such that $|G| = p^n$ and $|H| = p^m$, for some $n \in \mathbb{Z}^+$ and $0 \le m < n$. Let $a \in G - H$. By Proposition 7.2.4, $H \le N(H)$. If $H$ is normal, then $N(H) = G$, and we are done. Otherwise, $H \subseteq N(H) \not= G$. If $H$ is a proper subgroup of $N(H)$, we are also done. 
+
+Suppose then that $N(H) = H$. Then, there is no such $a \in G - H$ satisfying the desired property. By Proposition 7.2.8 (Burnside), $Z(G)$ is nontrivial and must be contained within $H = N(H)$ by the above assumption. If we take $a \in G - H$, then $C(a)$ contains both $\langle a \rangle$ and $Z(G)$, contradicting our choices of $a$ and $H$. We therefore conclude that $N(H) \not= H$. Thus, there exists an element $a \in G - H$ satisfying the desired property.

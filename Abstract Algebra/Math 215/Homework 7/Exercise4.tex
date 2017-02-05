@@ -1,0 +1,30 @@
+\subsection*{Exercise 4}
+Suppose that $A$ is a $\mathbb{Z}$-module, and let $a \in A$ and $n \in \mathbb{Z}^+$. We first want to show that the map $\phi_a: \mathbb{Z}/n\mathbb{Z} \rightarrow A$ given by $\phi_a(\overline{k}) = ka$ is a well-defined $\mathbb{Z}$-module homomorphism $\iff na = 0$. First suppose that $\phi_a$ is a well-defined $\mathbb{Z}$-module homomorphism, so that $\overline{k} = \overline{k'} \implies ka = k'a \in A$. By Exercise 7.3.26 of Homework 5, we found that $\mathbb{Z}/n\mathbb{Z}$ has characteristic $n$, for each $n \in \mathbb{Z}$. Therefore, $n\overline{k} = \overline{nk} = \overline{0} = \overline{nk'} = n\overline{k'}$, where $\overline{0} = \overline{n}$, so $\phi_a(\overline{nk'}) = \phi_a(\overline{0}) = 0a = na = \phi_a(\overline{n}) = \phi_a(\overline{nk})$. Since $a \in A$, a $\mathbb{Z}$-module, $0a = 0$, which implies that $na = 0 \in A$.
+
+On the other hand, suppose that $na = 0 \in A$. Then, by assumption $0 = na = \phi_a(\overline{n})$. Furthermore, for $m \in \mathbb{Z}$, since $A$ is a $\mathbb{Z}$-module, we have $0 = m0 = m(na) = (mn)a = \phi_a(\overline{mn})$, where $\overline{mn} = \overline{0} = \overline{n} \in \mathbb{Z}/n\mathbb{Z}$, which has characteristic $n$. Moreover, for any $\overline{x} = \overline{y} \in \mathbb{Z}/n\mathbb{Z}$, we have $x \equiv y$ (mod $n$) so that $(x-y) = nq$, for some $q \in \mathbb{Z}$. Therefore, $\phi_a(\overline{x}) = xa = (y + nq)a = ya + nqa = ya + 0 = ya = \phi_a(\overline{y})$, since $A$ is a $\mathbb{Z}$-module. Therefore, $\phi_a$ is a well-defined map, and it remains for us to show that $\phi_a$ is a $\mathbb{Z}$-module homomorphism. 
+
+For any $\overline{x}, \overline{y} \in \mathbb{Z}/n\mathbb{Z}$, we have that $\phi_a(\overline{x}+\overline{y}) = \phi_a(\overline{x+y}) = (x+y)a = xa + ya = \phi_a(\overline{x}) + \phi_a(\overline{y})$, since $A$ is a $\mathbb{Z}$-module. Similarly, for any $r \in \mathbb{Z}$, $\phi_a(r\overline{x}) = \phi_a(\overline{rx}) = (rx)a = r(xa) = r\phi_a(\overline{x})$. Therefore, $\phi_a$ is a well-defined $\mathbb{Z}$-module homomorphism.
+
+Now, we show that Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong A_n := \{a \in A \mid na = 0\}$, the annihilator in $A$ of the ideal $n\mathbb{Z}$ of $\mathbb{Z}$. We showed above that $\phi_a: \mathbb{Z}/n\mathbb{Z} \rightarrow A$ is a well-defined $\mathbb{Z}$-module homomorphism, for a given $a \in A$ and $n \in \mathbb{Z}^+$, if and only if $na = 0$. Therefore, for any $a \in A$ which is annihilated by $n \in \mathbb{Z}^+$, the map defined by $\phi_a(\overline{k}) = ka$, as above, belongs to Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)$. Indeed, the constructed homomorphisms $\phi_a$ are the unique homomorphisms from $\mathbb{Z}/n\mathbb{Z}$ into $A$, since any arbitrary homomorphism $\phi \in$ Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)$ is completely determined by the generator $\overline{1} \in \mathbb{Z}/n\mathbb{Z}$. Any such homomorphism $\phi$ sends $\overline{1} \mapsto a \in A$, for some $a \in A$. Then, for any $k \in \mathbb{Z}$, we have $\phi(\overline{k}) = ka \in A$. But notice that this is how we defined $\phi_a$, for given $a \in A_n$.
+
+Now, we can define the isomorphism $\psi: A_n \rightarrow$ Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)$ given by $a \mapsto \phi_a$, where $\phi_a$ is as defined above. $\psi$ is indeed a homomorphism since for any $a,b \in A_n$ and $\overline{x} \in \mathbb{Z}/n\mathbb{Z}$, we have the following:
+
+[1] $\psi(ab) = \phi_{ab} = \phi_a\phi_b = \psi(a)\psi(b)$, since:
+\begin{align*}
+    \phi_{ab}(\overline{x}) &= x(ab) \\
+    &= x(ba) \\
+    &= (xb)a \\
+    &= \phi_b(\overline{x})a \\
+    &= \phi_a(\phi_b(\overline{x})) \\
+    &= \phi_a\phi_b(\overline{x})
+\end{align*}
+
+[2] $\psi(a+b) = \phi_{a+b} = \phi_a+\phi_b = \psi(a)+\psi(b)$, since:
+\begin{align*}
+    \phi_{a+b}(\overline{x}) &= x(a+b) \\
+    &= xa + xb \\
+    &= \phi_a(\overline{x})+\phi_b(\overline{x}) \\
+    &= (\phi_a+\phi_b)(\overline{x})
+\end{align*}
+
+$\psi$ is injective, because for any $\phi_a = \phi_b \in$ Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z},A)$ we have $\phi_a(\overline{x}) = xa = xb = \phi_b(\overline{x})$, for every $x \in \mathbb{Z}$. But this implies that $a = b \in A_n$, since $A$ is a $\mathbb{Z}$-module. On the other hand, $\psi$ is surjective, since by our observations above, $\phi_a \in$ Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z},A) \iff a \in A_n$. Therefore, $\psi$ defines a one-to-one correspondence between Hom$_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z},A)$ and $A_n$.

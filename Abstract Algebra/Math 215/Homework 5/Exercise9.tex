@@ -1,0 +1,12 @@
+\subsection*{Exercise 30}
+Let $I$ be an ideal of the commutative ring $R$. Define rad $I = \{r \in R \mid r^n \in I$, for some $n \in \mathbb{Z}^+\}$ to be the radical of $I$. We claim that rad $I$ is an ideal containing $I$ and that (rad $I)/I = \mathfrak{N}(R/I)$. Since $I$ is an ideal, it is closed under multiplication, so for any $r \in I \subseteq R$, $r^n \in I$, for any $n \in \mathbb{Z}^+$, which implies that $I \subseteq$ rad $I$. Now, clearly if $I =$ rad $I$, then rad $I$ is an ideal. More generally, we must show that rad $I$ is closed under addition and multiplication and satisfies $r$(rad $I$) = (rad $I$)$r \subseteq I, \forall r \in R$. To that end, let $a,b  \in$ rad $I$ such that $a^n, b^m \in I$, for some $n,m \in \mathbb{Z}^+$. Then, since $R$ is commutative, $(a + b) \in$ rad $I$ as well, since $(a + b)^{(m+n)} = (a^{(m+n)} + b^{(m+n)}) = (a^ma^n + b^mb^n) \in (a^mI + Ib^n) = (I + I) = I$ by Exercise 7.3.26. In addition, $(ab)^{(m+n)} = a^{(m+n)}b^{(m+n)} = a^ma^nb^mb^n \in a^mIIb^n = I$, since $I$ is an ideal. Now, we have shown that rad $I$ is a subring of $R$ containing $I$, so it remains for us to show that $r$(rad $I$) = (rad $I)r \subseteq I$, for every $r \in R$. By commutativity, for any $r \in R, (ra)^m = r^ma^m \in r^mI = I$, so rad $I$ is an ideal containing $I$.
+
+Now, we show that (rad $I)/I = \mathfrak{N}(R/I)$. Let $(x + I) \in$ (rad $I)/I$ so that:
+\begin{align*}
+    (x + I) \in \textnormal{ (rad } I)/I &\iff x \in \textnormal{ rad } I \\
+    &\iff x^n \in I, \textnormal{ for some } n \in \mathbb{Z}^+ \\
+    &\iff (x^n + I) = (0 + I) \in R/I \\
+    &\iff (x + I)^n = (0 + I) \in R/I \\
+    &\iff x \in \mathfrak{N}(R/I)
+\end{align*}
+Now, we conclude that rad $I$ is an ideal containing $I$ such that (rad $I)/I = \mathfrak{N}(R/I)$.

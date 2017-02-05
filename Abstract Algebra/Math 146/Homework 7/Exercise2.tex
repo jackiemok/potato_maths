@@ -1,0 +1,21 @@
+\subsection*{Exercise 11}
+\textit{In the group $GL_2(\mathbb{C})$ of all invertible $2 \times 2$ matrices with complex entries, let Q be the following set of matrices (the quaternion group, defined in Example 3.3.7):}
+
+$\pm\left(\begin{array}{cc}
+1 & 0 \\ 0 & 1 \\ \end{array}\right), \hspace{10 mm}
+\pm\left(\begin{array}{cc}
+i & 0 \\ 0 & -i \\ \end{array}\right), \hspace{10 mm}
+\pm\left(\begin{array}{cc}
+0 & 1 \\ -1 & 0 \\ \end{array}\right), \hspace{10 mm}
+\pm\left(\begin{array}{cc}
+0 & i \\ i & 0 \\ \end{array}\right). \hspace{10 mm}$
+
+\textit{(a) Show that Q is not isomorphic to $D_4$.}
+
+\textit{(b) Find the center Z(Q) of Q.}
+
+\vspace{5 mm}
+\textbf{[a]} Let $Q = \{\pm \mathbf{e}, \pm \mathbf{i}, \pm \mathbf{j}, \pm \mathbf{k}\}$, where $\mathbf{e} = [\mathbf{e_1} \hspace{3 mm} \mathbf{e_2}],$ $\mathbf{i} = [i\mathbf{e_1} \hspace{3 mm} -i\mathbf{e_2}],$ $\mathbf{j} = [-\mathbf{e_2} \hspace{3 mm} \mathbf{e_1}],$ $\mathbf{k} = [i\mathbf{e_2} \hspace{3 mm} i\mathbf{e_1}]$, as given above. $D_4 = \langle a,b \mid a^4 = e, b^2 = e, ba = a^{-1}b\rangle = \{e,a,a^2,a^3,b,ab,a^2b,a^3b\}$. If $D_4 \cong Q$, then the orders of elements in each group must correspond exactly with each other. But by Example 3.3.7, for any $x \in Q\setminus\{\pm\mathbf{e}\}$, we have that $o(x) = 4$. On the other hand, in $D_4$, we have $o(b), o(a^2), o(ab), o(a^2b), o(a^3b) = 2$. Therefore, the elements' orders do not directly correspond, and we conclude that $D_4 \not\cong Q$.
+
+\vspace{5 mm}
+\textbf{[b]} We must find the center $Z(Q) = \{x \in Q \mid xq = qx,$ for all $q \in Q\}$ of $Q$. Certainly, the identity element $\mathbf{e} = I_2 \in Z(Q)$. We also see that $\mathbf{-e} \in Z(Q)$, since $\mathbf{-e}x = \mathbf{e}(-x) = (-x)\mathbf{e} = x(\mathbf{-e}),$ for any $x \in Q$. By Example 3.3.7, we also have that $\mathbf{ij = k = -ji}$, $\mathbf{jk = i = -kj}$, and $\mathbf{ki = j = -ik}$. Therefore, $Z(Q) = \{\pm\mathbf{e}\}$.

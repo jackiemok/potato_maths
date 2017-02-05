@@ -1,0 +1,24 @@
+\subsection*{Exercise 1(b)}
+Let $f(x) = x^3 - 9x^2 + 10x - 16$. We will verify that $f(x)$ has roots 2 modulo 3 and 3 modulo 5.
+
+In $\mathbb{Z}_3$, we can rewrite $f(x) = x^3 + x + 2$:
+
+\hspace{10 mm} $f(0) = (0 + 0 + 2) = 2 \not\in [0] \implies$ 0 is not a root of $f(x)$ modulo 3.
+
+\hspace{10 mm} $f(1) = (1 + 1 + 2) = 4 \not\in [0] \implies$ 1 is not a root of $f(x)$ modulo 3.
+
+\hspace{10 mm} $f(2) = (8 + 2 + 2) = 12 \in [0] \implies$ 2 is a root of $f(x)$ modulo 3.
+
+In $\mathbb{Z}_5$, we can rewrite $f(x) = x^3 + x^2 - 1$:
+
+\hspace{10 mm} $f(0) = (0 + 0 - 1) = -1 \not\in [0] \implies$ 0 is not a root of $f(x)$ modulo 5.
+
+\hspace{10 mm} $f(1) = (1 + 1 - 1) = 1 \not\in [0] \implies$ 1 is not a root of $f(x)$ modulo 5.
+
+\hspace{10 mm} $f(2) = (8 + 4 - 1) = 11 \not\in [0] \implies$ 2 is not a root of $f(x)$ modulo 5.
+
+\hspace{10 mm} $f(3) = (27 + 9 - 1) = 35 \in [0] \implies$ 3 is a root of $f(x)$ modulo 5.
+
+\hspace{10 mm} $f(4) = (64 + 16 - 1) = 79 \not\in [0] \implies$ 4 is not a root of $f(x)$ modulo 5.
+
+Then, by Proposition 4.4.1, the possible rational roots of $f(x)$ are $\pm 1, \pm 2, \pm 4, \pm 8, \pm 16$. We see that $f(8) = (8^3 - 9\cdot8^2 + 10\cdot8 - 16) = 0 \implies $ 8 is a root of $f(x)$.

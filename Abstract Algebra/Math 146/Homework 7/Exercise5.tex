@@ -1,0 +1,12 @@
+\subsection*{Exercise 2}
+\textit{Let H be a subgroup of G, and let S denote the set of left cosets of H. Define a group action of G on S by setting $a\cdot(xH) = axH$, for all $a,x \in G$ (see Example 7.3.8).}
+
+\textit{(a) Let $\phi: G \rightarrow$ Sym(S) be the homomorphism that corresponds to the group action defined above. Show that ker($\phi$) is the largest normal subgroup of G that is contained in H.}
+
+\textit{(b) Assume that G is finite and let $[G:H] = n$. Show that if n! is not divisible by $|G|$, then H must contain a nontrivial normal subgroup of G.}
+
+\vspace{5 mm}
+\textbf{[a]} Let $\phi: G \rightarrow Sym(S)$ be the homomorphism corresponding to the group action $a\cdot(xH) = axH$, for all $a,x \in G$. It is true that ker($\phi) = \{g \in G \mid g\cdot(xH) = xH$, for any $x \in G\} \trianglelefteq G$ by the Fundamental Homomorphism Theorem. Then, given any $x \in G$, $g\cdot(xH) = xH$ whenever $g \in xH$, and thus $gx = x$. Therefore, ker($\phi$) $= \cap_{x \in G} \{g \in G \mid gx = x\} = \cap_{x \in G}G_x$ is the intersection of the stabilizers of $x \in G$. But this is the set $\cap_{x \in G} xHx^{-1}$ of all conjugates of $H$, which then must be the largest normal subgroup of $G$ contained in $H$.
+
+\vspace{5 mm}
+\textbf{[b]} Suppose that $|G| = m < \infty$ and $[G:H] = |G|/|H| = n$, where $m \nmid k$, for any $k \in \{1,...,n\}$. Suppose for the sake of contradiction that $H$ does not contain a nontrivial normal subgroup of $G$. Then, $H$ contains only the trivial normal subgroup $\{e\} \trianglelefteq G$. By part (a), we would have that ker($\phi$) = $\{e\} = \cap_{x \in G}G_x = \cap_{x \in G} xHx^{-1}$. But then, this implies that $|H| = 1$ and $|G| = n$, which contradicts the choice of $m$ not being a factor of $n!$. Therefore, $H$ must contain a nontrivial normal subgroup of $G$.

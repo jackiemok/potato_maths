@@ -1,0 +1,26 @@
+\subsection*{Exercise 40}
+Suppose that $R$ is a commutative ring. We claim that the following are equivalent:
+
+\textbf{(i)} $R$ has exactly one prime ideal.
+\newline
+\textbf{(ii)} Every element of $R$ is either nilpotent or a unit.
+\newline
+\textbf{(iii)} $R/\mathfrak{N}(R)$ is a field.
+
+\vspace{3 mm}
+
+$\textbf{(iii)} \implies \textbf{(i)}$:
+\newline
+$R/\mathfrak{N}(R)$ is a field, so by Proposition 12, $\mathfrak{N}(R)$ must be a maximal ideal, where by Exercise 7.3.29, we ascertained that $\mathfrak{N}(R)$ is indeed an ideal. Then, there do not exist any ideals $I$ with $\mathfrak{N}(R) \subset I \subset R$, and by Corollary 14, $\mathfrak{N}(R)$ is a prime ideal. Thus, it simply remains for us to show that $\mathfrak{N}(R)$ is the only prime ideal of $R$. However, if we suppose that there exists some other prime ideal $J \not= \mathfrak{N}(R)$ in $R$, then we would conclude once again by Corollary 14 that $J$ is maximal in $R$, thereby contradicting our choice of $\mathfrak{N}(R)$. Thus, $R/\mathfrak{N}(R)$ is a field $\implies$ $R$ has exactly one prime ideal.
+
+\vspace{3 mm}
+
+$\textbf{(i)} \implies \textbf{(ii)}$:
+\newline
+$R$ has exactly one prime ideal $P$, and so by Proposition 13, the quotient ring $R/P$ is an integral domain. By the definition of integral domain, this implies that $R/P$ has no zero divisors, thereby forcing every element of $R/P$ to be either 0 or a unit. Moreover, by Exercise 7.4.30, rad $P$ is an ideal containing $P$ and (rad $P)/P = \mathfrak{N}(R/P) = \{0\}$, since every element of $R/P$ is either 0 or a unit. If we can show that $P = \mathfrak{N}(R)$, then we have shown that every element of $R$ is either nilpotent or a unit. By Exercise 7.1.14, we may deduce that $P = \{r \in R \mid rq = 0$, for some $q \in R \} \cup \mathfrak{N}(R)$, where $\mathfrak{N}(R)$ at least contains the zero element. Thus, $P = \mathfrak{N}(R)$ is the unique prime ideal of $R$, and every element of $R$ is either nilpotent or a unit.
+
+\vspace{3 mm}
+
+$\textbf{(ii)} \implies \textbf{(iii)}$:
+\newline
+Every element of $R$ is either nilpotent or a unit $\implies R = \mathfrak{N}(R) \sqcup R^\times$, where by Exercise 7.3.29, we obtained that $\mathfrak{N}(R)$ is an ideal of $R$. Then, forming the quotient ring $R/\mathfrak{N}(R)$, we see that $\mathfrak{N}(R/\mathfrak{N}(R)) = \{0\}$ by Exercise 7.3.30. This implies that passing through the quotient leaves us with only zero and the units of $R/\mathfrak{N}(R)$ since units cannot be divisors of zero. Notice also that by Exercise 7.1.14, we have ensured that only the nonzero nilpotent elements are the zero divisors. Now, since $R/\mathfrak{N}(R)$ has no zero divisors, we conclude that $R/\mathfrak{N}(R)$ is a field, our desired result.

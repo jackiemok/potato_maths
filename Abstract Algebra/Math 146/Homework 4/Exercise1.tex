@@ -1,0 +1,26 @@
+\subsection*{Exercise 7}
+\textit{Define $\phi: \mathbb{Z}[\sqrt{2}] \rightarrow \mathbb{Z}[\sqrt{2}]$ by $\phi(m + n\sqrt{2}) = m - n\sqrt{2}$, for all $m,n \in \mathbb{Z}$. Show that $\phi$ is an automorphism of $\mathbb{Z}[\sqrt{2}].$}
+
+\vspace{5 mm}
+Since $\mathbb{Z}[\sqrt{2}]$ is both the domain and codomain of $\phi$, we need only verify that $\phi$ is an isomorphism. The identity element maps to the identity element, since letting $m = 1, n = 0$, we obtain $\phi(1) = \phi(1 + 0) = 1 - 0 = 1$. $\phi$ also preserves additive and multiplicative properties. Let $m_1,m_2,n_1,n_2 \in \mathbb{Z}$. Then,
+\begin{align*}
+    \phi((m_1 + n_1\sqrt{2}) + (m_2 + n_2\sqrt{2})) &= \phi((m_1 + m_2) + (n_1 + n_2)\sqrt{2}) \\
+    &= (m_1 + m_2) - ((n_1 + n_2)\sqrt{2}) \\
+    &= (m_1 - n_1\sqrt{2}) + (m_2 - n_2\sqrt{2}) \\
+    &= \phi(m_1 + n_1\sqrt{2}) + \phi(m_2 + n_2\sqrt{2}) \\
+    & \\
+    \phi((m_1 + n_1\sqrt{2}) \cdot (m_2 + n_2\sqrt{2})) &= \phi((m_1m_2 + 2n_1n_2) + (m_1n_2 + n_1m_2)\sqrt{2}) \\
+    &= (m_1m_2 + 2n_1n_2) - ((m_1n_2 + n_1m_2)\sqrt{2}) \\
+    &= (m_1m_2 + 2n_1n_2 - m_1n_2\sqrt{2} - n_1m_2\sqrt{2}) \\
+    &= (m_1 - n_1\sqrt{2})(m_2 - n_2\sqrt{2}) \\
+    &= \phi(m_1 + n_1\sqrt{2})\cdot \phi(m_2 + n_2\sqrt{2})
+\end{align*}
+
+Now we have shown that $\phi$ is a homomorphism, so it remains for us to verify that $\phi$ is a bijection. Let $a := (m_1 + n_1\sqrt{2})$ and $b := (m_2 + n_2\sqrt{2})$ be in $\mathbb{Z}[\sqrt{2}]$ such that $\phi(a) = \phi(b)$. Then, 
+\begin{align*}
+    \phi(m_1 + n_1\sqrt{2}) &= \phi(m_2 + n_2\sqrt{2}) \\ \implies & (m_1 - n_1\sqrt{2}) = (m_2 - n_2\sqrt{2}) \\
+    \implies & (m_1 - m_2) = (n_1 - n_2)\sqrt{2}
+\end{align*}
+But since $m_1,m_2,n_1,n_2 \in \mathbb{Z}$, their respective differences must be integer-valued as well, thereby forcing $(m_1-m_2) = 0 = (n_1 - n_2)$. Otherwise, if $(n_1 - n_2) = k$ for some $k \in \mathbb{Z} \setminus \{0\}$, then $(m_1 - m_2) = k\sqrt{2} \implies \frac{(m_1 - m_2)}{k} = \sqrt{2}$, showing that $\sqrt{2}$ is rational, which is absurd. Therefore, we have that $m_1 = m_2$ and $n_1 = n_2$, which further implies that $a = (m_1 + n_1\sqrt{2}) = (m_2 + n_2\sqrt{2}) = b$, so that $\phi$ is one-to-one. 
+
+On the other hand, for any $c \in \mathbb{Z}[\sqrt{2}]$, we claim that we can write $c = \phi(x)$ for some $x = (a + b\sqrt{2})$ in $\mathbb{Z}[\sqrt{2}]$. Suppose that $c = (c_1 + c_2\sqrt{2})$ for some $c_1,c_2 \in \mathbb{Z}$. Then, $c = (c_1 - (-c_2)\sqrt{2}) = \phi(c_1 + (-c_2)\sqrt{2})$. Then, letting $x = (c_1 - c_2) \in \mathbb{Z}[\sqrt{2}]$, we see that $\phi$ is surjective. Now, we conclude that $\phi$ is an automorphism, as required.

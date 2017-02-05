@@ -1,0 +1,6 @@
+\subsection*{Exercise 10}
+We claim that $\mathbb{Q}[x]/\langle x^2+2\rangle \not\cong \mathbb{Q}[x]/\langle x^2+1\rangle$. Indeed both are fields since $f(x) = x^2 + 2$ and $g(x) = x^2 + 1$ are polynomials of degree 2 with no rational roots. We can represent elements of both fields by linear polynomials of the form $a + bx$, for some $a,b \in \mathbb{Q}$. $[x^2] = [-2] \in \mathbb{Q}[x]/\langle x^2+2\rangle$, and $[x^2] = [-1] \in \mathbb{Q}[x]/\langle x^2+1\rangle$.
+
+Suppose for the sake of contradiction that the two fields are isomorphic. Then, there exists some isomorphism $\phi: \mathbb{Q}[x]/\langle x^2+2\rangle \rightarrow \mathbb{Q}[x]/\langle x^2+1\rangle$ such that $\phi([x]) = [a+bx]$, for some $a,b \in \mathbb{Q}$.
+
+Then, $\phi([x^2]) = [a+bx][a+bx] = [a^2 + 2(abx) + b^2x^2]  = [(a^2 - b^2) + 2(abx)]$ for some $a,b \in \mathbb{Q}$. On the other hand, this quantity should also be equal to $\phi([x^2]) = \phi([-2]) = [-2]$. But then, this implies that $2ab = 0$, so that either $a=0$ or $b=0$ and $(a^2 - b^2) = -2$. But $a = 0$ since otherwise $a^2 \not\ge 0$. Then, we must have that $b^2 = -2$, which contradicts the choice of $b \in \mathbb{Q}$. Now, we have reached our required contradiction and conclude that $\mathbb{Q}[x]/\langle x^2+2\rangle \not\cong \mathbb{Q}[x]/\langle x^2+1\rangle$.

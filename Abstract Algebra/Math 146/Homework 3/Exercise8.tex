@@ -1,0 +1,21 @@
+\subsection*{Exercise 13}
+\textit{Find all ring homomorphisms from $\mathbb{Z}\oplus\mathbb{Z}$ into $\mathbb{Z}$. That is, find all possible formulas, and show why no others are possible.}
+
+\vspace{5 mm}
+In $\mathbb{Z}$, the zero and identity elements are 0 and 1, respectively. $\mathbb{Z}\oplus\mathbb{Z} = \{(x,y) \mid x,y \in \mathbb{Z} \}$ has zero and identity elements $(0,0)$ and $(1,1)$, respectively. To see this, take any $x,y \in \mathbb{Z}: (x,y)\cdot(1,1) = (x\cdot1,y\cdot1) = (x,y)$ and $(x,y)+(0,0) = (x+0,y+0) = (x,y)$. Then, for any ring homomorphism $\phi: \mathbb{Z}\oplus\mathbb{Z} \rightarrow \mathbb{Z}$, we must have $\phi((0,0)) = 0$ and $\phi((1,1)) = 1$. Additionally, for any $(m_1,m_2), (n_1,n_2) \in \mathbb{Z}\oplus\mathbb{Z}$, we must have $\phi((m_1,m_2) + (n_1,n_2)) = \phi((m_1 + n_1,m_2 + n_2)) = \phi((m_1,m_2)) + \phi((n_1,n_2))$ and $\phi((m_1,m_2) \cdot (n_1,n_2)) = \phi((m_1 \cdot n_1,m_2 \cdot n_2)) = \phi((m_1,m_2)) \cdot \phi((n_1,n_2))$. \\
+
+\underline{[1] $\phi_1((m_1,m_2)) = m_1$}
+
+Then, $\phi_1((0,0)) = 0$, so that the zero-element maps to the zero-element. Similarly, $\phi_1((1,1)) = 1$, so that the multiplicative identity element maps to the identity element.
+
+$\phi_1((m_1,m_2) + (n_1,n_2)) = \phi_1((m_1 + n_1,m_2 + n_2)) = m_1 + n_1 = \phi_1((m_1,m_2)) + \phi_1((n_1,n_2))$. \\
+$\phi_1((m_1,m_2) \cdot (n_1,n_2)) = \phi_1((m_1 \cdot n_1,m_2 \cdot n_2)) = m_1 \cdot n_1 = \phi_1((m_1,m_2)) \cdot \phi_1((n_1,n_2))$. \\
+
+\underline{[2] $\phi_2((m_1,m_2)) = m_2$}
+
+Then, $\phi_2((0,0)) = 0$, so that the zero-element maps to the zero-element. Similarly, $\phi_2((1,1)) = 1$, so that the multiplicative identity element maps to the identity element.
+
+$\phi_2((m_1,m_2) + (n_1,n_2)) = \phi_2((m_1 + n_1,m_2 + n_2)) = m_1 + n_1 = \phi_2((m_1,m_2)) + \phi_2((n_1,n_2))$. \\
+$\phi_2((m_1,m_2) \cdot (n_1,n_2)) = \phi_2((m_1 \cdot n_1,m_2 \cdot n_2)) = m_1 \cdot n_1 = \phi_2((m_1,m_2)) \cdot \phi_2((n_1,n_2))$. \\
+
+Note that extra care must be taken when considering elements of the form $(m_1,0)$ and $(0,m_2)$, since $(m_1,0) + (0,m_2) = (m_1,m_2)$ and $(m_1,0) \cdot (0,m_2) = (0,0)$. Although $\mathbb{Z}$ is an integral domain, we see from this example that $\mathbb{Z}\oplus \mathbb{Z}$ is not. Therefore, the described homomorphisms are our only possibilities for homomorphisms from $\mathbb{Z}\oplus\mathbb{Z}$ into $\mathbb{Z}$.

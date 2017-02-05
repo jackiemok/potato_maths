@@ -1,0 +1,11 @@
+\subsection*{Exercise 11}
+Let $M$ be the $\mathbb{Z}$-module $\mathbb{Z}/24\mathbb{Z} \times \mathbb{Z}/15\mathbb{Z} \times \mathbb{Z}/50\mathbb{Z}$, so that $(M,+)$ is an abelian group.
+
+\vspace{5 mm}
+\textbf{[a]} We must find the annihilator $I$ of $M$ in $\mathbb{Z}$. $M$ is annihilated by $I$ if $I$ is a 2-sided ideal of $\mathbb{Z}$ such that $am = 0$, for all $a \in I$ and $m \in M$. By Exercise 7.3.26 of Homework 5, $\mathbb{Z}
+/n\mathbb{Z}$ has characteristic $n$, for each $n \in \mathbb{Z}^+$. That is, $n$ is the smallest positive integer for which $n\overline{1} = \overline{0} \in \mathbb{Z}/n\mathbb{Z}$. Since $\mathbb{Z}/n\mathbb{Z} = \langle \overline{1} \rangle$, $n\cdot\overline{1} = \overline{n1} = \overline{n}\cdot\overline{1} = 0 \implies n\cdot\overline{x} = \overline{n}\overline{x} = \overline{n}\cdot\overline{x} = 0$, for any $\overline{x} \in \mathbb{Z}/n\mathbb{Z}$. Moreover, $\overline{n} = n\mathbb{Z}$ is a 2-sided ideal of the principal ideal domain $\mathbb{Z}$, so $\overline{n}$ annihilates $\mathbb{Z}/n\mathbb{Z}$, for any $n \in \mathbb{Z}^+$.
+
+Thus, $24\mathbb{Z}$ annihilates $\mathbb{Z}/24\mathbb{Z}$, $15\mathbb{Z}$ annihilates $\mathbb{Z}/15\mathbb{Z}$, and $50\mathbb{Z}$ annihilates $\mathbb{Z}/50\mathbb{Z}$. Now, since $M = \langle(\overline{1},0,0),(0,\overline{1},0),(0,0,\overline{1}) \rangle$ and $n\mathbb{Z} \subseteq m\mathbb{Z} \iff m \mid n$, for any $m,n \in \mathbb{Z}$, it follows that $I$ = lcm$(24,15,50)\mathbb{Z} = 600\mathbb{Z}$ annihilates $M$.
+
+\vspace{5 mm}
+\textbf{[b]} Let $I = 2\mathbb{Z}$. Then, for any $(\overline{m_1}, \overline{m_2}, \overline{m_3}) \in M$, the annihilator of $I$ in $M$ satisfies $2q(\overline{m_1}, \overline{m_2}, \overline{m_3}) = (\overline{2qm_1}, \overline{2qm_2}, \overline{2qm_3}) = (\overline{0}, \overline{0}, \overline{0}) = 0_M$, for any $q \in \mathbb{Z}$. That is, for each pairing $(i,j) \in \{(1,24),(2,15),(3,50)\}$, we have $\overline{2qm_i} = \overline{0} \iff 2qm_i \in j\mathbb{Z} \iff 2m_i \in j\mathbb{Z} \iff \overline{2m_i} = j\mathbb{Z}/j\mathbb{Z}$. Therefore, the annihilator of $I$ in $M$ is described by the direct product of cyclic groups $12\mathbb{Z}/24\mathbb{Z} \times 15\mathbb{Z}/15\mathbb{Z} \times 25\mathbb{Z}/50\mathbb{Z}$.

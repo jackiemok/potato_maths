@@ -1,0 +1,26 @@
+\subsection*{Exercise 8}
+\textit{Let $F$ be a field, and let $a \in F$. Define $\phi: F[x] \rightarrow F[x]$ by $\phi(f(x)) = f(x+a),$ for all $f(x) \in F[x]$. Show that $\phi$ is an automorphism of $F[x]$.}
+
+\vspace{5 mm}
+Since $F[x]$ is both the domain and codomain of $\phi$, we must show that $\phi$ is an isomorphism. In $F[x]$, the identity element is the constant polynomial $f(x) = 1$ for all $x \in F$. Then, $\phi(1) = f(1 + a) = 1$.
+
+Without loss of generality, let $f(x),g(x) \in F[x]$ with $f(x) = a_nx^n + ... + a_0$ and $g(x) = b_mx^m + ... + b_0$ to see that $\phi$ is additive and multiplicative: 
+\begin{align*}
+    \phi(f(x) + g(x)) &= \phi((a_nx^n + ... + a_0) + (b_mx^m + ... + b_0)) \\
+    &= \phi(a_nx^n + ... + (a_m + b_m)x^m + ... + (a_1 + b_1)x + (a_0 + b_0)) \\
+    &= a_n(x+a)^n + ... + (a_m + b_m)(x+a)^m + ... + (a_1 + b_1)(x+a) + (a_0 + b_0) \\
+    &= [a_n(x+a)^n + ... + a_1(x+a) + a_0] + [b_m(x+a)^m + ... + b_1(x+a) + b_0] \\
+    &= f(x+a) + g(x+a) \\
+    &= \phi(f(x)) + \phi(g(x)) \\
+    & \\
+    \phi(f(x)\cdot g(x)) &= \phi((a_nx^n + ... + a_0) \cdot (b_mx^m + ... + b_0)) \\
+    &= \phi(a_nb_mx^{m+n} + ... + (a_1b_0 + a_0b_1)x + a_0b_0) \\
+    &= a_nb_m(x+a)^{m+n} + ... + (a_1b_0 + a_0b_1)(x+a) + a_0b_0 \\
+    &= [a_n(x+a)^n + ... + a_1(x+a) + a_0]\cdot [b_m(x+a)^m + ... + b_1(x+a) + b_0] \\
+    &= f(x+a)\cdot g(x+a) \\
+    &= \phi(f(x))\cdot \phi(g(x))
+\end{align*}
+
+$\phi$ is indeed a homomorphism, so now we must verify that $\phi$ defines a one-to-one correspondence. As before, let $f(x), g(x) \in F[x]$. Suppose that $\phi(f(x)) = \phi(g(x))$. Then, $f(x+a) = g(x+a)$ for each $x \in F$, so that $f(x) = [a_n(x+a)^n + ... + a_1(x+a) + a_0] = [b_m(x+a)^m + ... + b_1(x+a) + b_0] = g(x)$. Then, we must have $m = n$ and $a_0 = b_0$, $a_1 = b_1$, ..., $a_n = b_m$, so that $f(x)$ and $g(x)$ define the same polynomial over $F$.
+
+On the other hand, we claim that for each $f(x) \in F[x]$, $f(x) = \phi(g(x))$ for some $g(x) \in F[x]$. Suppose that $f(x) = a_nx^n + ... + a_0.$ Then, $f(x) = [a_n(x-a+a)^n + ... + a_1(x-a+a) + a_0] = [a_n((x-a)+a)^n + ... + a_1(x-a)+a) + a_0] =: g(x+a) = \phi(g(x))$, where $g(x) = a_n(x-a)^n + ... + a_1(x-a) + a_0$. We have now shown that $\phi$ is both one-to-one and onto, so $\phi$ is an automorphism as required.

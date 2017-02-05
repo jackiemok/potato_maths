@@ -1,0 +1,16 @@
+\subsection*{Exercise 5(b)}
+We want to find the greatest common divisor of the polynomials $f(x) = x^3 - 2x^2 + 3x + 1$ and $g(x) = x^3 + 2x + 1$ over $\mathbb{Z}_5$. We may rewrite $f(x) = x^3 + 3x^2 + 3x + 1$ over $\mathbb{Z}_5$. Similarly, we proceed by using the Euclidean Algorithm for polynomials.
+
+\polylongdiv{x^3 + 3x^2 + 3x + 1}{x^3 + 2x + 1}
+
+We obtain the quotient $q_1(x) = 1$ and remainder $r_1(x) = 3x^2 + x$. Now, gcd($f(x),g(x)$) = gcd($g(x),r_1(x)$). Note that we can rewrite $g(x) = 6x^3 + 2x + 1$ and $r_1(x) = 3x^2 + 6x$ over $\mathbb{Z}_5$.
+
+\polylongdiv{6x^3 + 2x + 1}{3x^2 + 6x}
+
+This gives the quotient $q_2(x) = 2x - 4$ and remainder $r_2(x) = 26x + 1 = x + 1 \in \mathbb{Z}_5[x]$. Now, we have that gcd($g(x),r_1(x)$) = gcd($r_1(x),r_2(x)$).
+
+\polylongdiv{3x^2 + 6x}{x + 1}
+
+We obtain the quotient $q_3(x) = 3x + 3$ and remainder $r_3(x) = -3 = 2 \in \mathbb{Z}_5[x]$. The greatest common divisor of $f(x)$ and $g(x)$ is computed as follows:
+
+$\textnormal{gcd}(x^3 + 3x^2 + 3x + 1,x^3 + 2x + 1) = \textnormal{gcd}(6x^3 + 2x + 1,3x^2 + 6x) = \textnormal{gcd}(3x^2 + 6x,x + 1) = \textnormal{gcd}(x + 1,2) = 1$.

@@ -1,0 +1,6 @@
+\subsection*{Exercise 9}
+Suppose that the finite group $G$ has two composition series given by: $1 = N_0 \trianglelefteq N_1 \trianglelefteq ... \trianglelefteq N_r = G$ and $1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G$. We will show that $r = 2$ and the lists of composition factors are the same. Since $N_r = G = M_2$ and $M_1, N_{r-1} \trianglelefteq G$, we can consider the product group $M_1N_{r-1} \le G$, which has order $|M_1|\cdot|N_{r-1}|/|M_1 \cap N_{r-1}|$. By the Second Isomorphism Theorem, $M_1N_{r-1}/N_{r-1} \cong M_1/M_1\cap N_{r-1}$.
+
+Consider the intersection $K = M_1 \cap N_{r-1} \trianglelefteq G$. Since $G/N_{r-1}$ and $G/M_1$ are simple by assumption, $K$ must be either $M_1$ or $N_{r-1}$ or $\{e\}$. But $K$ cannot be either of $M_1$ or $N_{r-1}$ since otherwise one would be contained in the other, thereby contradicting $G/N_{r-1}$ and $G/M_1$ being simple. We conclude that $K = \{e\}$, so that $M_1N_{r-1}/N_{r-1} \cong M_1/\{e\}$, where $M_1N_{r-1}/N_{r-1} \cong G/N_{r-1}$. Now, $G/N_{r-1} \cong M_1/\{e\} \implies N_r/N_{r-1} \cong M_1/M_0$. 
+
+Now, by following the same procedure with $M_1N_{r-1}/M_1 \cong N_{r-1}/M_1\cap N_{r-1}$, we obtain $G/M_1 \cong N_{r-1}/\{e\} \implies M_2/M_1 \cong N_{r-1}/N_0$. Therefore, $r = 2$, and $M_i = N_j,$ for all $0 \le i,j \le r$.

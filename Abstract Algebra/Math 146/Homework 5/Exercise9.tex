@@ -1,0 +1,5 @@
+\subsection*{Exercise 5}
+\textit{Let f(x) be an irreducible polynomial in K[x]. Show that if F is an extension field of K such that deg(f(x)) is relatively prime to [F : K], then f(x) is irreducible in F[x].}
+
+\vspace{5 mm}
+Suppose that $u \in F$ is a root of some nonzero irreducible polynomial $f(x) \in K[x]$, where $F$ is some field extension of $K$. Then, $[F(u): F][F: K] = [F(u): K] = [F(u): K(u)][K(u): K]$. Meanwhile, deg($f(x)) = [K(u):K] \mid ([F(u): F][F: K])$, where $([K(u): K],[F: K]) = 1 \implies $ deg($f(x)) \mid [F(u):F]$, but we also have that $[F(u):F] \le$ deg($f(x)) = [K(u):K]$. This forces deg($f(x)) = [F(u): F]$, otherwise the degree of $u$ over $F$ would be less than the degree of $u$ over $K$. Therefore, $f(x)$ is irreducible in $F[x]$.

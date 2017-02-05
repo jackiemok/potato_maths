@@ -1,0 +1,13 @@
+\subsection*{Exercise 22}
+Suppose that $x$ and $g$ are elements of some group $G$. We claim that $|x| = |g^{-1}xg|$. Suppose that $|x| = n$, for some $n \in \mathbb{Z}^+$. Then, $x^n = e$, and similarly, 
+\begin{align*}
+    (g^{-1}xg)^n &= (g^{-1}xg)\cdot(g^{-1}xg)\cdot...\cdot(g^{-1}xg)\\
+    &= g^{-1}x(gg^{-1})x(gg^{-1})x\cdot...\cdot(gg^{-1})xg \\
+    &= g^{-1}(xexex\cdot...\cdot ex)g \\
+    &= g^{-1}x^ng \\
+    &= g^{-1}eg \\
+    &= e
+\end{align*}
+Thus, $(g^{-1}xg)$ has order $n$ whenever $x$ has order $n$ in $G$, so that $|x| = |g^{-1}xg|$. Note that this is true even when $x$ has infinite order, since the order of $(g^{-1}xg)$ depends on the order of $x$ in $G$.
+
+Now, we deduce that $|ab| = |ba|, \forall a,b \in G$. From the previous result, we have that $|ab| = |b(ab)b^{-1}| = |ba(bb^{-1})| = |bae| = |ba|$, our desired result. Once again, this holds for finite or infinite orders of the elements in $G$.

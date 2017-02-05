@@ -1,0 +1,26 @@
+\subsection*{Exercise 2(a),(c)}
+\textit{Which of the following sets are subrings of the field $\mathbb{R}$ of real numbers?}
+
+\textbf{(a)} $A = \{m + n\sqrt{2} \mid m,n \in \mathbb{Z}$ and $n$ is even $\}$
+
+\vspace{5 mm}
+$A \subseteq \mathbb{R}$ since all such $m,n \in \mathbb{R}$ and $\sqrt{2} \in\mathbb{R}$. $A \not= \emptyset$ since taking $m = 0 = n$ gives us $0 \in A$. Similarly, we have $1 \in A$ for $m = 1$ and $n = 0$. Therefore, A has the same additive and multiplicative identities of $\mathbb{R}$. 
+
+$A$ is also closed under addition and multiplication. Let $a = (a_1 + a_2\sqrt{2})$ and $b = (b_1 + b_2\sqrt{2})$ be in $A$:
+\begin{align*}
+    a + b &= (a_1 + a_2\sqrt{2}) + (b_1 + b_2\sqrt{2}) \\
+    &= (a_1 + b_1) + (a_2\sqrt{2} + b_2\sqrt{2}) \\
+    \implies a + b &= (a_1 + b_1) + (a_2 + b_2)\sqrt{2} \hspace{5 mm} \textnormal{ where } (a_1 + b_1) \in \mathbb{Z} \textnormal{ and } (a_2 + b_2) \in 2\mathbb{Z} \\
+    & \\
+    a \cdot b &= (a_1 + a_2\sqrt{2})\cdot(b_1 + b_2\sqrt{2}) \\
+    &= (a_1 \cdot b_1) + (a_1\cdot b_2\sqrt{2} + a_2\sqrt{2} \cdot b_1) + a_2\sqrt{2}\cdot b_2\sqrt{2} \\
+   \implies a \cdot b &= (a_1\cdot b_1 + 2a_2\cdot b_2) + (a_1\cdot b_2 + a_2\cdot b_1)\sqrt{2} \hspace{5 mm} \textnormal{ where } (a_1b_1 + 2a_2b_2) \in \mathbb{Z} \textnormal{ and } (a_1b_2 + a_2b_1) \in 2\mathbb{Z} 
+\end{align*}
+
+$A$ is closed under taking additive inverses as well, since for any $a = (a_1 + a_2\sqrt{2}) \in A$, we have $-a = (-a_1 + -a_2\sqrt{2})$, where $-a_1 \in \mathbb{Z}$ and $-a_2 \in 2\mathbb{Z}$. Now, we conclude that $A$ is indeed a subring of $\mathbb{R}$.
+\vspace{5 mm}
+
+\textbf{(c)} $C = \{a + b\sqrt[3]{2} \mid a,b \in \mathbb{Q} \}$
+
+\vspace{5 mm}
+$C \not\subseteq \mathbb{Q}$ since letting $a = 0$ and $b = 1$ gives $\sqrt[3]{2} \in C$, but $\sqrt[3]{2} \not\in \mathbb{Q}$. Thus, $C$ cannot be a subring of $\mathbb{Q}$.

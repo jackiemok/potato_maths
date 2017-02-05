@@ -1,0 +1,409 @@
+\subsection*{Exercise 17}
+\textit{Let $R$ be the set of all matrices $\left(%
+    \begin{array}{cc}
+      a & b \\
+      c & d \\
+    \end{array}%
+    \right)$ over $\mathbb{Q}$ such that $a=d$ and $c=0$.}
+\vspace{5 mm}
+
+\textbf{[a]} \textit{Verify that $R$ is a commutative ring.}
+\vspace{3 mm}
+
+Addition and multiplication in $R$ is well-defined. Suppose that $a = a'$ and $b = b'$. Then,
+
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$ + 
+    $\left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      (a+d) & (b+e) \\
+      0 & (a+d) \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      (a'+d) & (b'+e) \\
+      0 & (a'+d) \\
+    \end{array}%
+    \right) =
+    \left(%
+\begin{array}{cc}
+  a' & b' \\
+  0 & a' \\
+\end{array}%
+\right)$ + 
+    $\left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$
+
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right) \cdot 
+    \left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      ad & (ae + bd) \\
+      0 & ad \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      a'd & (a'e + b'd) \\
+      0 & a'd \\
+    \end{array}%
+    \right) =
+    \left(%
+\begin{array}{cc}
+  a' & b' \\
+  0 & a' \\
+\end{array}%
+\right) \cdot
+    \left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$
+\vspace{3 mm}
+
+$R$ is also closed under addition and multiplication since $\mathbb{Q}$ is closed under addition and multiplication. Thus, the quantities $(a+d), (b+e), (ae+bd), ad \in \mathbb{Q}$. Furthermore, addition and multiplication are commutative in $R$ since they are commutative in $\mathbb{Q}$.
+
+\vspace{3 mm}
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$ + 
+    $\left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      (a+d) & (b+e) \\
+      0 & (a+d) \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      (d+a) & (e+b) \\
+      0 & (d+a) \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right) +
+\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$
+
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right) \cdot 
+    \left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      ad & (ae + bd) \\
+      0 & ad \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      da & (db+ea) \\
+      0 & da \\
+    \end{array}%
+    \right) =
+    \left(%
+    \begin{array}{cc}
+      d & e \\
+      0 & d \\
+    \end{array}%
+    \right) \cdot
+    \left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$
+\vspace{3 mm}
+
+Associativity and distributivity also follow from associativity and distributivity in $\mathbb{Q}$.
+
+$R$ has the additive identity element $\mathbf{0} = \left(%
+    \begin{array}{cc}
+      0 & 0 \\
+      0 & 0 \\
+    \end{array}%
+    \right)$ : \\
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$ + 
+    $\left(%
+    \begin{array}{cc}
+      0 & 0 \\
+      0 & 0 \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)$ =
+    $\left(%
+    \begin{array}{cc}
+      0 & 0 \\
+      0 & 0 \\
+    \end{array}%
+    \right)$ + 
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$
+
+$R$ has the multiplicative identity element $\mathbf{1} = \left(%
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}%
+    \right)$ : \\
+    $\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right) \cdot 
+    \left(%
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)$ =
+    $\left(%
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}%
+    \right) \cdot
+\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$
+
+$R$ has additive inverses:
+
+$\left(%
+\begin{array}{cc}
+  a & b \\
+  0 & a \\
+\end{array}%
+\right)$ + 
+    $\left(%
+    \begin{array}{cc}
+      -a & -b \\
+      0 & -a \\
+    \end{array}%
+    \right)$ = 
+    $\left(%
+    \begin{array}{cc}
+      0 & 0 \\
+      0 & 0 \\
+    \end{array}%
+    \right)$ =
+    $\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)$ + 
+$\left(%
+\begin{array}{cc}
+  -a & -b \\
+  0 & -a \\
+\end{array}%
+\right)$
+
+\vspace{5 mm}
+\textbf{[b]} \textit{Let $I$ be the set of all such matrices for which $a = d = 0$. Show that $I$ is an ideal of $R$.}
+\vspace{5 mm}
+
+$I$ = $\{ \left(%
+\begin{array}{cc}
+  0 & b \\
+  0 & 0 \\
+\end{array}%
+\right) \mid b \in \mathbb{Q} \}$. Let $a = \left(%
+\begin{array}{cc}
+  0 & a \\
+  0 & 0 \\
+\end{array}%
+\right)$ and $b = \left(%
+\begin{array}{cc}
+  0 & b \\
+  0 & 0 \\
+\end{array}%
+\right) \in I$, and $r = \left(%
+\begin{array}{cc}
+  c & d \\
+  0 & c \\
+\end{array}%
+\right) \in R$. 
+
+Then, $a \pm b = \left(%
+\begin{array}{cc}
+  0 & (a \pm b) \\
+  0 & 0 \\
+\end{array}%
+\right) \in I$, and $ra = 
+\left(%
+\begin{array}{cc}
+  c & d \\
+  0 & c \\
+\end{array}%
+\right) \cdot
+\left(%
+\begin{array}{cc}
+  0 & a \\
+  0 & 0 \\
+\end{array}%
+\right) = \left(%
+\begin{array}{cc}
+  0 & ca \\
+  0 & 0 \\
+\end{array}%
+\right) \in I$.
+
+We conclude that $I$ is an ideal of $R$.
+
+\vspace{5 mm}
+\textbf{[c]} \textit{Use the fundamental homomorphism theorem for rings to show that $R/I \cong \mathbb{Q}$.}
+\vspace{5 mm}
+
+Consider the map $\phi: R \rightarrow \mathbb{Q}$ given by $\phi(\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)) = a$. Then, $\phi(1_R) = \phi(\left(%
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}%
+    \right)) = 1$. $\phi$ is onto since for any $q \in \mathbb{Q}$, we have that $q = \phi(\left(%
+    \begin{array}{cc}
+      q & b \\
+      0 & q \\
+    \end{array}%
+    \right))$, where $b \in \mathbb{Q}$. Thus, $\phi(R) = \mathbb{Q}$. $\phi$ is a homomorphism since it is additive and multiplicative:
+    
+    $\phi(\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right) + \left(%
+    \begin{array}{cc}
+      a' & b' \\
+      0 & a' \\
+    \end{array}%
+    \right)) = \phi(\left(%
+    \begin{array}{cc}
+      (a+a') & (b+b') \\
+      0 & (a+a') \\
+    \end{array}%
+    \right)) = (a+a') = \phi(\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)) + \phi(\left(%
+    \begin{array}{cc}
+      a' & b' \\
+      0 & a' \\
+    \end{array}%
+    \right))$.
+    
+    $\phi(\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right) \cdot \left(%
+    \begin{array}{cc}
+      a' & b' \\
+      0 & a' \\
+    \end{array}%
+    \right)) = \phi(\left(%
+    \begin{array}{cc}
+      aa' & (ab'+ba') \\
+      0 & aa' \\
+    \end{array}%
+    \right)) = aa' = \phi(\left(%
+    \begin{array}{cc}
+      a & b \\
+      0 & a \\
+    \end{array}%
+    \right)) \cdot \phi(\left(%
+    \begin{array}{cc}
+      a' & b' \\
+      0 & a' \\
+    \end{array}%
+    \right))$.
+    
+    Now, ker($\phi) = \{ a \in R \mid \phi(a) = 0 \} = \{ \left(%
+\begin{array}{cc}
+  0 & b \\
+  0 & 0 \\
+\end{array}%
+\right) \mid b \in \mathbb{Q} \} = I$. Then by the Fundamental Homomorphism Theorem, $R/$ker($\phi) = R/I \cong \phi(R) = \mathbb{Q}$, as desired.

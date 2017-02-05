@@ -1,0 +1,13 @@
+\subsection*{Exercise 20}
+We want to construct a field containing 125 elements. For a given field $F$ over which we have an irreducible polynomial $f(x)$ of degree $n \in \mathbb{Z}^+$, we can construct the field $F/\langle f(x) \rangle$ whose elements are congruence classes of polynomials modulo $f(x)$ with degree $\le n$. There are $p^n - 1$ polynomials of degree less than $n$ over $\mathbb{Z}_p$ for some prime number $p$. Thus, the field $\mathbb{Z}_p[x]/\langle f(x) \rangle$, which includes the zero element, has $p^n$ elements.
+
+Consider the field $\mathbb{Z}_5[x]/\langle g(x) \rangle$, for some irreducible polynomial $g(x) = ax^3 + bx^2 + cx + d$ in $\mathbb{Z}_5[x]$ of degree 3. Then, $|\mathbb{Z}_5[x]/\langle g(x) \rangle| = 5^3 = 125$, as desired.
+
+We could take the polynomial $x^3 + x^2 + x + 3$ to be our $g(x)$, since it has not roots in $\mathbb{Z}_5$: \\
+$g(0) = (0+0+0+3) = 3 \not\in [0] \\
+g(1) = (1+1+1+3) = 6 \not\in [0] \\
+g(2) = (8+4+2+3) = 17 \not\in [0] \\
+g(3) = (27+9+3+3) = 42 \not\in [0] \\
+g(4) = (64+16+4+3) = 87 \not\in [0]$
+
+Therefore, $\mathbb{Z}_5[x]/\langle x^3 + x^2 + x + 3 \rangle$ is a field containing 125 elements.

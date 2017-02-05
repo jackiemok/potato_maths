@@ -1,0 +1,19 @@
+\subsection*{Exercise 13}
+An element $x \in R$ is nilpotent if $x^m = 0$ for some $m \in \mathbb{Z}^+$.
+
+\vspace{3 mm} 
+
+\textbf{[a]} Suppose that $n = a^kb$, for some $a,b \in \mathbb{Z}$ and $k \in \mathbb{Z}^+$. We claim that $\overline{ab} \in \mathbb{Z}/n\mathbb{Z}$ is nilpotent. Since $\mathbb{Z}/n\mathbb{Z}$ is commutative, $\overline{(ab)^{k}} = \overline{a^kb^k} = \overline{a^k(bb^{k-1})} = \overline{(a^kb)b^{k-1}} = \overline{nb^{k-1}} = \overline{n} = \overline{0}$. So, $\overline{ab}$ is indeed nilpotent.
+
+\vspace{3 mm} 
+
+\textbf{[b]}
+We claim that $\overline{a} \in \mathbb{Z}/n\mathbb{Z}$ is nilpotent $\iff$ every prime divisor of $n$ also divides $a \in \mathbb{Z}$. Suppose first that $\overline{a}$ is nilpotent so that there exists some $m \in \mathbb{Z}^+$ such that $\overline{a^m} = \overline{0} = \overline{n}$, where $n = \prod_{i=1}^kp_i^{\alpha_i}$ for distinct primes $p_i$ and exponents $\alpha_i \in \mathbb{Z}^+$, for $i = 1,...,k$. But $\overline{a^m} = \overline{n} \implies a^m = nq$, for some $q \in \mathbb{Z}$, which implies that every prime divisor of $n$ divides $a^m$ since $a^m = (\prod_{i=1}^kp_i^{\alpha_i})q$. Moreover, since $a^m$ has precisely the same set of prime divisors as $a$, with only exponents of primes differing in the prime decompositions, it follows that every prime divisor of $n$ also divides $a$.
+
+Conversely, suppose that every prime divisor of $n$ also divides $a \in \mathbb{Z}$. Let $n = \prod_{i=1}^kp_i^{\alpha_i}$ for distinct primes $p_i$ and exponents $\alpha_i \in \mathbb{Z}^+$, for each $i = 1,...,k$. Then, by assumption $a = \prod_{i=1}^kp_i^{\beta_i}q$, for some $q \in \mathbb{Z}$ and exponents $\beta_i \in \mathbb{Z}^+$, for each $i = 1,...,k$. Now, let $r =$ max$\{\alpha_i \mid i = 1,...,k\} \in \mathbb{Z}^+$ and consider $a^r = (\prod_{i=1}^kp_i^{\beta_i}q)^r = \prod_{i=1}^kp_i^{r\beta_i}q^r$, so that $\alpha_i \le r\beta_i$, for each $i = 1,...,k$. This implies that $n = \prod_{i=1}^kp_i^{\alpha_i}$ divides $\prod_{i=1}^kp_i^{r\beta_i} = (\prod_{i=1}^kp_i^{\alpha_i})(\prod_{i=1}^kp_i^{r\beta_i - \alpha_i})$, and thus $n | a^r$ so that $a^r = nq'$, for some $q' \in \mathbb{Z}$. Now, $a^r = nq' \implies \overline{a^r} = \overline{n} = \overline{0}$, so $\overline{a}$ is nilpotent, as desired.
+
+In particular, this result allows us to easily determine the nilpotent elements of $\mathbb{Z}/72\mathbb{Z}$. Note that 72 has prime decomposition given by $72 = 2^33^2$, so by our previous result, any nilpotent element $\overline{x} \in \mathbb{Z}/72\mathbb{Z}$ satisfies $x = (3\cdot2)q = 6q$, for some $q \in \mathbb{Z}$. That is, the nilpotent elements of $\mathbb{Z}/72\mathbb{Z}$ are precisely the multiples of 6: $\{\overline{6}, \overline{12}, \overline{18}, \overline{24}, \overline{30}, \overline{36}, \overline{42}, \overline{48}, \overline{54}, \overline{60}, \overline{66}, \overline{72} = \overline{0}\} \subset \mathbb{Z}/72\mathbb{Z}$.
+
+\vspace{3 mm} 
+
+\textbf{[c]} Let $R$ be the ring of functions from a nonempty set $X$ to a field $F$. We want to show that $R$ contains no nonzero nilpotent elements. Suppose for the sake of contradiction that there exists some nonzero function $f \in R$ such that $f^m \equiv 0$, for some $m \in \mathbb{Z}^+$. By assumption, there exists some $x \in X$ such that $f(x) \not= 0$. But $f^m(x) = 0 \implies f(x)f^m(x) = f(x)0 = 0$ by Proposition 1. That is, $f(x) \not= 0 \in F$ is a divisor of zero, but not a unit in $F$, contradicting the definition of $F$ being a field. We conclude that $R$ cannot contain any nonzero nilpotent elements.

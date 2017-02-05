@@ -1,0 +1,14 @@
+\subsection*{Exercise 16}
+\textit{Are $\mathbb{Z}_9$ and $\mathbb{Z}_3\oplus\mathbb{Z}_3$ isomorphic as rings?}
+
+\vspace{5 mm}
+$\mathbb{Z}_9 = \{[0], [1],...,[8]\}$ and $\mathbb{Z}_3\oplus\mathbb{Z}_3 = \{[0],[1],[2]\}\oplus \{[0],[1],[2]\} = \mathbb{Z}_3^2$. We claim that the two rings are not isomorphic. In particular, $\mathbb{Z}_9$ is additively cyclic with generator $\left< [1] \right>$, while $\mathbb{Z}_3 \oplus \mathbb{Z}_3$ has no additive generator.
+
+Similarly, elements behave differently with respect to multiplication in both rings. From Exercise 5.1.20(a), we saw that the only idempotent elements of $\mathbb{Z}_9$ are [0] and [1]. On the other hand, in $\mathbb{Z}_3\oplus\mathbb{Z}_3$:
+
+$([0],[0])^2 = ([0],[0]) \implies ([0],[0]) \textnormal{ is idempotent.}$ \\
+$([1],[1])^2 = ([1],[1]) \implies ([1],[1]) \textnormal{ is idempotent.}$ \\
+$([0],[1])^2 = ([0],[1]) \implies ([0],[1]) \textnormal{ is idempotent.}$ \\
+$([1],[0])^2 = ([1],[0]) \implies ([1],[0]) \textnormal{ is idempotent.}$
+
+Thus, we conclude that $\mathbb{Z}_9$ and $\mathbb{Z}_3\oplus\mathbb{Z}_3$  are not isomorphic as rings.

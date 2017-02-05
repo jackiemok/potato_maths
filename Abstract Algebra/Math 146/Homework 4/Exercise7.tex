@@ -1,0 +1,9 @@
+\subsection*{Exercise 9}
+\textit{Find a nonzero prime ideal of $\mathbb{Z}\oplus\mathbb{Z}$ that is not maximal.}
+
+\vspace{5 mm}
+To find such a nonzero prime ideal in $\mathbb{Z}\oplus\mathbb{Z}$, we use Proposition 5.3.9. That is, we must find a nonzero prime ideal $I$ such that the corresponding factor group $\mathbb{Z}\oplus\mathbb{Z}/I$ is not a field or finite integral domain.
+
+Consider $I = \{(n,0) \mid n \in \mathbb{Z} \} \subseteq \mathbb{Z}\oplus\mathbb{Z}$, which we claim to be a nonzero prime ideal. It is nonzero since $(1,0) \in I$. Let $a = (a,0), b = (b,0) \in I$ and $r \in \mathbb{Z}\oplus\mathbb{Z}$. Then, $a \pm b = (a,0) \pm (b,0) = (a \pm b, 0) \in I$ and $ra = r(a,0) = (ra,0) \in I$, so $I$ is indeed an ideal. $I$ is prime since if $c,d \in \mathbb{Z}\oplus\mathbb{Z}$, then $cd \in I \implies cd = (cd,0) = c(d,0) = d(c,0) \implies c \in I$ or $d \in I$.
+
+From Exercise 5.2.13 (of the previous homework assignment), we saw that there exists a homomorphism $\phi: \mathbb{Z}\oplus\mathbb{Z} \rightarrow \mathbb{Z}$ defined by $\phi((a,b)) = b$, $\forall a,b \in \mathbb{Z}$. $\phi$ is onto since for any $n \in \mathbb{Z}$, $n = \phi((a,n))$ for some $a \in \mathbb{Z}$. Thus, $\phi(\mathbb{Z}\oplus\mathbb{Z}) = \mathbb{Z}$. Then, ker($\phi$) = $ \{(a,b) \in \mathbb{Z}\oplus\mathbb{Z} \mid \phi((a,b)) = 0 \} = \{(a,b) \in \mathbb{Z}\oplus\mathbb{Z} \mid b = 0 \} = \{(a,0) \in \mathbb{Z}\oplus\mathbb{Z} \} = I$. Now by the Fundamental Homomorphism Theorem, $\mathbb{Z}\oplus\mathbb{Z}/I \cong \phi(\mathbb{Z}\oplus\mathbb{Z}) = \mathbb{Z}$. But $\mathbb{Z}$ is not a field, so by Proposition 5.2.9, $I$ must not be maximal.
