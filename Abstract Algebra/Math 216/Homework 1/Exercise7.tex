@@ -1,0 +1,8 @@
+\subsection*{Exercise 14}
+\begin{framed}
+\textit{Let R be a P.I.D. and let M be a torsion R-module. Prove that M is irreducible (cf. Exercises 9 to 11 of Section 10.3) if and only if M = Rm for any nonzero element $m \in M$ where the annihilator of m is a nonzero prime ideal (p).}
+\end{framed}
+
+If $M =$ Tor($M) \not= 0$ is irreducible, then 0 and $M$ are its only submodules. By Theorem 12.1.1 and Corollary 12.1.2, $M$ is finitely generated, and in particular, cyclic so that $M = Ra$, for some $a \not= 0 \in M$, by Example 10.3.2. By Exercise 10.3.5, $M$ has a nonzero annihilator, so there is a nonzero $r \in R$ such that for all $m \in M$, $rm = r(sa) = (rs)a = 0$, for appropriate $s \in R$. Since Ann($\{a\}) \not= (0)$ is an ideal of the P.I.D. $R$, Ann($\{a\}) = R($Ann($\{a\})) =$ Ann($R\{a\}) =$ Ann($M) =: (p)$ is principal. Considering the $R$-module homomorphism $\pi: R \rightarrow M$ defined by $\pi(r) = ra$, as on page 462, we see that $R/$ker($\pi) \cong M$, where ker($\pi) =$ Ann$(M) = (p)$. By Lemma 12.1.8, since $M$ is cyclic and irreducible, $(p)$ must be prime.
+
+Conversely, suppose that $M = Rm$, for some $m \not= 0 \in M$ with nonzero prime Ann($\{m\}) = (p) \subseteq R$. Since $M =$ Tor($M)$ is cyclic, the principal ideal $(p)$ = Ann($\{m\}) = R($Ann($\{m\})) =$ Ann($R\{m\}) =$ Ann($M)$. Consider again the $R$-module homomorphism $\pi: R \rightarrow M$ given by $\pi(r) = rm$, with $R/$ker($\pi) \cong M$, where ker($\pi) =$ Ann$(M) = (p)$ is prime. Therefore, $R/(p)$ is a field isomorphic to the cyclic $M =$ Tor($M$). By Lemma 12.1.8, the only submodules of $M$ are 0 and $M$ itself, so $M$ is irreducible.

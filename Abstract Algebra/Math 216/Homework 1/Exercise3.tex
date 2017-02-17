@@ -1,0 +1,13 @@
+\subsection*{Exercise 3}
+\begin{framed}
+\textit{Let R be an integral domain and let A and B be R-modules of ranks m and n, respectively. Prove that the rank of $A \oplus B$ is m + n. [Use the previous exercise.]}
+\end{framed}
+
+If an $R$-module $M = A+B$ is the sum of submodules $A$ and $B$ of $M$ satisfying the equivalent conditions of Proposition 10.3.5, then we interpret $M$ to be the internal direct sum $M = A \oplus B$. Every element $m \in M$ can then be written uniquely as a sum of elements $m = a + b$, where $a \in A$ and $b \in B$. Since by Proposition 10.3.5, $A \oplus B \cong A \times B = \{(a,b) \mid a \in A, b \in B\}$, where elements of $A$ and $B$ do not interact, we see that the rank of $A \times B$, and thus, the rank of $A \oplus B$, must be the sum of the ranks of $A$ and $B$.
+
+In particular, if we let $X = \{x_1,...,x_m\} \subseteq A$ and $Y = \{y_1,...,y_n\} \subseteq B$ be maximal sets of linearly independent elements of $A$ and $B$, respectively, then, we claim that $X \cup Y$ is linearly independent in $A \oplus B$, where $A/RX$ and $B/RY$ are torsion $R$-modules by Exercise 12.1.2. To see that $X \cup Y$ is a linearly independent set in $A \oplus B$, let $r_i \in R$, for $i = 1,...,m+n$. Then, consider a linear combination: \begin{align*}
+    m &= r_1x_1 + ... + r_mx_m + r_{m+1}y_1 + ... + r_{m+n}y_n = 0 \in M \\
+    &= (r_1x_1 + ... + r_mx_m) + (r_{m+1}y_1 + ... + r_{m+n}y_n) \\
+    \implies (r_1x_1 + ... + r_mx_m) &= -(r_{m+1}y_1 + ... + r_{m+n}y_n)
+\end{align*}
+But by Proposition 10.3.5, $A \cap B = \{0\}$, which forces $\sum_{i=1}^mr_ix_i = 0 = \sum_{i=1}^nr_iy_i$. But since $X$ and $Y$ are linearly independent sets in $A$ and $B$, respectively, we see that $r_i = 0$, for each $i = 1,...,m+n$. Now, we see that the rank of $A \oplus B$ must indeed be $m + n$.

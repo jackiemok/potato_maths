@@ -1,0 +1,14 @@
+\subsection*{Exercise 4}
+\begin{framed}
+\textit{Let R be an integral domain, let M be an R-module and let N be a submodule of M. Suppose M has rank n, N has rank r and the quotient M/N has rank s. Prove that n = r + s. Let $x_1, x_2, ..., x_s$ be elements of M whose images in M/N are a maximal set of independent elements and let $x_{s+1}, x_{s+2}, ..., x_{s+r}$ be a maximal set of independent elements in N. Prove that $x_1, x_2, ..., x_{s+r}$ are linearly independent in M and that for any element $y \in M$ there is a nonzero element $r \in R$ such that ry is a linear combination of these elements. Then use Exercise 2.]}
+\end{framed}
+
+By assumption of $N$ as a submodule of $M$, notice that we must have $n \ge r,s \in \mathbb{N}$. Let $X = \{x_1,...,x_s\} \subseteq M$ be a set whose image under the natural projection map $\pi: M \rightarrow M/N$ is a maximal set of independent elements. Also, let $Y = \{y_1,...,y_r\}$ be a maximal set of independent elements in $N$. We will show that $X \cup Y$ is a set of $n = r + s$ linearly independent elements of $M$, such that for any $m \in M$, there exists some $\overline{r} \not= 0 \in R$ such that $\overline{r}m = r_1x_1 + ... + r_sx_s + r_{s+1}y_1 + ... + r_ny_r$, for unique $r_i, i = 1,...,n$.
+
+By construction of $X$, $|\pi(X)| = s$, so let $\pi(X) = \{\pi(x_1),...,\pi(x_s)\} \subseteq M/N$ be the maximal set of independent elements. Notice that $RX \subseteq M$ is a submodule of $M$ and $RY \subseteq N$ is a submodule of $N$, where $M/RX$ and $N/RY$ are torsion $R$-modules, by Exercise 12.1.2 and since $RX$ and $RY$ are the smallest submodules of $M$ and $N$ containing $X$ and $Y$, respectively. Now, consider a linear combination $m = 0 \in M$:
+\begin{align*}
+    m &= r_1x_1 + ... + r_sx_s + r_{s+1}y_1 + ... + r_{s+r}y_r = 0 \\
+    &= (r_1x_1 + ... + r_sx_s) + (r_{s+1}y_1 + ... + r_{s+r}y_r) = 0 \\
+    \implies (r_1x_1 + ... + r_sx_s) &= -(r_{s+1}y_1 + ... + r_{s+r}y_r)
+\end{align*}
+But since $RX \cap RY = \{0\}$, $\sum_{i=1}^sr_ix_i = 0 = \sum_{i=1}^rr_iy_i$. Since $X$ and $Y$ are linearly independent sets of $M$ and $N$, respectively, we see that $r_i = 0$, for each $i = 1,...,r+s$. Therefore, $X \cup Y$ is a linearly independent set of $r + s$ elements of $M$. Now, by the definition of rank, we see that the rank of $M$ is at least $r + s$. But since Tor($M/R(X \cup Y)) = M/R(X \cup Y)$, $n = r + s$.

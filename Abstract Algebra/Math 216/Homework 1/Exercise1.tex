@@ -1,0 +1,14 @@
+\subsection*{Exercise 1}
+\begin{framed}
+\textit{Let M be a module over the integral domain R.}
+
+\textbf{[a]} \textit{Suppose x is a nonzero torsion element in M. Show that x and 0 are ``linearly dependent." Conclude that the rank of Tor(M) is 0, so that in particular any torsion R-module has rank 0.}
+
+\textbf{[b]} \textit{Show that the rank of M is the same as the rank of the (torsion free) quotient M/Tor(M)}
+\end{framed}
+
+\textbf{[a]} By Exercise 10.1.8(a), since $x \not= 0 \in$ Tor($M)$ and $R$ is an integral domain, Tor($M) \not= 0$ is a submodule of $M$. There exists some nonzero $r \in R$ such that $rx = 0 \in M$. Suppose for the sake of contradiction that $x$ and 0 are linearly independent. Then, $r_1x + r_20 = 0 \in M$ must imply that $r_1 = 0 = r_2 \in R$. But since $rx = 0 \in M$, where $r \not= 0 \in$ Ann($\{x\})$, letting $r_1 = r$ and $r_2$ be any arbitrary element of $R$ in the equation above violates the linear independence requirement. Therefore, $x$ and 0 must be linearly dependent.
+
+Since $x$ was chosen arbitrarily, any nonzero torsion element in $M$ and $0_M$ must be linearly dependent. But every element of Tor($M)$ is either $0_M$ or not $0_M$, so the maximum number of $R$-linearly independent elements of Tor($M)$ is 0. Equivalently, Tor($M)$ has rank 0, and in particular, any torsion $R$-module has rank 0.
+
+\textbf{[b]} The rank of $M$ is the maximum number of $R$-linearly independent elements of $M$. Likewise, the rank of the torsion free quotient $M/$Tor($M)$ is the maximum number of $R$-linearly independent elements of $M$/Tor($M$). Since the quotient $M/$Tor($M)$ is torsion free, Tor($M/$Tor($M)) = 0$, and since any torsion $R$-module has rank 0, taking the quotient $M/$Tor($M)$ does not reduce the number of $R$-linearly independent elements in $M$. Thus, both $M$ and $M$/Tor($M)$ have the same maximum number of $R$-linearly independent elements; i.e., both $M$ and $M$/Tor($M)$ have the same rank.
