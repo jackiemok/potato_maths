@@ -1,0 +1,13 @@
+\subsection*{Exercise 3}
+\begin{framed}
+\textit{Determine the minimal polynomial over $\mathbb{Q}$ for the element $1 + i$.}
+\end{framed}
+
+Let $\alpha := (1 + i)$ and $K$ be an extension of $\mathbb{Q}$ containing $\mathbb{Q}(\alpha)$, where $\alpha$ is a root of some nonzero polynomial $f(x) \in \mathbb{Q}[x]$. By Proposition 13.2.9, we can find a monic irreducible polynomial $g(x) := m_{\alpha, \mathbb{Q}}(x) \in \mathbb{Q}[x]$ for which $\alpha$ is a root and $g(x) \mid f(x)$ in $\mathbb{Q}[x]$. Since $f(x) \in \mathbb{Q}[x] \subset \mathbb{R}[x]$, by the Complex Conjugate Root Theorem, $\overline{\alpha} = (1 - i)$ is also a root of $f(x)$. We consider the corresponding product of linear polynomials: 
+\begin{align*}
+    (x - \alpha)(x - \overline{\alpha}) &= x^2 - (\overline{\alpha} + \alpha)x + \alpha\overline{\alpha} \\
+    &= x^2 - ((1 + i) + (1 - i))x + (1 + i)(1 - i) \\
+    &= x^2 - (2 + i - i)x + (1 - i^2) \\
+    &= x^2 - 2x + (1 - (-1)) \\
+    \implies g(x) &= x^2 - 2x + 2 \text{ is the minimal polynomial for $\alpha, \overline{\alpha}$ over } \mathbb{Q}
+\end{align*}

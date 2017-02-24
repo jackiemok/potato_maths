@@ -1,0 +1,68 @@
+\subsection*{Exercise 20}
+\begin{framed}
+\textit{Show that if the matrix of the linear transformation `multiplication by $\alpha$' considered in the previous exercise is $A$ then $\alpha$ is a root of the characteristic polynomial for $A$. This gives an effective procedure for determining an equation of degree $n$ satisfied by an element $\alpha$ in an extension of $F$ of degree $n$. Use this procedure to obtain the monic polynomial of degree 3 satisfied by $\sqrt[3]{2}$ and by $1 + \sqrt[3]{2} + \sqrt[3]{4}$.}
+\end{framed}
+
+Let $A \in M_n(F)$ be the matrix of the linear transformation `multiplication by $\alpha$.' Then, $Ak = \phi_\alpha(k) = \alpha k$, for every $k \in K$. Therefore, $\alpha$ is an eigenvalue for the linear transformation $\phi_\alpha \in$ Hom($K, K)$ and, thus, $A$. By Proposition 12.2.12, this is equivalent to the property that det($\alpha I - A) = 0$. But det($xI - A) = c_A(x)$ is the characteristic polynomial of $A$, for which $\alpha$ is clearly a root.
+
+Now, let $\alpha := \sqrt[3]{2}$, $\beta := (1 + \sqrt[3]{2} + \sqrt[3]{4}) \in K = F(\alpha)$ and $A, B \in M_3(F)$ be the matrices for the linear transformations $\phi_\alpha, \phi_\beta \in$ Hom($K, K)$. Then, $Ak = \phi_\alpha(k) = \alpha k$ and $Bk = \phi_\beta(k) = \beta k$, for each $k \in K$, where det($\alpha I - A) = 0 =$ det($\beta I - B)$. Since $K$ is finite, it is algebraic and finitely generated with basis $\mathcal{B} = \{1, \alpha, \alpha^2 = \sqrt[3]{4} = \beta - \alpha - 1\}$ by Corollary 13.2.13. For any $k = (a + b\alpha + c\alpha^2) \in K$ with $a, b, c \in F$:
+\begin{align*}
+    Ak &= \alpha k = \alpha(a + b\alpha + c\alpha^2) \\
+    &= a\alpha + b\alpha^2 + c\alpha^3 \\
+    &= a\alpha + b\alpha^2 + c\sqrt[3]{8} \\
+    &= 2c + a\alpha + b\alpha^2 = \alpha k = \left[\begin{array}{c}
+        2c \\
+        a \\
+        b
+    \end{array}\right] \\
+    \implies Ak = \left[\begin{array}{ccc}
+    0 & 0 & 2  \\
+    1 & 0 & 0 \\
+    0 & 1 & 0
+\end{array}\right]\left[ \begin{array}{c}
+    a  \\
+    b \\
+    c
+\end{array}\right] &= \left[\begin{array}{c}
+        2c \\
+        a \\
+        b
+    \end{array}\right] = \alpha k \\
+    \implies c_A(x) = \text{det}(xI - A) &= \text{det}\left(\left[\begin{array}{ccc}
+    x & 0 & -2  \\
+    -1 & x & 0 \\
+    0 & -1 & x
+\end{array}\right]\right) = (x^3 - 2)
+\end{align*}
+Similarly, for $\beta, k \in K$:
+\begin{align*}
+    Bk &= \beta k = \beta(a + b\alpha + c\alpha^2) \\
+    &= a\beta + b\alpha\beta + c\alpha^2\beta, \text{ where } \beta = \alpha^2 + \alpha + 1 \\
+    &= a\alpha^2 + a\alpha + a + b\alpha(\alpha^2 + \alpha + 1) + c\alpha^2(\alpha^2 + \alpha + 1) \\
+    &= a\alpha^2 + a\alpha + a + b\alpha^3 + b\alpha^2 + b\alpha + c\alpha^4 + c\alpha^3 + c\alpha^2 \\
+    &= a + (a + b)\alpha + (a + b + c)\alpha^2 + (b + c)\alpha^3 + c\alpha^4 \\
+    &= (a + 2(b+c)) + (a + b)\alpha + (a + b + c)\alpha^2 + c\alpha\alpha^3 \\
+    &= (a + 2(b+c)) + (a + b + 2c)\alpha + (a + b + c)\alpha^2 = \left[\begin{array}{c}
+        a + 2(b+c) \\
+        a + b + 2c \\
+        a + b + c
+    \end{array}\right] \\
+    \implies Bk = \left[\begin{array}{ccc}
+    1 & 2 & 2  \\
+    1 & 1 & 2 \\
+    1 & 1 & 1
+\end{array}\right]\left[ \begin{array}{c}
+    a  \\
+    b \\
+    c
+\end{array}\right] &= \left[\begin{array}{c}
+        a + 2(b+c) \\
+        a + b + 2c \\
+        a + b + c
+    \end{array}\right] = \beta k \\
+    \implies c_B(x) = \text{det}(xI - B) &= \text{det}\left(\left[\begin{array}{ccc}
+    x-1 & -2 & -2  \\
+    -1 & x-1 & -2 \\
+    -1 & -1 & x-1
+\end{array}\right]\right) = (x^3 - 3x^2 - 3x - 1)
+\end{align*}

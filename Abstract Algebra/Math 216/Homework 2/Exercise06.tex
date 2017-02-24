@@ -1,0 +1,37 @@
+\subsection*{Exercise 5}
+\begin{framed}
+\textit{Let $F = \mathbb{Q}(i)$. Prove that $x^3 - 2$ and $x^3 - 3$ are irreducible over F.}
+\end{framed}
+
+Let $p(x) := x^3 - 2$ and $q(x) := x^3 - 3$, both polynomials of degree 3. Therefore, if $p(x)$ and $q(x)$ were reducible over $F$, then each would have a linear polynomial factor and, thus, a root in $F$ by Proposition 9.4.10. Suppose to the contrary that $p(x)$ and $q(x)$ are reducible over $F$ with roots $\alpha, \beta \in F$, respectively. Since $F = \mathbb{Q}(i) = \{a + bi \mid a, b \in \mathbb{Q}\}$ and $p(\alpha), q(\beta) = 0$, $\alpha = a + bi$ and $\beta = c + di$, for some $a, b, c, d \in \mathbb{Q}$. But $p(x), q(x) \in F[x] \subset \mathbb{R}[x]$, so by the Complex Conjugate Root Theorem, $p(\overline{\alpha}), q(\overline{\beta}) = 0$. Then,
+\begin{align*}
+    p(x) &= x^3 - 2 =
+    (x - \alpha)(x - \overline{\alpha})(x - \gamma), \text{ for some } \gamma \in F \\
+    &= x^3 - (\alpha + \overline{\alpha} + \gamma)x^2 + (\alpha\overline{\alpha} + \alpha\gamma + \overline{\alpha}\gamma)x - \alpha\overline{\alpha}\gamma
+    \\
+    &= x^3 - (a + bi + a - bi + \gamma)x^2 + ((a + bi)(a - bi) + (a + bi)\gamma + (a - bi)\gamma)x - (a + bi)(a - bi)\gamma \\
+    &= x^3 - (2a + \gamma)x^2 + (a^2 + b^2 + 2a\gamma)x - (a^2 + b^2)\gamma
+    \\
+    \\
+    &\implies (2a + \gamma) = 0 = (a^2 + b^2 + 2a\gamma) \text{ and } (a^2 + b^2)\gamma = 2
+    \\
+    &\implies 2a = -\gamma \text{ and } (a^2 + b^2) = -2a\gamma \text{ and } (-2a\gamma)\gamma = 2 \\
+    &\implies (a^2 + b^2) = (-2a\gamma) = \gamma^2, \gamma \in \{\pm 1, \pm 2\} \\
+    &\implies (-2a\gamma)\gamma = \gamma^2\gamma = \gamma^3 = 2 \\
+    &\implies \gamma \not\in F, \text{ our required contradiction.} \\
+    &\implies p(x) \text{ is irreducible over } F.
+\end{align*}
+Following the same procedure outlined above, we obtain the same result for $q(x)$:
+\begin{align*}
+    q(x) &= x^3 - 3 =
+    (x - \beta)(x - \overline{\beta})(x - \gamma'), \text{ for some } \gamma' \in F \\
+    &= x^3 - (2c + \gamma')x^2 + (c^2 + d^2 + 2c\gamma')x - (c^2 + d^2)\gamma' \\
+    \\
+    &\implies (2c + \gamma') = 0 = (c^2 + d^2 + 2c\gamma') \text{ and } (c^2 + d^2)\gamma' = 3
+    \\
+    &\implies 2c = -\gamma' \text{ and } (c^2 + d^2) = -2c\gamma' \text{ and } (-2c\gamma')\gamma' = 3 \\
+    &\implies (c^2 + d^2) = (-2c\gamma') = \gamma'^2, \gamma' \in \{\pm 1, \pm 3\} \\
+    &\implies (-2c\gamma')\gamma' = \gamma'^2\gamma' = \gamma'^3 = 3 \\
+    &\implies \gamma' \not\in F, \text{ our required contradiction.} \\
+    &\implies q(x) \text{ is irreducible over } F.
+\end{align*}

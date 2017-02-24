@@ -1,0 +1,22 @@
+\subsection*{Exercise 4}
+\begin{framed}
+\textit{Prove directly that the map $a + b\sqrt{2} \mapsto a - b\sqrt{2}$ is an isomorphism of $\mathbb{Q}(\sqrt{2})$ with itself.}
+\end{framed}
+
+Let $\phi: \mathbb{Q}(\sqrt{2}) \rightarrow \mathbb{Q}(\sqrt{2})$ be given by $\phi(a + b\sqrt{2}) = a - b\sqrt{2}$. Note that $\phi$ is well-defined, since if $(a + b\sqrt{2}) = (c + d\sqrt{2}) \in \mathbb{Q}(\sqrt{2})$, then $(a + b\sqrt{2}) - (c + d\sqrt{2}) = 0 \implies (a - c) + (b - d)\sqrt{2} = 0 \implies (a - c) = 0 = (b - d)$, forcing $a = c$ and $b = d$. Thus, $\phi(a + b\sqrt{2}) = (a - b\sqrt{2}) = (c - d\sqrt{2}) = \phi(c + d\sqrt{2})$, and $\phi$ is well-defined.
+
+Let $(a + b\sqrt{2}), (c + d\sqrt{2}) \in \mathbb{Q}(\sqrt{2})$ for the following verification of $\phi$ as a homomorphism:
+\begin{align*}
+    \textbf{Additivity} \hspace{23 mm} \phi((a + b\sqrt{2}) + (c + d\sqrt{2})) &= \phi((a + c) + (b + d)\sqrt{2}) \\
+    &= (a + c) - (b + d)\sqrt{2} \\
+    &= (a - b\sqrt{2}) + (c - d\sqrt{2}) \\
+    &= \phi(a + b\sqrt{2}) + \phi(c + d\sqrt{2}) \\
+    \\
+    \textbf{Multiplicativity} \hspace{15 mm} \phi((a + b\sqrt{2})\cdot(c + d\sqrt{2})) &= \phi(ac + ad\sqrt{2} + bc\sqrt{2} + 2bd) \\
+    &= \phi((ac + 2bd) + (ad + bc)\sqrt{2}) \\
+    &= (ac + 2bd) - (ad + bc)\sqrt{2} \\
+    &= ac - ad\sqrt{2} - bc\sqrt{2} + 2bd \\
+    &= (a - b\sqrt{2})\cdot(c - d\sqrt{2}) \\
+    &= \phi(a + b\sqrt{2})\cdot\phi(c + d\sqrt{2})
+\end{align*}
+It remains for us to show that $\phi$ is bijective. $\phi$ is injective since ker($\phi) = \{a + b\sqrt{2} \mid a - b\sqrt{2} = 0\} = \{0 + 0\sqrt{2}\} = \{0\}$ is trivial. $\phi$ is surjective, since if $(a - b\sqrt{2}) \in \mathbb{Q}(\sqrt{2})$, then $(a - b\sqrt{2}) = (a + (-1 \cdot b)\sqrt{2}) = \phi(a + (-b)\sqrt{2}) \in \mathbb{Q}(\sqrt{2})$. Therefore, $\phi$ is an isomorphism of $\mathbb{Q}(\sqrt{2})$ with itself.

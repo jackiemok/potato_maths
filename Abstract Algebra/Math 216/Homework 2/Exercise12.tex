@@ -1,0 +1,74 @@
+\subsection*{Exercise 21}
+\begin{framed}
+\textit{Let $K = \mathbb{Q}(\sqrt{D})$ for some squarefree integer $D$. Let $\alpha = a + b\sqrt{D}$ be an element of $K$. Use the basis 1, $\sqrt{D}$ for $K$ as a vector space over $\mathbb{Q}$ and show that the matrix of the linear transformation `multiplication by $\alpha$' on $K$ considered in the previous exercises has the matrix $\left(\begin{array}{cc}
+    a & bD \\
+    b & a
+\end{array}\right)$. Prove directly that the map $a + b\sqrt{D} \mapsto \left(\begin{array}{cc}
+    a & bD \\
+    b & a
+\end{array}\right)$ is an isomorphism of the field $K$ with a subfield of the ring of $2 \times 2$ matrices with coefficients in $\mathbb{Q}$.}
+\end{framed}
+
+Given the basis $\mathcal{B} = \{1, \sqrt{D}\}$ for $K$, for any $k \in K$, $k = (c + d\sqrt{D})$, for some $c, d \in \mathbb{Q}$. Then,
+\begin{align*}
+    Ak &= \alpha k = \alpha(c + d\sqrt{D}) \\
+    &= \alpha c + \alpha d \sqrt{D} \\
+    &= ac + bc\sqrt{D} + ad\sqrt{D} + bdD \\
+    &= (ac + bdD) + (bc + ad)\sqrt{D} = \left[\begin{array}{c}
+    ac + bdD  \\
+    bc + ad 
+\end{array}\right] \\
+\implies Ak = \left[\begin{array}{cc}
+    a & bD  \\
+    b & a 
+\end{array}\right]\left[\begin{array}{c}
+    c  \\
+    d 
+\end{array}\right] &= \left[\begin{array}{c}
+    ac + bdD  \\
+    bc + ad 
+\end{array}\right] = \alpha k
+\end{align*}
+Now, let $\phi: K \rightarrow M_2(\mathbb{Q})$ be the map defined by $\phi(a + b\sqrt{D}) = \left[\begin{array}{cc}
+    a & bD  \\
+    b & a 
+\end{array}\right]$, for each $a, b \in \mathbb{Q}$. 
+
+$\phi$ is well-defined:
+\begin{align*}
+    (a + b\sqrt{D}) = (c + d\sqrt{D}) &\implies (a - c) + (b - d)\sqrt{D} = 0 \implies a = c, b = d \in \mathbb{Q} \\
+    \implies \phi(a + b\sqrt{D}) = \left[\begin{array}{cc}
+    a & bD  \\
+    b & a 
+\end{array}\right] &= \left[\begin{array}{cc}
+    c & dD  \\
+    d & c 
+\end{array}\right] = \phi(c + d\sqrt{D})
+\end{align*}
+$\phi$ is additive and multiplicative:
+\begin{align*}
+    \phi((a + b\sqrt{D})+(c + d\sqrt{D})) &= \phi((a+c) + (b+d)\sqrt{D}) = \left[\begin{array}{cc}
+    a+c & (b+d)D  \\
+    b+d & a+c 
+\end{array}\right] \\
+&= \left[\begin{array}{cc}
+    a & bD  \\
+    b & a 
+\end{array}\right] + \left[\begin{array}{cc}
+    c & dD  \\
+    d & c 
+\end{array}\right] = \phi(a + b\sqrt{D}) + \phi(c + d\sqrt{D}) \\
+\\
+\phi((a + b\sqrt{D})\cdot(c + d\sqrt{D})) &= \phi((ac + bdD) + (ad + bc)\sqrt{D}) = \left[\begin{array}{cc}
+    ac+bdD & (ad+bc)D  \\
+    ad+bc & ac+bdD
+\end{array}\right] \\
+&= \left[\begin{array}{cc}
+    a & bD  \\
+    b & a 
+\end{array}\right]\left[\begin{array}{cc}
+    c & dD  \\
+    d & c 
+\end{array}\right] = \phi(a + b\sqrt{D})\cdot\phi(c + d\sqrt{D})
+\end{align*}
+ker($\phi) = \{(a + b\sqrt{D}) \in K \mid \phi(a + b\sqrt{D}) = 0\} = \{(a + b\sqrt{D}) \mid a = b = 0 \in \mathbb{Q}\} = \{0\} \implies \phi$ is injective, and by the First Isomorphism Theorem, $K/$ker($\phi) \cong K \cong \phi(K) \le M_2(\mathbb{Q})$.

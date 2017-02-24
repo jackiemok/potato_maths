@@ -1,0 +1,18 @@
+\subsection*{Exercise 7}
+\begin{framed}
+\textit{Prove that $\mathbb{Q}(\sqrt{2} + \sqrt{3}) = \mathbb{Q}(\sqrt{2}, \sqrt{3})$ [one inclusion is obvious, for the other consider $(\sqrt{2} + \sqrt{3})^2$, etc.]. Conclude that $[\mathbb{Q}(\sqrt{2} + \sqrt{3}): \mathbb{Q}] = 4.$ Find an irreducible polynomial satisfied by $\sqrt{2} + \sqrt{3}$.}
+\end{framed}
+
+Let $\alpha: = (\sqrt{2} + \sqrt{3})$, where $\sqrt{2}$ and $\sqrt{3}$ are algebraic over $\mathbb{Q}$ with minimal polynomials $(x^2 - 2)$ and $(x^2 - 3)$, respectively, and $[\mathbb{Q}(\sqrt{2}, \sqrt{3}): \mathbb{Q}] = 4$ by Example 13.2.2 (page 526). By Corollary 13.2.18, $\sqrt{2}\pm\sqrt{3}, \sqrt{2}\sqrt{3} = \sqrt{6}, \sqrt{2}/\sqrt{3}, \sqrt{3}/\sqrt{2}$ are all algebraic over $\mathbb{Q}$. Therefore, $\alpha$ is algebraic over $\mathbb{Q}$ and $\mathbb{Q}(\sqrt{2}, \sqrt{3}) = \{a + b\sqrt{2} + c\sqrt{3} + d\sqrt{6} \mid a, b, c, d \in \mathbb{Q}\}$ contains both $\mathbb{Q}$ and $\alpha$, so that $\mathbb{Q}(\alpha) \subseteq \mathbb{Q}(\sqrt{2}, \sqrt{3})$.
+
+On the other hand, we must have $\mathbb{Q}(\sqrt{2}, \sqrt{3}) \subseteq \mathbb{Q}(\alpha)$. We consider, as suggested, the powers of $\alpha:$
+\begin{align*}
+    \alpha^2 &= (5 + 2\sqrt{6}) \\
+    \alpha^3 &= (11\sqrt{2} + 9\sqrt{3}) \\
+    \alpha^4 &= (49 + 20\sqrt{6}) \\
+    \alpha^5 &= (109\sqrt{2} + 89\sqrt{3}) \\
+    &\vdots
+\end{align*}
+An inductive argument shows that $\alpha^i = a\sqrt{2} + b\sqrt{3}$, for some $a, b \in \mathbb{Q}$ given $i \in \mathbb{Z}\setminus2\mathbb{Z}$. Otherwise, $i \in 2\mathbb{Z}$ and $\alpha^i = c + d\sqrt{6}$, for some $c, d \in \mathbb{Q}$. Notice also that $\sqrt{2} = \frac{\alpha^3 - 9\alpha}{2}$ and $\sqrt{3} = \frac{\alpha^3 - 11\alpha}{-2}$, so $\sqrt{6} = \frac{(\alpha^3 - 9\alpha)(11\alpha - \alpha^3)}{4}$. Now, we see that $\mathbb{Q}(\alpha) = \{a + b\sqrt{2} + c\sqrt{3} + d\sqrt{6} \mid a, b, c, d \in \mathbb{Q}\} = \mathbb{Q}(\sqrt{2}, \sqrt{3})$, as desired. Moreover, since $[\mathbb{Q}(\sqrt{3}, \sqrt{2}): \mathbb{Q}] = 4$, it follows that $[\mathbb{Q}(\alpha): \mathbb{Q}] = 4$, again by Example 13.2.2 (page 526).
+
+Since $\alpha$ is algebraic over $\mathbb{Q}$, we can find an irreducible monic polynomial $p(x) \in \mathbb{Q}[x]$ of degree 4 that is satisfied by $\alpha$. Substituting $x = \alpha$, we see that $x^2 = \alpha^2 = 5 + 2\sqrt{6} \implies (x^2 - 5) = 2\sqrt{6}$, and so $(x^2 - 5)^2 = 24 \implies (x^4 - 10x^2 + 25 - 24) = (x^4 - 10x^2 + 1) = 0$. By Proposition 9.4.11, since $(x^4 - 10x^2 + 1)$ is monic with integer coefficients and $p(d) \not= 0$, for every $d \in \mathbb{Z}$ dividing the constant term 1 $(d = \pm 1)$, it has no roots in $\mathbb{Q}$. This is our desired irreducible polynomial satisfied by $\alpha$.

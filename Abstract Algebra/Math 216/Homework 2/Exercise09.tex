@@ -1,0 +1,8 @@
+\subsection*{Exercise 14}
+\begin{framed}
+\textit{Prove that if $[F(\alpha): F]$ is odd then $F(\alpha) = F(\alpha^2)$.}
+\end{framed}
+
+Suppose that $[F(\alpha):F]$ is odd and $\alpha \in F(\alpha)$ is a root for some nonzero polynomial $f(x) = \sum_{i=0}^na_ix^i$. By Corollary 13.2.18, since $\alpha$ is algebraic over $F$, so is $\alpha^2$. In particular, $F(\alpha^k) \subseteq F(\alpha)$, for any $k \in \mathbb{Z}$, since $F(\alpha)$ is a field. By Proposition 13.2.14, $[F(\alpha):F] = [F(\alpha):F(\alpha^2)][F(\alpha^2):F]$ is odd, so 2 cannot divide either of the factors $[F(\alpha):F(\alpha^2)]$ or $[F(\alpha^2):F]$.
+
+However, letting $f(x) = (x^2 - \alpha^2)$, we see that $\alpha$ satisfies the monic polynomial $f(x)$ in $F(\alpha^2) \subseteq F(\alpha)$. Therefore, $1 \le [F(\alpha):F(\alpha^2)] \le 2$. However, as a factor of $[F(\alpha):F]$, $[F(\alpha):F(\alpha^2)]$ cannot be 2 by assumption, and must thus be 1, which implies that $F(\alpha) = F(\alpha^2)$ by Proposition 13.2.11.

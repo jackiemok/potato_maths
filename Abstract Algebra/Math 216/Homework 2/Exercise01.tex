@@ -1,0 +1,19 @@
+\subsection*{Exercise 1}
+\begin{framed}
+\textit{Show that $p(x) = x^3 + 9x + 6$ is irreducible in $\mathbb{Q}[x]$. Let $\theta$ be a root of $p(x)$. Find the inverse of $1 + \theta$ in $\mathbb{Q}(\theta)$.}
+\end{framed}
+
+Letting $p(x) = x^3 + 9x + 6 = x^3 + 0x^2 + 9x + 6 =: \sum_{i=0}^3a_ix^i$, we see that $a_ix^i \in \mathbb{Z}[x]$, for $i = 0,...,3$. Furthermore, $p = 3 \in \mathbb{Z}$ is prime and divides $a_i$, for $i = 0, 1, 2$, while $p^2 = 9$ does not divide $a_3 = 1$. Therefore, by Eisenstein's Criterion for $\mathbb{Z}[x]$ (Corollary 9.4.14), $p(x)$ is irreducible in both $\mathbb{Z}[x]$ and $\mathbb{Q}[x]$.
+
+Letting $\theta$ be a root of $p(x)$ gives $p(\theta) = 0 \in \mathbb{Q}(\theta)$, where $\mathbb{Q}[x]/(p(x)) \cong \mathbb{Q}(\theta) = \{a + b\theta + c\theta^2 \mid a, b, c \in \mathbb{Q}\}$, by Theorem 13.1.6. Now, to find the inverse of $(1 + \theta) \in \mathbb{Q}(\theta)$, we use the Euclidean Algorithm in $\mathbb{Q}[x]$. By our previous result, $p(x)$ is relatively prime to every polynomial in $\mathbb{Q}[x]$ of lower degree, so there exist polynomials $a(x), b(x) \in \mathbb{Q}[x]$ such that $a(x)(1 + x) + b(x)p(x) = 1 \in \mathbb{Q}[x]$. Thus, $a(\theta) = (1 + \theta)^{-1} \in \mathbb{Q}(\theta)$. 
+
+Long division produces the result \hspace{5 mm} \polylongdiv{x^3 + 9x + 6}{x + 1}
+\newline
+Therefore, 
+\begin{align*}
+    (1 + x)(x^2 - x + 10) - 4 &= p(x) \\
+    \implies (1 + x)(x^2 - x + 10) - p(x) &= 4 \\
+    \implies \frac{1}{4}(1 + x)(x^2 - x + 10) - \frac{1}{4}p(x) &= 1 \\
+    \implies (1 + x)a(x) + b(x)p(x) &= 1, \textnormal{ where } a(x) = \frac{1}{4}(x^2 - x + 10) \textnormal{ and } b(x) = \frac{-1}{4}
+\end{align*}
+Now, it follows that $(1 + \theta)^{-1} = (\frac{1}{4}\theta^2 - \frac{1}{4}\theta + \frac{5}{2}) \in \mathbb{Q}(\theta).$

@@ -1,0 +1,38 @@
+\subsection*{Exercise 19}
+\begin{framed}
+\textit{Let $K$ be an extension of $F$ of degree $n$.}
+
+\textbf{[a]} \textit{For any $\alpha \in K$ prove that $\alpha$ acting by left multiplication on $K$ is an $F$-linear transformation of $K$.}
+
+\textbf{[b]} \textit{Prove that $K$ is isomorphic to a subfield of the ring of $n \times n$ matrices over $F$, so the ring of $n \times n$ matrices over $F$ contains an isomorphic copy of every extension of $F$ of degree $\le n$.}
+\end{framed}
+
+\textbf{[a]} By construction, $K$ may be viewed as an $n$-dimensional vector space over $F$ or $F$-module. Therefore, we must show that $\alpha$ acting by left multiplication on $K$ is an $F$-module homomorphism. For any $\alpha \in K$, let $\phi_\alpha: K \rightarrow K$ be the map defined by $\phi_\alpha(k) = \alpha k$, for each $k \in K$. $\phi_\alpha$ is well-defined for any given $\alpha$, since for $k = k' \in K$, we have $\phi(k) - \phi(k') = \alpha k - \alpha k' = \alpha(k - k') = \alpha 0 = 0 \implies \phi(k) = \phi(k')$. Letting $k, k' \in K$ and $r \in F$, we show that $\phi_\alpha$ respects the $F$-module structure of $K$, for every $\alpha \in K$:
+\begin{align*}
+    \phi_\alpha(k + k') &= \alpha(k + k') \\
+    &= \alpha k + \alpha k' \\
+    &= \phi_\alpha(k) + \phi_\alpha(k') \\
+    \\
+    \phi_\alpha(rk) &= \alpha rk \\
+    &= r \alpha k \\
+    &= r \phi_\alpha(k) \in K \text{ since $K$ is an $F$-module}.
+\end{align*}
+Since $F$ is a field and $K$ an $F$-module, the $F$-module homomorphism $\phi_\alpha$ given by $\alpha$ acting by left multiplication on $K$ defines a linear transformation of $K$, for each $\alpha \in K$.
+
+\textbf{[b]} Using our previous results, let $\phi: K \rightarrow$ Hom$_F(K,K)$ be the map defined by $\phi(\alpha) = \phi_\alpha$, for each $\alpha \in K$. $\phi$ must be well-defined, since if $\alpha = \alpha' \in K$, then $\phi_\alpha(k) - \phi_{\alpha'}(k) = \alpha k - \alpha' k = (\alpha - \alpha')k = 0k = 0$, for each $k \in K,$ which implies that $\phi_\alpha = \phi_{\alpha'}$. Let $\alpha, \beta \in K$. Then, $\phi$ is a homomorphism:
+\begin{align*}
+    \phi(\alpha + \beta) &= \phi_{\alpha + \beta}(k), k \in K \\
+    &= (\alpha + \beta)k, k \in K \\
+    &= \alpha k + \beta k, k \in K \\
+    &= \phi_\alpha(k) + \phi_\beta(k), k \in K \\
+    &= \phi_\alpha + \phi_\beta \\
+    &= \phi(\alpha) + \phi(\beta) \\
+    \\
+    \phi(\alpha\beta) &= \phi_{\alpha\beta}(k), k \in K \\
+    &= \alpha\beta k, k \in K \\
+    &= \phi_\alpha(\beta k), k \in K \\
+    &= \phi_\alpha(\phi_\beta(k)), k \in K \\
+    &= \phi_\alpha\phi_\beta(k), k \in K \\
+    &= \phi(\alpha)\phi(\beta)
+\end{align*}
+$\phi$ is injective since ker($\phi) = \{k \in K \mid \phi(k) = 0\} = \{k \in K \mid \phi_k(x) = 0, \forall x \in K\} = \{0\}$. Notice that by our previous results and Corollary 11.1.9, $\phi_\alpha$ is an isomorphism from $K$ into $K$, for each $\alpha \in K$. Furthermore, for each $\alpha \in K$, $\phi_\alpha$ is nonsingular by injectivity, and we see that $\phi(K) =$ Aut($K) = GL(K)$. By Theorem 11.2.10 and Corollary 11.2.14, $GL(K) \cong GL_n(F) \subseteq M_n(F)$. By the First Isomorphism Theorem, $K \cong GL(K) \cong GL_n(F) \le M_n(F)$. The ring $M_n(F)$ contains an isomorphic copy of extensions of $F$ of degree $n$ in this case. But for any extension $K'$ of degree $m \in \{1, ..., n-1\}$, $K' \subseteq K$ since $K$ is finitely generated. Therefore, the ring $M_n(F)$ contains an isomorphic copy of every extension of $F$ of degree $\le n$.

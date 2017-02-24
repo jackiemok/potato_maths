@@ -1,0 +1,31 @@
+\subsection*{Exercise 3}
+\begin{framed}
+\textit{Show that $x^3 + x + 1$ is irreducible over $\mathbb{F}_2$ and let $\theta$ be a root. Compute the powers of $\theta$ in $\mathbb{F}_2(\theta)$.}
+\end{framed}
+
+$\mathbb{F}_2 = \mathbb{Z}/2\mathbb{Z} = \{\overline{0}, \overline{1}\}$, so if $p(x) := x^3 + x + \overline{1}$ were reducible over $\mathbb{F}_2$, then either $p(\overline{0}) = \overline{0}$ or $p(\overline{1}) = \overline{0}$ in $\mathbb{F}_2[x]$. But $p(\overline{0}) = \overline{0}^3 + \overline{0} + \overline{1} = \overline{1} \not= \overline{0}$ and $p(\overline{1}) = \overline{1}^3 + \overline{1} + \overline{1} = \overline{3} = \overline{1} \not= \overline{0}$, so $p(x)$ is irreducible over $\mathbb{F}_2$.
+
+Let $\overline{\theta}$ be a root of $p(x)$ in $\mathbb{F}_2(\overline{\theta}) \cong \mathbb{F}_2[x]/(p(x))$. Noticing that $p(\overline{\theta}) = \overline{\theta}^3 + \overline{\theta} + \overline{1} = \overline{0} \implies \overline{\theta}^3 + \overline{\theta} = \overline{-1} = \overline{1}$ , we now compute the powers of $\overline{\theta}$ in $\mathbb{F}_2(\overline{\theta})$ as follows:
+\begin{align*}
+    \overline{\theta}^0 &= \overline{1} \\
+    \overline{\theta}^1 &= \overline{\theta} \\
+    \overline{\theta}^2 &= \overline{\theta}^2 \\
+    \overline{\theta}^3 &= \overline{1} - \overline{\theta} = \overline{1} + \overline{\theta} \\
+    \overline{\theta}^4 &= \overline{\theta}\overline{\theta}^3 = \overline{\theta}(\overline{1} + \overline{\theta}) = \overline{\theta} + \overline{\theta}^2 \\
+    \overline{\theta}^5 &= \overline{\theta}\overline{\theta}^4 = \overline{\theta}(\overline{\theta} + \overline{\theta}^2) = \overline{\theta}^2 + \overline{\theta}^3 = \overline{\theta}^2 + \overline{\theta} + \overline{1} \\
+    \overline{\theta}^6 &= \overline{\theta}\overline{\theta}^5 = \overline{\theta}(\overline{\theta}^2 + \overline{\theta} + \overline{1}) = \overline{\theta}^3 + \overline{\theta}^2 + \overline{\theta} = \overline{\theta}^2 + \overline{\theta} + (\overline{\theta} + \overline{1}) = \overline{\theta}^2 + 2\overline{\theta} + \overline{1} = \overline{\theta}^2 + \overline{1} \\
+    \overline{\theta}^7 &= \overline{\theta}\overline{\theta}^6 = \overline{\theta}(\overline{\theta}^2 + \overline{1}) = \overline{\theta}^3 + \overline{\theta} = (\overline{1} + \overline{\theta}) + \overline{\theta} = \overline{1} + 2\overline{\theta} = \overline{1}
+\end{align*}
+Therefore, we have the following:
+\begin{equation*}
+    \theta^i = 
+\begin{cases*}
+    \overline{1} & \text{ for } $i \equiv 0 \text{ (mod 7)}$ \\
+    \overline{\theta} & \text{ for } $i \equiv 1 \text{ (mod 7)}$ \\
+    \overline{\theta}^2 & \text{ for } $i \equiv 2 \text{ (mod 7)}$ \\
+    \overline{\theta} + \overline{1} & \text{ for } $i \equiv 3 \text{ (mod 7)}$ \\
+    \overline{\theta}^2 + \overline{\theta} & \text{ for } $i \equiv 4 \text{ (mod 7)}$ \\
+    \overline{\theta}^2 + \overline{\theta} + \overline{1} & \text{ for } $i \equiv 5 \text{ (mod 7)}$ \\
+    \overline{\theta}^2 + \overline{1} & \text{ for } $i \equiv 6 \text{ (mod 7)}$
+\end{cases*}
+\end{equation*}
